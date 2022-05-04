@@ -1,0 +1,57 @@
+.article-card__image-wrapper {
+  margin-bottom: 24px;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+}
+
+.article-card__content {
+  display: grid;
+  grid-template-rows: max-content minmax(64px, 96px) auto auto;
+}
+
+.article-card__date {
+  font-size: 16px;
+  color: transparentize($color-nero, 0.6);
+}
+
+.article-card__title {
+  margin-top: 12px;
+  margin-bottom: 24px;
+
+  font-family: $ff-second-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.article-card__text {
+  position: relative;
+  font-size: 16px;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.3em;
+  height: 3.9em;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+
+  //   left: 0;
+  //   bottom: 0;
+
+  //   width: 100%;
+  //   height: 45%;
+
+  //   background-image: linear-gradient(180deg, $color-transparent, $color-default-white);
+  // }
+}
+
+.article-card__button {
+  margin-top: 36px;
+  justify-self: start;
+}

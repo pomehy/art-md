@@ -1,0 +1,11 @@
+mixin card-item(item)
+  a.card-item(href=item.href)&attributes(attributes)
+    .card-item__image-wrapper
+        +picture(item.img.path, item.img.image, item.img.format, item.img.width, item.img.height, item.img.altText)
+    h3.card-item__title !{item.title}
+      +icon("icon-arrow-right", 32, 32)
+    .card-item__description
+      each text in item.text
+        p.card-item__text !{text}
+      if item.note
+        p.card-item__note !{item.note}

@@ -1,0 +1,58 @@
+.mission {
+  position: relative;
+  padding-top: 53px;
+  padding-bottom: 53px;
+
+  // background-image: linear-gradient(90deg, $color-my-sin, $color-dark-orange);
+  // background-image: linear-gradient(90deg, $color-pumpkin, $color-dark-orange 83.33%);
+  background-image: linear-gradient(90deg, $color-dark-orange, $color-pumpkin 90%);
+
+  overflow: hidden;
+
+  .container {
+    padding-left: 240px;
+    padding-right: 240px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 60px;
+    right: 240px;
+
+    width: 96px;
+    height: 70px;
+
+    background-image: url("../../img/svg/decor-misson.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    opacity: 0.3;
+  }
+}
+
+.mission__title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  max-width: 90%;
+
+  font-family: $ff-second-font;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: $color-default-white;
+}
+
+.mission__decor {
+  position: absolute;
+  top: 36px;
+  left: 80px;
+
+  color: $color-default-white;
+  opacity: 0.3;
+
+  pointer-events: none;
+}

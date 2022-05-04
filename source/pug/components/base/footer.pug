@@ -1,3 +1,106 @@
+-
+  const companyLinks = [
+    {
+      href: "#",
+      name: "О нас",
+    },
+    {
+      href: "#",
+      name: "Нам доверяют",
+    },
+    {
+      href: "#",
+      name: "Статьи",
+    },
+    {
+      href: "#",
+      name: "Контакты",
+    },
+  ]
+
+-
+  const serviceLinks = [
+    {
+      href: "#",
+      name: "Радиостанции",
+    },
+    {
+      href: "#",
+      name: "Социальные сети",
+    },
+    {
+      href: "#",
+      name: "Мониторы",
+    },
+    {
+      href: "#",
+      name: "Локальное радио",
+    },
+    {
+      href: "#",
+      name: "LED Экран",
+    },
+  ]
+
+-
+  const prodLinks = [
+    {
+      href: "#",
+      name: "Радиоролики",
+    },
+    {
+      href: "#",
+      name: "Видеоролики",
+    },
+    {
+      href: "#",
+      name: "Продающий текст",
+    },
+  ]
+
 mixin footer(footerMods)
   footer.footer(class=footerMods)
-    .container
+    .footer__content
+      .container
+        .footer__grid
+          if(currentUrl === "index.html")
+            //- lighthouse снимает 10 баллов SEO за <a> без href
+            span.footer__logo
+              +icon("logo-full", 260, 48)
+          else
+            a.footer__logo(href="index.html", aria-label="Переход на главную")
+              +icon("logo-full", 260, 48)
+          .footer-links
+            p.footer-links__title Компания
+            ul.footer-links__list
+              each item in companyLinks
+                li
+                  a(href=item.href) !{item.name}
+          .footer-links
+            p.footer-links__title Наши возможности
+            ul.footer-links__list
+              each item in serviceLinks
+                li
+                  a(href=item.href) !{item.name}
+          .footer-links
+            p.footer-links__title Изготовление рекламы
+            ul.footer-links__list
+              each item in prodLinks
+                li
+                  a(href=item.href) !{item.name}
+          .footer__contacts.footer-links
+            p.footer-links__title Контакты
+            a(href="tel:+78314795464") +7 (83147) 9-54-64
+            a(href="mailto:info@art-md.ru") info@art-md.ru
+            .socials
+              a(href="#")
+                +icon("logo-vk", 32, 32)
+              a(href="#")
+                +icon("logo-instagram", 32, 32)
+    .footer__copyright
+      .container
+        p Данный сайт носит сугубо рекламно-информационный характер, и&nbsp;ни&nbsp;при каких условиях не&nbsp;является публичной офёртой, определяемой положением Статьи&nbsp;437&nbsp;(2) Гражданского кодекса РФ. Точную и&nbsp;окончательную информацию о&nbsp;стоимости услуг&nbsp;Вы можете получить, связавшись с&nbsp;нами.
+        .copyright
+          span Разработано
+          a(href="megacoder.ru") megacoder.ru
+

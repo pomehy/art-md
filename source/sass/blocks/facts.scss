@@ -1,0 +1,45 @@
+.facts {
+  padding: 36px 24px;
+  background-color: $color-snow;
+
+  border-radius: 8px;
+
+  box-shadow: 0 0 4px transparentize($color-default-black, 0.75);
+}
+
+.facts__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.facts__item {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.facts__title {
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  font-weight: 700;
+  font-family: $ff-second-font;
+  font-size: 32px;
+  line-height: 34px;
+}
+
+.facts__text {
+  margin-top: 0;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: transparentize($color-nero, 0.2);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

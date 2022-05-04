@@ -1,0 +1,29 @@
+mixin feedback()
+  section.page-section.page-section--orange.feedback
+    .container
+      .feedback__grid
+        .feedback__content
+          h2.page-section__title Мы&nbsp;поможем вам в&nbsp;этом необъятном мире&nbsp;рекламы!
+          p.page-section__description Заполните форму и наш менеджер свяжется с вами
+          a.feedback__phone(href="tel:+78314795464", aria-label="Позвонить в компанию") +7 (83147) 9-54-64
+          a.feedback__mail(href="mailto:info@art-md.ru", aria-label="Написать в компанию")
+            +icon("icon-mail", 24, 24)
+            span info@art-md.ru
+        .feedback__form(data-validate)
+          form(action="#")
+            +custom-input({
+              inputPlaceholder: "Имя*",
+              inputError: "Обязательное поле",
+              inputId: "feedback-name",
+              inputName: "feedback-name",
+            })(data-validate-type="text")
+            +custom-input({
+              inputPlaceholder: "Телефон*",
+              inputError: "Обязательное поле",
+              inputId: "feedback-phone",
+              inputName: "feedback-phone",
+            })(data-validate-type="phone")
+            button(type="submit").button.button--reverse Отправить заявку
+            .feedback__policy
+              p Нажимая кнопку «Отправить заявку» вы даёте согласие на #[a(href="#") обработку своих персональных данных]
+    +icon("logo", 280, 280).feedback__decor

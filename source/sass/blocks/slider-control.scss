@@ -1,0 +1,50 @@
+.slider-control {
+  display: flex;
+}
+
+.slider-control__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  margin-right: 12px;
+  padding: 0;
+
+  width: 56px;
+  height: 56px;
+
+  color: $color-dark-orange;
+
+  background-color: $color-transparent;
+  border: 2px solid $color-dark-orange;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: background-color $trans-default, color $trans-default;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  svg {
+    width: 44px;
+    height: 44px;
+    transform: scale(1);
+    transition: transform $trans-default;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      background-color: $color-dark-orange;
+      color: $color-default-white;
+    }
+
+    &:active {
+      svg {
+        transform: scale(1.25);
+      }
+    }
+  }
+}

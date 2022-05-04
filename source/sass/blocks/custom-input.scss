@@ -4,7 +4,8 @@
 
   display: flex;
   width: 500px;
-  padding: 20px 0;
+  padding-top: 0;
+  padding-bottom: 24px;
 
   label {
     display: flex;
@@ -15,21 +16,31 @@
     textarea {
       flex-grow: 1;
       min-height: 40px;
-      margin-left: 30px;
-      padding: 10px;
+      padding: 18px;
 
-      border: 2px solid rgba($color-default-black, 0.2);
-      border-radius: 5px;
+      font-family: $ff-second-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: $color-default-white;
+
+      background-color: transparentize($color-default-white, 0.8);
+      border: 2px solid rgba($color-default-white, 0.5);
+      border-radius: 4px;
       outline: none;
 
       transition: border $trans-default;
 
       &:hover {
-        border: 2px solid rgba($color-default-black, 0.5);
+        border: 2px solid $color-default-white;
       }
 
       &:focus {
-        border: 2px solid rgba($color-default-black, 0.8);
+        border: 2px solid rgba($color-default-white, 0.8);
+      }
+
+      &::placeholder {
+        color: $color-default-white;
       }
     }
   }
@@ -37,9 +48,9 @@
   &__error {
     position: absolute;
     right: 0;
-    bottom: -5px;
+    bottom: 1px;
 
-    color: $color-torch-red;
+    color: $color-nero;
 
     opacity: 0;
 
@@ -48,11 +59,15 @@
 
   &.is-invalid {
     input {
-      border: 2px solid $color-torch-red;
+      border: 2px solid $color-nero;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba($color-torch-red, 0.5);
+        border: 2px solid rgba($color-nero, 0.5);
+      }
+
+      &::placeholder {
+        color: $color-nero;
       }
     }
 

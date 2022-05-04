@@ -1,0 +1,58 @@
+-
+  const productionData = [
+    {
+      href: "#",
+      title: "Изготовление радиоролика",
+      text: [
+        "Радиоролики любой сложности",
+      ],
+      img: {
+        path: 'content/production',
+        image: 'production-radio',
+        format: 'jpg',
+        width: 555,
+        height: 340,
+        altText: 'Радиостудия',
+      },
+    },
+    {
+      href: "#",
+      title: "Изготовление видеоролика",
+      text: [
+        "Видеоролика любой сложности",
+      ],
+      img: {
+        path: 'content/production',
+        image: 'production-video',
+        format: 'jpg',
+        width: 555,
+        height: 340,
+        altText: 'Съемки видео',
+      },
+    },
+    {
+      href: "#",
+      title: "Продающий текст",
+      text: [
+        "Цепляющий рекламный текст",
+      ],
+      img: {
+        path: 'content/production',
+        image: 'production-text',
+        format: 'jpg',
+        width: 555,
+        height: 340,
+        altText: 'Копирайтер пишет текст',
+      },
+    },
+  ]
+
+mixin production()
+  section.page-section.page-section--snow.production
+    .container
+      .page-section__header
+        h2.page-section__title Изготовление рекламы
+        p.page-section__description Разработаем креативную продающую идею и воплотим её в жизнь
+      .page-section__body.production__grid
+        each item in productionData
+          +card-item(item).card-item--small

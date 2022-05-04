@@ -1,5 +1,53 @@
-.footer {
-  padding: 40px 0;
+.footer__content {
+  padding: 60px 0;
 
-  background-color: $color-neon-blue;
+  background-color: $color-nero;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content max-content;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.footer__logo {
+  display: flex;
+  color: $color-dark-orange;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin-bottom: 8px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .socials {
+    margin-top: 16px;
+  }
+}
+
+.footer__copyright {
+  padding: 12px 0;
+  background-color: $color-night-rider;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    max-width: 60%;
+
+    color: transparentize($color-default-white, 0.5);
+  }
 }

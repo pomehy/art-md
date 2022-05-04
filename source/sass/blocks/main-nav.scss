@@ -1,27 +1,150 @@
 .main-nav {
-  &__list {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
+  margin-right: auto;
+}
 
-    list-style: none;
+.main-nav__list {
+  display: flex;
+  margin: 0;
+  margin-right: 20px;
+  margin-left: 60px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__item {
+  position: relative;
+  margin-right: 32px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.main-nav__item--sublist {
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -8px;
+
+    border-top: 5px solid $color-default-white;
+    border-left: 5px solid $color-transparent;
+    border-right: 5px solid $color-transparent;
+
+    transition: transform $trans-default;
   }
 
-  &__item {
-    margin-right: 20px;
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      .main-nav__sublist {
+        display: flex;
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.main-nav__link {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  color: $color-default-white;
+  color: transparentize($color-default-white, 0.15);
+
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    color: transparentize($color-nero, 0.85);
+    transform: scale(0.5) rotate(45deg);
+    transition: opacity $trans-default, transform $trans-default;
   }
 
-  &__link {
-    color: $color-default-white;
+  &.is-active {
+    opacity: 0.6;
+  }
 
-    &.is-active {
-      opacity: 0.6;
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: $color-default-white;
+
+      svg {
+        opacity: 0.6;
+        transform: scale(0.9) rotate(0);
+      }
+    }
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__sublist {
+  position: absolute;
+  top: 160%;
+
+  display: none;
+  flex-direction: column;
+
+  padding: 12px 16px;
+
+  width: max-content;
+
+  list-style: none;
+
+  background-color: $color-snow;
+  border-radius: 2px;
+
+  box-shadow: 0 3px 10px transparentize($color-default-black, 0.85);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 40px;
+
+    background-color: $color-transparent;
+  }
+
+  li {
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
-  &__toggle {
-    display: none;
+  a {
+    display: flex;
+
+    font-size: 20px;
+    color: transparentize($color-nero, 0.15);
+    transition: color $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-dark-orange;
+      }
+    }
   }
 }

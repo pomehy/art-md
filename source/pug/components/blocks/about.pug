@@ -1,0 +1,66 @@
+-
+  const aboutFacts = [
+    {
+      title: "7 лет на рынке",
+      text: "Мы знаем, что важно вашему потребителю",
+    },
+    {
+      title: "2000+ проектов",
+      text: "Нам доверяют продвижение бизнеса",
+    },
+    {
+      title: "37 площадок рекламы",
+      text: "И это не предел",
+    },
+  ]
+
+-
+  const aboutFeatures = [
+    {
+      title: "Доверие",
+      text: "Мы честны с нашими партнерами и ответственно подходим к делу",
+      icon: "icon-trust",
+    },
+    {
+      title: "Доступность",
+      text: "Комплексное размещение по доступным ценам",
+      icon: "icon-accessibility",
+    },
+    {
+      title: "Профессионализм",
+      text: "Специалисты с опытом более 12 лет, которые любят свою работу",
+      icon: "icon-expertise",
+    },
+    {
+      title: "Эффективность",
+      text: "Комплексный подход позволяет добиться максимального результата",
+      icon: "icon-effect",
+    },
+  ]
+
+
+mixin about()
+  section.page-section.about
+    .container
+      .page-section__header
+        h2.page-section__title О нас
+        p.page-section__description Мы&nbsp;единственное агентство медийной рекламы в&nbsp;городе, которое имеет в&nbsp;своём арсенале разноплановые OFFLINE&nbsp;и&nbsp;ONLINE инструменты продвижения на&nbsp;локальном рынке Арзамаса! В&nbsp;наше время&nbsp;&mdash; невозможно эффективно развивать бизнес без присутствия в&nbsp;&laquo;оффлайне&raquo; и&nbsp;&laquo;онлайне&raquo;, поэтому мы&nbsp;взяли лучшее и&nbsp;объединили это внутри &laquo;Артмедиа&raquo;.
+        a.page-section__link(href="about.html") Подробнее
+      .page-section__body.about__grid
+        .about__facts
+          .facts
+            ul.facts__list
+              each itemFact in aboutFacts
+                li.facts__item
+                  p.facts__title !{itemFact.title}
+                  p.facts__text !{itemFact.text}
+          //- a.about__link(href="about.html") Подробнее о нас
+        .about__features.features
+          ul.features__list
+            each itemFeature in aboutFeatures
+              li.features__item
+                p.features__title !{itemFeature.title}
+                p.features__description !{itemFeature.text}
+                //- +icon(itemFeature.icon, 46, 46)
+
+

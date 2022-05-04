@@ -1,0 +1,52 @@
+-
+  const partnerCardData = [
+    {
+      title : "Банк Тинькофф",
+      icon: "logo-tinkoff",
+    },
+    {
+      title : "Магазин Пятерочка",
+      icon: "logo-five",
+    },
+    {
+      title : "ПАО «Арзамасский машиностроительный завод»",
+      icon: "logo-amz",
+    },
+    {
+      title : "Телеканал СТС",
+      icon: "logo-sts",
+    },
+    {
+      title : "Магазин Мвидео",
+      icon: "logo-mvideo",
+    },
+    {
+      title : "Развлекательный центр Омега",
+      icon: "logo-omega",
+    },
+  ]
+
+
+
+mixin partners()
+  section.page-section.partners(data-slider-partner-container)
+    .container
+      .page-section__header
+        h2.page-section__title Наши партнёры
+        p.page-section__description Мы имеем опыт работы с бизнесом в разных сферах и областях
+        .slider-control
+          button.slider-control__button(type="button", data-slider-control-prev)
+            +icon("icon-arrow-left", 16, 16)
+          button.slider-control__button(type="button", data-slider-control-next)
+            +icon("icon-arrow-right", 16, 16)
+      .page-section__body.partners__grid
+        .partners__slider.swiper(data-slider-partner)
+          .swiper-wrapper
+            each item in partnerCardData
+              article.partner-card.swiper-slide&attributes(attributes)
+                h3.visually-hidden !{item.title}
+                .partner-card__image-wrapper
+                  +icon(item.icon, 200, 200)
+          .slider-pagination(data-slider-pagination)
+        +button({text: "Посмотреть всех", href: "#"})(aria-label="Перейти на страницу Партнеры").page-section__button
+

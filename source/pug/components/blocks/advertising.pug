@@ -1,0 +1,94 @@
+-
+  const advertisingData = [
+    {
+      href: "#",
+      title: "Радиостанции",
+      text: [
+        "Лидирующие радиостанции по популярности в Арзамасе*",
+      ],
+      note: "*Согласно опросам проведённых в городских сообществах социальной сети Вконтакте",
+      img: {
+        path: 'content/advertising',
+        image: 'advertising-radio',
+        format: 'jpg',
+        width: 610,
+        height: 340,
+        altText: 'Радиостудия',
+      },
+    },
+    {
+      href: "#",
+      title: "Социальные сети",
+      text: [
+        "203 000+ совокупное количество подписчиков",
+        "137 000+ ежедневный охват аудитории*",
+      ],
+      note: "*Данные на основании совокупной статистики всех сообществ",
+      img: {
+        path: 'content/advertising',
+        image: 'advertising-social',
+        format: 'jpg',
+        width: 610,
+        height: 340,
+        altText: 'Социальная сеть',
+      },
+    },
+    {
+      href: "#",
+      title: "Мониторы",
+      text: [
+        "Охват 25 000+ посетителей в рабочий день*",
+      ],
+      note: "*Данные по посещаемости предоставлены ЦГБ г. Арзамас",
+      img: {
+        path: 'content/advertising',
+        image: 'advertising-monitor',
+        format: 'jpg',
+        width: 610,
+        height: 340,
+        altText: 'Рекламный монитор',
+      },
+    },
+    {
+      href: "#",
+      title: "Локальное радио",
+      text: [
+        "Охват 23 000+ посетителей ежедневно*",
+      ],
+      note: "*Данные предоставлены администрацией торговых и социальных объектов",
+      img: {
+        path: 'content/advertising',
+        image: 'advertising-radio-local',
+        format: 'jpg',
+        width: 610,
+        height: 340,
+        altText: 'Фото радио аппаратуры',
+      },
+    },
+    {
+      href: "#",
+      title: "LED Экран",
+      text: [
+        "Охват 12 000 - 14 000 человек ежедневно*",
+      ],
+      note: "*Данные основаны на базе автомобильного и пешего трафика с учётом близлежащих объектов скопления людей",
+      img: {
+        path: 'content/advertising',
+        image: 'advertising-led',
+        format: 'jpg',
+        width: 610,
+        height: 340,
+        altText: 'LED Экран на улице Калинина, г. Арзамас, ТЦ Павлин',
+      },
+    },
+  ]
+
+mixin advertising(data)
+  .page-section.advertising
+    .container
+      .page-section__header
+        h2.page-section__title Наши рекламные возможности
+        p.page-section__description Мы&nbsp;собрали в&nbsp;своём портфеле арсенал рекламных носителей, который позволяет решать эффективно задачи&nbsp;бизнеса по&nbsp;работе со&nbsp;своей аудиторией
+      .page-section__body.advertising__grid
+        each item in advertisingData
+          +card-item(item)

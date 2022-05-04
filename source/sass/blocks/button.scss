@@ -1,0 +1,61 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+
+  font-size: 20px;
+  line-height: 24px;
+  color: $color-default-white;
+  text-align: center;
+
+  background-color: $color-dark-orange;
+  border: none;
+  cursor: pointer;
+
+  border-radius: 2px;
+  transition: opacity $trans-default;
+
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.button--reverse {
+  background-color: $color-default-white;
+  color: $color-dark-orange;
+}
+
+.button--secondary {
+  padding: 10px 24px;
+  color: $color-dark-orange;
+
+  border: 2px solid $color-dark-orange;
+  background-color: $color-transparent;
+
+  transition: background-color $trans-default, color $trans-default, opacity $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      background-color: $color-dark-orange;
+      color: $color-default-white;
+    }
+  }
+}
+
+.button--small {
+  padding: 8px 24px;
+}

@@ -1,0 +1,47 @@
+.footer-links {
+  margin-left: auto;
+
+  a {
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-default-white;
+
+    transition: color $trans-default, opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-dark-orange;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.footer-links__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-family: $ff-second-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: $color-default-white;
+}
+
+.footer-links__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

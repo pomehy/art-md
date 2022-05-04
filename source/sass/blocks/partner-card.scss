@@ -1,0 +1,17 @@
+.partner-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 250px;
+  height: 250px;
+
+  border: 1px solid transparentize($color-default-black, 0.80);
+  border-radius: 4px;
+}
+
+.partner-card__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

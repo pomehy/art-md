@@ -1,0 +1,26 @@
+.partners {
+  .page-section__header {
+    position: relative;
+    max-width: 100%;
+  }
+
+  .page-section__title,
+  .page-section__description {
+    max-width: 55%;
+  }
+
+  .slider-control {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.partners__grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.partners__slider {
+  margin-left: 0;
+  margin-right: 0;
+}

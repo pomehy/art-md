@@ -124,24 +124,24 @@ block main
       section(id="modals")
         h2 Modals
         p
-          +btn({text: "modal-feedback"})(data-open-modal="feedback")
+          +button({text: "modal-feedback"})(data-open-modal="feedback")
         p
-          +btn({text: "modal-success"})(data-open-modal="success")
+          +button({text: "modal-success"})(data-open-modal="success")
 
       section(id="buttons")
         h2 Buttons
-        +btn({text: "Текст", href: "#"})
+        +button({text: "Текст", href: "#"})
         p Пример вызова
         code
-          pre +btn({text: "Текст", href: "#"})
-        +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+          pre +button({text: "Текст", href: "#"})
+        +button({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").button--red
         p Пример вызова
         code
-          pre +btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
-        +btn({text: "Текст"})(disabled)
+          pre +button({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").button--red
+        +button({text: "Текст"})(disabled)
         p Пример вызова
         code
-          pre +btn({text: "Текст"})(disabled)
+          pre +button({text: "Текст"})(disabled)
 
       section(id="form-elements")
         h2 Form elements
@@ -174,8 +174,8 @@ block main
             p Пример вызова
             code
               pre +custom-toggle({inputLabel: "Подтвердите своё согласие", inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox
-            +btn({text: "Сбросить форму", type: "reset"})
-            +btn({text: "Отправить форму", type: "submit"})
+            +button({text: "Сбросить форму", type: "reset"})
+            +button({text: "Отправить форму", type: "submit"})
 
   script
     include ../../js/inline/ui-kit.js

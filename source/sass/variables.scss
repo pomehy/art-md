@@ -12,7 +12,12 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
-
+$color-dark-orange:                 #FE8A00;
+$color-my-sin:                      #FFAE4D;
+$color-pumpkin:                     #F9710E;
+$color-nero:                        #1A1A1A;
+$color-snow:                        #F9F9F9;
+$color-night-rider:                 #333333;
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
@@ -26,7 +31,8 @@ $fz-default:                        16px;
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
-
+$ff-main-font:                      "FuturaBC", "Arial", sans-serif;
+$ff-second-font:                    "Gilroy", "Arial", sans-serif;
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
 
 // Animation
