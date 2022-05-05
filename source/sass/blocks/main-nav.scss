@@ -1,12 +1,13 @@
 .main-nav {
   margin-right: auto;
+  margin-left: auto;
 }
 
 .main-nav__list {
   display: flex;
   margin: 0;
   margin-right: 20px;
-  margin-left: 60px;
+  margin-left: 20px;
   padding: 0;
 
   list-style: none;
@@ -14,7 +15,7 @@
 
 .main-nav__item {
   position: relative;
-  margin-right: 32px;
+  margin-right: 40px;
 
   &:last-child {
     margin-right: 0;
@@ -62,7 +63,7 @@
 
   font-size: 20px;
   color: $color-default-white;
-  color: transparentize($color-default-white, 0.15);
+  // color: transparentize($color-default-white, 0.15);
 
   cursor: pointer;
 

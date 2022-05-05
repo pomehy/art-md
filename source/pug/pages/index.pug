@@ -4,13 +4,14 @@ block variables
   - const title = "Артмедиа - агентство медийной рекламы" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
-  - const headerMods = ""
+  - const headerMods = "header--transparent is-painted"
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 block main
   main
+    h1.visually-hidden Артмедиа - агентство медийной рекламы
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     +intro()

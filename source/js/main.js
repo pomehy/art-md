@@ -4,8 +4,9 @@ import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
 
 import {initParntersSlider} from './modules/sliders/init-partners-slider';
-
-
+import {initVideo} from './modules/init-video';
+import {initTypedText} from './modules/init-typed-text';
+import {initHeader} from './modules/init-header-control';
 
 // ---------------------------------
 
@@ -15,7 +16,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-
+  initParntersSlider();
+  initVideo();
+  initTypedText();
+  initHeader();
   // Modules
   // ---------------------------------
 
@@ -25,9 +29,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCustomSelect();
     initFormValidate();
-    initParntersSlider();
   });
 });
+
 
 // ---------------------------------
 

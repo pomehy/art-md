@@ -19,22 +19,22 @@
     {
       title: "Доверие",
       text: "Мы честны с нашими партнерами и ответственно подходим к делу",
-      icon: "icon-trust",
+      icon: "icon-trust-color",
     },
     {
       title: "Доступность",
       text: "Комплексное размещение по доступным ценам",
-      icon: "icon-accessibility",
+      icon: "icon-accessibility-color",
     },
     {
       title: "Профессионализм",
       text: "Специалисты с опытом более 12 лет, которые любят свою работу",
-      icon: "icon-expertise",
+      icon: "icon-expertise-color",
     },
     {
       title: "Эффективность",
       text: "Комплексный подход позволяет добиться максимального результата",
-      icon: "icon-effect",
+      icon: "icon-effect-color",
     },
   ]
 
@@ -61,6 +61,6 @@ mixin about()
               li.features__item
                 p.features__title !{itemFeature.title}
                 p.features__description !{itemFeature.text}
-                //- +icon(itemFeature.icon, 46, 46)
+                +icon(itemFeature.icon, 50, 50)
 
 

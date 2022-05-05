@@ -34,11 +34,12 @@
 }
 
 .footer__copyright {
-  padding: 12px 0;
+  padding: 8px 0;
   background-color: $color-night-rider;
 
   .container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -46,6 +47,8 @@
     margin-top: 0;
     margin-bottom: 0;
 
+    font-size: 14px;
+    line-height: 16px;
     max-width: 60%;
 
     color: transparentize($color-default-white, 0.5);

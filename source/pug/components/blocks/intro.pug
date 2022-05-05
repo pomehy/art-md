@@ -2,5 +2,18 @@ mixin intro()
   .intro
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    video.intro__video(width="1920", height="1080", preload="auto", autoplay, muted, playsinline, loop, pip="false", src="video/intro-video.mp4")
     .container
-
+      .intro__content
+        +icon("artmedia", 256, 24)
+        .intro__typing-text-wrapper
+          span.intro__typing-text(data-typing-text)
+          .visually-hidden(data-template-text)
+            span Реклама на радио
+            span Реклама на мониторах
+            span Реклама в общественных местах
+            span Маркетинг в социальных сетях
+        .intro__text Помогаем развивать бизнес
+        +button({text: "Обсудить проект"}).intro__button
+        a.intro__scroll(href="#scroll")
+          +icon("icon-scroll", 25, 58)
