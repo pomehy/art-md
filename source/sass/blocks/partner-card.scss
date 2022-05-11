@@ -8,6 +8,23 @@
 
   border: 1px solid transparentize($color-default-black, 0.80);
   border-radius: 4px;
+
+  @include vp-1919 {
+    height: 230px;
+  }
+
+  @include vp-1439 {
+    height: 210px;
+  }
+
+  @include vp-1279 {
+    height: 170px;
+
+    svg {
+      width: 150px;
+      height: 150px;
+    }
+  }
 }
 
 .partner-card__image-wrapper {

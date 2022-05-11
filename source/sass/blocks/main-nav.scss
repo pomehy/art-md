@@ -1,6 +1,10 @@
 .main-nav {
   margin-right: auto;
   margin-left: auto;
+
+  @include vp-1279 {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -19,6 +23,14 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include vp-1919 {
+    margin-right: 32px;
+  }
+
+  @include vp-1439 {
+    margin-right: 24px;
   }
 }
 
@@ -63,7 +75,6 @@
 
   font-size: 20px;
   color: $color-default-white;
-  // color: transparentize($color-default-white, 0.15);
 
   cursor: pointer;
 
@@ -91,10 +102,6 @@
       }
     }
   }
-}
-
-.main-nav__toggle {
-  display: none;
 }
 
 .main-nav__sublist {

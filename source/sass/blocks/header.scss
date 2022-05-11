@@ -16,11 +16,30 @@
 
   transition: background-color $trans-default;
 
+  @include vp-1439 {
+    padding: 20px 0;
+  }
+
   .container {
     display: flex;
     align-items: center;
     padding-right: 60px;
     padding-left: 60px;
+
+    @include vp-1919 {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+
+    @include vp-1439 {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+
+    @include vp-1279 {
+      padding-right: 28px;
+      padding-left: 28px;
+    }
   }
 }
 
@@ -38,6 +57,13 @@
     background-color: $color-dark-orange;
   }
 
+  .header__toggle {
+    &::before,
+    &::after {
+      background-color: $color-dark-orange;
+    }
+  }
+
   .main-nav__link {
     svg {
       color: transparentize($color-default-white, 0.65);
@@ -45,22 +71,46 @@
   }
 }
 
-.header__logo-wrapper {
-  width: 100%;
-  max-width: 30%;
-}
-
 .header__logo {
   display: flex;
   align-items: center;
   color: $color-default-white;
+
+  svg {
+    &:last-of-type {
+      margin-left: 20px;
+    }
+  }
+
+  @include vp-1919 {
+    svg {
+      &:last-of-type {
+        margin-left: 20px;
+        width: 178px;
+        height: 20px;
+      }
+    }
+  }
+
+  @include vp-1439 {
+    svg {
+      &:last-of-type {
+        margin-left: 12px;
+        width: 158px;
+        height: 18px;
+      }
+    }
+  }
 }
 
 .header__buttons {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
-  max-width: 30%;
+
+  @include vp-1279 {
+    margin-left: auto;
+    align-items: center;
+  }
 }
 
 .header__phone {
@@ -75,6 +125,34 @@
   border-radius: 2px;
 
   transition: background-color $trans-default, color $trans-default, opacity $trans-default;
+
+  @include vp-1439 {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-right: 12px;
+    padding-left: 12px;
+    font-size: 16px;
+
+    border: none;
+    background-color: $color-transparent;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+        color: $color-default-white;
+        background-color: $color-transparent;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  @include vp-1279 {
+    font-size: 18px;
+  }
 
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
@@ -93,4 +171,111 @@
   margin-left: 24px;
   background-color: $color-default-white;
   color: $color-dark-orange;
+
+  @include vp-1439 {
+    margin-left: 20px;
+  }
+
+  @include vp-1279 {
+    margin-left: 40px;
+  }
+}
+
+.header__toggle {
+  position: relative;
+  display: none;
+
+  padding: 0;
+
+  width: 32px;
+  height: 16px;
+
+  background-color: $color-transparent;
+  border-left: none;
+  border-right: none;
+
+  border-top: 8px solid $color-transparent;
+  border-bottom: 8px solid $color-transparent;
+  cursor: pointer;
+
+  box-sizing: content-box;
+
+  transition: opacity $trans-default;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 24px;
+    height: 4px;
+
+    border-radius: 2px;
+
+    background-color: $color-default-white;
+
+    // transition: right $trans-default, left $trans-default;
+    transition: all $trans-default;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      &::before {
+        left: 8px;
+      }
+
+      &::after {
+        right: 8px;
+      }
+
+      &.is-active {
+        &::before {
+          left: 4px;
+          top: 6px;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          right: 4px;
+          bottom: 6px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &.is-active {
+    &::before {
+      left: 4px;
+      top: 6px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      right: 4px;
+      bottom: 6px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @include vp-1279 {
+    display: block;
+    margin-left: 40px;
+  }
 }

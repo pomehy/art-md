@@ -47,4 +47,10 @@
       }
     }
   }
+
+  @include vp-1279 {
+    margin-right: 10px;
+    width: 48px;
+    height: 48px;
+  }
 }

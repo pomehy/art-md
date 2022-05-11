@@ -5,11 +5,12 @@ mixin feedback()
         .feedback__content
           h2.page-section__title Мы&nbsp;поможем вам в&nbsp;этом необъятном мире&nbsp;рекламы!
           p.page-section__description Заполните форму и наш менеджер свяжется с вами
-          a.feedback__phone(href="tel:+78314795464", aria-label="Позвонить в компанию") +7 (83147) 9-54-64
-          a.feedback__mail(href="mailto:info@art-md.ru", aria-label="Написать в компанию")
+          button(type="button", data-open-modal="feedback").button.button--reverse Заполнить форму
+          //- a.feedback__phone(href="tel:+78314795464", aria-label="Позвонить в компанию") +7 (83147) 9-54-64
+          //- a.feedback__mail(href="mailto:info@art-md.ru", aria-label="Написать в компанию")
             +icon("icon-mail", 24, 24)
             span info@art-md.ru
-        .feedback__form(data-validate)
+        //- .feedback__form
           form(action="#")
             +custom-input({
               inputPlaceholder: "Имя*",

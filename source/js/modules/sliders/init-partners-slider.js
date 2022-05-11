@@ -18,6 +18,7 @@ const initSwiper = (slider) => {
     loop: true,
     allowTouchMove: true,
     slidesPerView: 6,
+    slidesPerGroup: 3,
     spaceBetween: 40,
     navigation: {
       nextEl: nextButton,
@@ -28,6 +29,34 @@ const initSwiper = (slider) => {
       clickable: true,
       bulletClass: 'slider-pagination__button',
       bulletActiveClass: 'is-active',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 'auto',
+        spaceBetween: 12,
+        slidesPerGroup: 1,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 24,
+      },
+      1280: {
+        slidesPerView: 5,
+        spaceBetween: 32,
+      },
+      1440: {
+        slidesPerView: 5,
+        spaceBetween: 32,
+      },
+      1920: {
+        slidesPerView: 6,
+        spaceBetween: 32,
+        slidesPerGroup: 3,
+      },
     },
   });
 };
@@ -42,13 +71,4 @@ const initParntersSlider = () => {
 
 export {initParntersSlider};
 
-// breakpoints: {
-//   320: {
-//     slidesPerView: 'auto',
-//     spaceBetween: 10,
-//   },
-//   768: {
-//     slidesPerView: 'auto',
-//     spaceBetween: 20,
-//   },
-// },
+

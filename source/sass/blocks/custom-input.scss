@@ -3,7 +3,7 @@
   position: relative;
 
   display: flex;
-  width: 500px;
+  width: 100%;
   padding-top: 0;
   padding-bottom: 24px;
 
@@ -41,6 +41,10 @@
 
       &::placeholder {
         color: $color-default-white;
+      }
+
+      @include vp-1279 {
+        padding: 14px;
       }
     }
   }

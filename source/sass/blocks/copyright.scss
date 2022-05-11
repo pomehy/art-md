@@ -10,6 +10,11 @@
 
   color: transparentize($color-default-white, 0.5);
 
+  @include vp-1439 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   a {
     color: transparentize($color-default-white, 0.5);
     text-transform: uppercase;

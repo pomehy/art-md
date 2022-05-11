@@ -12,12 +12,20 @@
   opacity: 0.3;
 
   pointer-events: none;
+
+  @include vp-1279 {
+    left: -100px;
+  }
 }
 
 .feedback__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
+
+  @include vp-1279 {
+    gap: 60px;
+  }
 }
 
 .feedback__content {
@@ -26,6 +34,14 @@
   flex-direction: column;
   margin-left: auto;
   max-width: 85%;
+
+  @include vp-1919 {
+    max-width: 90%;
+  }
+
+  @include vp-1279 {
+    max-width: 100%;
+  }
 }
 
 .feedback__phone {
@@ -50,6 +66,12 @@
       opacity: 0.5;
     }
   }
+
+  @include vp-1279 {
+    margin-top: 48px;
+    font-size: 48px;
+    line-height: 56px;
+  }
 }
 
 .feedback__mail {
@@ -63,6 +85,10 @@
   color: $color-default-white;
 
   transition: opacity $trans-default;
+
+  @include vp-1279 {
+    margin-top: 24px;
+  }
 
   span {
     margin-left: 8px;
@@ -98,6 +124,12 @@
     font-weight: 700;
 
     border-radius: 4px;
+
+    @include vp-1279 {
+      margin-top: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
   }
 }
 

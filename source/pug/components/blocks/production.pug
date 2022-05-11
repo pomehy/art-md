@@ -53,6 +53,6 @@ mixin production()
       .page-section__header
         h2.page-section__title Изготовление рекламы
         p.page-section__description Разработаем креативную продающую идею и воплотим её в жизнь
-      .page-section__body.production__grid
+      .page-section__grid.page-section__grid--production
         each item in productionData
           +card-item(item).card-item--small

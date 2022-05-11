@@ -21,6 +21,10 @@
     pointer-events: none;
   }
 
+  @include vp-1439 {
+    font-size: 18px;
+  }
+
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {

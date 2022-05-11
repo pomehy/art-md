@@ -15,6 +15,19 @@
 
   transform: translateZ(0);
 
+  @include vp-1919 {
+    min-height: 360px;
+  }
+
+  @include vp-1439 {
+    padding: 28px;
+  }
+
+  @include vp-1279 {
+    padding: 24px;
+    min-height: 280px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -47,11 +60,18 @@
 
 .card-item--small {
   min-height: 340px;
+
+  @include vp-1919 {
+    min-height: 300px;
+  }
+
+  @include vp-1279 {
+    min-height: 240px;
+  }
 }
 
 .card-item__title {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   margin-top: 0;
@@ -64,9 +84,19 @@
 
   color: $color-default-white;
 
+  @include vp-1279 {
+    font-size: 24px;
+    line-height: 28px;
+
+    svg {
+      margin-top: 2px;
+    }
+  }
+
   svg {
-    margin-top: 4px;
+    margin-top: 6px;
     transition: color $trans-default;
+    flex-shrink: 0;
   }
 }
 
@@ -77,15 +107,38 @@
   font-size: 24px;
   color: $color-default-white;
 
+  @include vp-1439 {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @include vp-1279 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   &:last-of-type {
     margin-bottom: 0;
   }
 }
 
 .card-item__note {
+  position: relative;
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 10px;
+  font-size: 16px;
+  line-height: 18px;
   color: $color-default-white;
+  opacity: 0.7;
+
+  &::before {
+    content: "*";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .card-item__image-wrapper {

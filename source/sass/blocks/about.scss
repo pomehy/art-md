@@ -1,29 +1,5 @@
 .about {
   position: relative;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   z-index: 0;
-  //   top: 0;
-  //   left: 0;
-
-  //   width: 100%;
-  //   height: 100%;
-  //   background-image: url("../../img/content/team.jpg");
-  //   background-position: center 5%;
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  //   background-attachment: fixed;
-
-  //   opacity: 0.15;
-  // }
-}
-
-.about__grid {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  column-gap: 120px;
 }
 
 .about__facts {
@@ -41,4 +17,12 @@
   padding-left: 40px;
 
   max-width: 90%;
+
+  @include vp-1279 {
+    max-width: 100%;
+    padding-top: 32px;
+    padding-right: 0;
+    padding-bottom: 32px;
+    padding-left: 0;
+  }
 }

@@ -9,11 +9,26 @@
   grid-template-columns: max-content max-content max-content max-content max-content;
   justify-content: space-between;
   gap: 100px;
+
+  @include vp-1919 {
+    gap: 55px;
+  }
+
+  @include vp-1279 {
+    gap: 20px;
+  }
 }
 
 .footer__logo {
   display: flex;
   color: $color-dark-orange;
+
+  @include vp-1439 {
+    svg {
+      width: 200px;
+      height: 37px;
+    }
+  }
 }
 
 .footer__contacts {
@@ -52,5 +67,9 @@
     max-width: 60%;
 
     color: transparentize($color-default-white, 0.5);
+
+    @include vp-1439 {
+      max-width: 75%;
+    }
   }
 }

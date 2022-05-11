@@ -9,9 +9,34 @@
 
   overflow: hidden;
 
+  @include vp-1439 {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  @include vp-1279 {
+    padding-top: 36;
+    padding-bottom: 36px;
+  }
+
   .container {
     padding-left: 240px;
     padding-right: 240px;
+
+    @include vp-1919 {
+      padding-right: 180px;
+      padding-left: 180px;
+    }
+
+    @include vp-1439 {
+      padding-right: 140px;
+      padding-left: 140px;
+    }
+
+    @include vp-1279 {
+      padding-right: 100px;
+      padding-left: 100px;
+    }
   }
 
   &::before {
@@ -24,12 +49,24 @@
     width: 96px;
     height: 70px;
 
-    background-image: url("../../img/svg/decor-misson.svg");
+    background-image: url(".././img/svg/decor-misson.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 
     opacity: 0.3;
+
+    @include vp-1439 {
+      top: 50px;
+      right: 110px;
+    }
+
+    @include vp-1279 {
+      top: 60px;
+      right: 40px;
+      width: 70px;
+      height: 51px;
+    }
   }
 }
 
@@ -44,6 +81,20 @@
   font-size: 40px;
   line-height: 48px;
   color: $color-default-white;
+
+  @include vp-1919 {
+    max-width: 100%;
+  }
+
+  @include vp-1439 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  @include vp-1279 {
+    font-size: 32px;
+    line-height: 36px;
+  }
 }
 
 .mission__decor {
@@ -55,4 +106,9 @@
   opacity: 0.3;
 
   pointer-events: none;
+
+  @include vp-1279 {
+    top: 26px;
+    left: 20px;
+  }
 }

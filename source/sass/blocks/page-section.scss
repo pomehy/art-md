@@ -2,6 +2,11 @@
   padding-top: 108px;
   padding-bottom: 108px;
   background-color: $color-default-white;
+
+  @include vp-1439 {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
 }
 
 .page-section--snow {
@@ -27,6 +32,14 @@
   margin-bottom: 40px;
 
   max-width: 55%;
+
+  @include vp-1919 {
+    max-width: 70%;
+  }
+
+  @include vp-1279 {
+    max-width: 75%;
+  }
 }
 
 .page-section__title {
@@ -35,6 +48,11 @@
   font-family: $ff-second-font;
   font-size: 44px;
   line-height: 48px;
+
+  @include vp-1279 {
+    font-size: 40px;
+    line-height: 44px;
+  }
 }
 
 .page-section__description {
@@ -43,6 +61,51 @@
 
   font-size: 24px;
   line-height: 28px;
+
+  @include vp-1439 {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.page-section__grid {
+  display: grid;
+  gap: 40px;
+
+  @include vp-1919 {
+    gap: 32px;
+  }
+
+  @include vp-1279 {
+    gap: 24px;
+  }
+}
+
+.page-section__grid--about {
+  grid-template-columns: 300px 1fr;
+  column-gap: 120px;
+
+  @include vp-1439 {
+    gap: 60px;
+  }
+
+  @include vp-1279 {
+    grid-template-columns: 270px 1fr;
+    gap: 60px;
+  }
+}
+
+.page-section__grid--advertising {
+  grid-template-columns: 1fr 1fr;
+}
+
+.page-section__grid--production {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.page-section__grid--articles {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 
@@ -58,6 +121,11 @@
   color: $color-dark-orange;
 
   transition: opacity $trans-default;
+
+  @include vp-1439 {
+    font-size: 20px;
+    line-height: 24px;
+  }
 
   &::before {
     content: "";

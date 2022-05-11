@@ -45,21 +45,21 @@
         altText: 'Иллюстрация статьи',
       },
     },
-    {
-      href: "#",
-      title: "Почему реклама на радио по прежнему актуальна?",
-      text: "В современном мире владельцы бизнеса, равно как и специалисты по продвижению, сосредоточены в основном на онлайн-рекламе. Другие каналы взаимодействия с аудиторией, такие как радио, используются всё реже. Эффективна ли в наш век высоких технологий реклама на радио — вопрос спорный. Чтобы ответить на него, стоит подробнее рассмотреть ее особенности.",
-      date: "21.02.2020",
-      datetime: "2020-02-21",
-      img: {
-        path: 'content/articles',
-        image: 'articles-2',
-        format: 'jpg',
-        width: 555,
-        height: 300,
-        altText: 'Иллюстрация статьи',
-      },
-    },
+    //- {
+    //-   href: "#",
+    //-   title: "Почему реклама на радио по прежнему актуальна?",
+    //-   text: "В современном мире владельцы бизнеса, равно как и специалисты по продвижению, сосредоточены в основном на онлайн-рекламе. Другие каналы взаимодействия с аудиторией, такие как радио, используются всё реже. Эффективна ли в наш век высоких технологий реклама на радио — вопрос спорный. Чтобы ответить на него, стоит подробнее рассмотреть ее особенности.",
+    //-   date: "21.02.2020",
+    //-   datetime: "2020-02-21",
+    //-   img: {
+    //-     path: 'content/articles',
+    //-     image: 'articles-2',
+    //-     format: 'jpg',
+    //-     width: 555,
+    //-     height: 300,
+    //-     altText: 'Иллюстрация статьи',
+    //-   },
+    //- },
   ]
 
 mixin articles()
@@ -67,16 +67,16 @@ mixin articles()
     .container
       .page-section__header
         h2.page-section__title Полезное о рекламе
-        p.page-section__description О&nbsp;продвижении простыми словами. Делимся секретами, лайфхаками и&nbsp;полезной информацией, как стать заметнее для свой аудитории.
+        p.page-section__description О&nbsp;продвижении простыми словами. Делимся секретами, лайфхаками и&nbsp;полезной информацией, как стать заметнее для свой аудитории
         a.page-section__link(href="about.html") Все статьи
 
-      .page-section__body.articles__grid
+      .page-section__grid.page-section__grid--articles
         each item in articleCardsData
           article.article-card
             .article-card__image-wrapper
               +picture(item.img.path, item.img.image, item.img.format, item.img.width, item.img.height, item.img.altText)
             .article-card__content
               time.article-card__date(datetime=item.datetime) !{item.date}
-              .article-card__title !{item.title}
-              .article-card__text !{item.text}
-              +button({text: "Подробнее", href: item.href})(aria-label="Перейти к статье").article-card__button.button--secondary.button--small
+              h3.article-card__title !{item.title}
+              p.article-card__text !{item.text}
+            +button({text: "Подробнее", href: item.href})(aria-label="Перейти к статье").article-card__button.button--secondary.button--small
