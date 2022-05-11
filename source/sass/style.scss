@@ -42,7 +42,9 @@
 @import "blocks/footer-links";
 @import "blocks/copyright";
 @import "blocks/intro";
-@import "blocks/amoforms";
+
+@import "blocks/accordion/accordion.scss";
+@import "blocks/accordion/data-accordion.scss";
 
 // ---------------------------------
 

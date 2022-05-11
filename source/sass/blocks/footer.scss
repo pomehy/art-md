@@ -2,6 +2,11 @@
   padding: 60px 0;
 
   background-color: $color-nero;
+
+  @include vp-1023 {
+    padding-top: 28px;
+    padding-bottom: 12px;
+  }
 }
 
 .footer__grid {
@@ -17,6 +22,11 @@
   @include vp-1279 {
     gap: 20px;
   }
+
+  @include vp-1023 {
+    grid-template-columns: 100%;
+    gap: 0;
+  }
 }
 
 .footer__logo {
@@ -28,6 +38,10 @@
       width: 200px;
       height: 37px;
     }
+  }
+
+  @include vp-1023 {
+    display: none;
   }
 }
 

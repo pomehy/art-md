@@ -2,11 +2,14 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
+import {initAccordions} from './modules/accordion/init-accordion';
 
 import {initParntersSlider} from './modules/sliders/init-partners-slider';
 import {initVideo} from './modules/init-video';
 import {initTypedText} from './modules/init-typed-text';
-import {initHeader} from './modules/init-header-control';
+import HeaderNav from './modules/init-header-control';
+
+const pageHeader = new HeaderNav();
 
 // ---------------------------------
 
@@ -19,7 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
   initParntersSlider();
   initVideo();
   initTypedText();
-  initHeader();
+  pageHeader.init();
+  initAccordions();
+
   // Modules
   // ---------------------------------
 

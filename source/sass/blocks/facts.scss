@@ -4,7 +4,13 @@
 
   border-radius: 8px;
 
-  box-shadow: 0 0 4px transparentize($color-default-black, 0.75);
+  box-shadow: 0 0 4px transparentize($color-default-black, 0.80);
+
+  @include vp-1023 {
+    padding: 0;
+    background-color: $color-transparent;
+    box-shadow: none;
+  }
 }
 
 .facts__list {
@@ -12,6 +18,16 @@
   padding: 0;
 
   list-style: none;
+
+  @include vp-1023 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+
+  @include vp-767 {
+    gap: 20px;
+  }
 }
 
 .facts__item {
@@ -19,6 +35,30 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 0;
+    padding: 20px;
+
+    background-color: $color-snow;
+    border-radius: 4px;
+    box-shadow: 0 0 4px transparentize($color-default-black, 0.80);
+  }
+
+  @include vp-767 {
+    position: relative;
+    min-width: 218px;
+
+    &:last-child {
+      &::before {
+        content: "";
+        position: absolute;
+        right: -16px;
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
 }
 

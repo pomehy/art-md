@@ -1,6 +1,27 @@
 .footer-links {
   margin-left: auto;
 
+  @include vp-1023 {
+    margin: 0;
+
+    border-bottom: 1px solid transparentize($color-snow, 0.6);
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &.is-active {
+      .footer-links__title {
+        button {
+          &::after {
+            transform: rotate(180deg);
+            border-top: 5px solid $color-dark-orange;
+          }
+        }
+      }
+    }
+  }
+
   a {
     font-size: 20px;
     line-height: 24px;
@@ -36,16 +57,62 @@
   line-height: 28px;
   color: $color-default-white;
 
+  button {
+    padding: 0;
+    font-family: $ff-second-font;
+    font-weight: 700;
+    border: none;
+    background-color: $color-transparent;
+    color: $color-default-white;
+  }
+
   @include vp-1439 {
     font-size: 20px;
     line-height: 24px;
   }
+
+  @include vp-1023 {
+    display: flex;
+    margin-bottom: 0;
+    width: 100%;
+
+    button {
+      position: relative;
+
+      width: 100%;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      text-align: start;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 4px;
+
+        border-top: 5px solid $color-default-white;
+        border-left: 5px solid $color-transparent;
+        border-right: 5px solid $color-transparent;
+
+        transition: transform $trans-default, color $trans-default;
+      }
+    }
+  }
+}
+
+.footer-links__list-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-links__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include vp-1023 {
+    padding-bottom: 16px;
+  }
 
   li {
     margin-bottom: 8px;

@@ -1,29 +1,51 @@
-const header = document.querySelector('[data-header]');
 const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
-const defaultOffset = 100;
+export default class HeaderNav {
+  constructor() {
+    this.root = document.querySelector('[data-header]');
+    this.toggle = this.root.querySelector('[data-header-toggle]');
+    this.defaultOffset = 100;
 
-
-const paintHeader = () => {
-  const currentScroll = scrollPosition();
-
-  if (!header.classList.contains('is-painted')) {
-    return;
+    this._paintElement = this._paintElement.bind(this);
+    this._getCoord = this._getCoord.bind(this);
+    this._handlerActiveClass = this._handlerActiveClass.bind(this);
+    this._initActiveMenu = this._initActiveMenu.bind(this);
   }
 
-  if (currentScroll > defaultOffset) {
-    header.classList.remove('header--transparent');
-  } else if (currentScroll < defaultOffset) {
-    header.classList.add('header--transparent');
-  }
-};
-
-const initHeader = () => {
-  if (!header) {
-    return;
+  _getCoord(item) {
+    return item.getBoundingClientRect().top;
   }
 
-  window.addEventListener('scroll', paintHeader);
-};
+  _paintElement() {
+    const currentScroll = scrollPosition();
 
-export {initHeader};
+    if (!this.root.classList.contains('is-painted')) {
+      return;
+    }
+
+    if (currentScroll > this.defaultOffset) {
+      this.root.classList.remove('is-transparent');
+    } else if (currentScroll < this.defaultOffset) {
+      this.root.classList.add('is-transparent');
+    }
+  }
+
+  _handlerActiveClass(item) {
+    if (item.classList.contains('is-active')) {
+      item.classList.remove('is-active');
+    } else {
+      item.classList.add('is-active');
+    }
+  }
+
+  _initActiveMenu() {
+    this._handlerActiveClass(this.root);
+    this._handlerActiveClass(this.toggle);
+  }
+
+  init() {
+    this._paintElement();
+    this.toggle.addEventListener('click', this._initActiveMenu);
+    window.addEventListener('scroll', this._paintElement);
+  }
+}

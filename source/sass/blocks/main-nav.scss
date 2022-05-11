@@ -3,7 +3,9 @@
   margin-left: auto;
 
   @include vp-1279 {
+    position: absolute;
     display: none;
+    margin: 0;
   }
 }
 
@@ -32,6 +34,7 @@
   @include vp-1439 {
     margin-right: 24px;
   }
+
 }
 
 .main-nav__item--sublist {

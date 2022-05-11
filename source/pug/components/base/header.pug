@@ -66,7 +66,8 @@ mixin header(headerMods, currentUrl)
                   a.main-nav__link(href=link.href)=link.text
                     +icon("logo", 49, 49)
       .header__buttons
-        a.header__phone(href="tel:+78314795464", aria-label="Позвонить в компанию") +7 (83147) 9-54-64
+        a.header__phone(href="tel:+78314795464", aria-label="Позвонить в компанию") #[span +7 (83147) 9-54-64]
+          +icon("icon-phone", 24, 24)
         +button({text: "Получить предложение"}).header__button(data-open-modal="feedback")
-        button.header__toggle(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+        button.header__toggle(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-header-toggle)
 

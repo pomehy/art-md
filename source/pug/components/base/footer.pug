@@ -60,7 +60,7 @@
 
 mixin footer(footerMods)
   footer.footer(class=footerMods)
-    .footer__content
+    .footer__content(data-accordion="parent", data-destroy="(max-width: 1023px)")
       .container
         .footer__grid
           if(currentUrl === "index.html")
@@ -70,33 +70,37 @@ mixin footer(footerMods)
           else
             a.footer__logo(href="index.html", aria-label="Переход на главную")
               +icon("logo-full", 260, 48)
-          .footer-links
-            p.footer-links__title Компания
-            ul.footer-links__list
-              each item in companyLinks
-                li
-                  a(href=item.href) !{item.name}
-          .footer-links
-            p.footer-links__title Наши возможности
-            ul.footer-links__list
-              each item in serviceLinks
-                li
-                  a(href=item.href) !{item.name}
-          .footer-links
-            p.footer-links__title Изготовление рекламы
-            ul.footer-links__list
-              each item in prodLinks
-                li
-                  a(href=item.href) !{item.name}
-          .footer__contacts.footer-links
-            p.footer-links__title Контакты
-            a(href="tel:+78314795464") +7 (83147) 9-54-64
-            a(href="mailto:info@art-md.ru") info@art-md.ru
-            .socials
-              a(href="#")
-                +icon("logo-vk", 32, 32)
-              a(href="#")
-                +icon("logo-instagram", 32, 32)
+          .footer-links(data-accordion="element")
+            p.footer-links__title(data-accordion="button") #[button(type="button") Компания]
+            .footer-links__list-wrapper(data-accordion="content")
+              ul.footer-links__list
+                each item in companyLinks
+                  li
+                    a(href=item.href) !{item.name}
+          .footer-links(data-accordion="element")
+            p.footer-links__title(data-accordion="button") #[button(type="button") Наши возможности]
+            .footer-links__list-wrapper(data-accordion="content")
+              ul.footer-links__list
+                each item in serviceLinks
+                  li
+                    a(href=item.href) !{item.name}
+          .footer-links(data-accordion="element")
+            p.footer-links__title(data-accordion="button") #[button(type="button") Изготовление рекламы]
+            .footer-links__list-wrapper(data-accordion="content")
+              ul.footer-links__list
+                each item in prodLinks
+                  li
+                    a(href=item.href) !{item.name}
+          .footer__contacts.footer-links(data-accordion="element")
+            p.footer-links__title(data-accordion="button") #[button(type="button") Контакты]
+            .footer-links__list-wrapper(data-accordion="content")
+              a(href="tel:+78314795464") +7 (83147) 9-54-64
+              a(href="mailto:info@art-md.ru") info@art-md.ru
+              .socials
+                a(href="#")
+                  +icon("logo-vk", 32, 32)
+                a(href="#")
+                  +icon("logo-instagram", 32, 32)
     .footer__copyright
       .container
         p Данный сайт носит сугубо рекламно-информационный характер, и&nbsp;ни&nbsp;при каких условиях не&nbsp;является публичной офёртой, определяемой положением Статьи&nbsp;437&nbsp;(2) Гражданского кодекса РФ. Точную и&nbsp;окончательную информацию о&nbsp;стоимости услуг&nbsp;Вы можете получить, связавшись с&nbsp;нами.

@@ -4,7 +4,7 @@ block variables
   - const title = "Артмедиа - агентство медийной рекламы" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
-  - const headerMods = "header--transparent is-painted"
+  - const headerMods = "is-transparent is-painted"
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
@@ -17,10 +17,10 @@ block main
     +intro()
     +about()
     +mission()
-    +advertising()
-    +production()
-    +partners()
-    +articles()
+    //- +advertising()
+    //- +production()
+    //- +partners()
+    //- +articles()
     //- +feedback()
 block modals
   +modal("modal--feedback")(data-modal="feedback")

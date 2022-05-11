@@ -8,9 +8,6 @@
   padding: 24px 0;
 
   background-color: $color-dark-orange;
-  // background-image: linear-gradient(90deg, $color-pumpkin, $color-dark-orange 83.33%);
-  // background-image: linear-gradient(90deg, $color-dark-orange, $color-pumpkin 90%);
-
 
   box-shadow: 0 3px 4px transparentize($color-default-black, 0.85);
 
@@ -18,6 +15,14 @@
 
   @include vp-1439 {
     padding: 20px 0;
+  }
+
+  @include vp-1279 {
+    &.is-active {
+      .main-nav {
+        display: flex;
+      }
+    }
   }
 
   .container {
@@ -43,30 +48,33 @@
   }
 }
 
-.header--transparent {
-  background-color: $color-transparent;
-  background-image: none;
-  box-shadow: none;
+.header {
+  &.is-transparent {
+    background-color: $color-transparent;
+    background-image: none;
+    box-shadow: none;
 
-  .header__logo {
-    color: $color-dark-orange;
-  }
+    .header__logo {
+      color: $color-dark-orange;
+    }
 
-  .header__button {
-    color: $color-default-white;
-    background-color: $color-dark-orange;
-  }
-
-  .header__toggle {
-    &::before,
-    &::after {
+    .header__button {
+      color: $color-default-white;
       background-color: $color-dark-orange;
     }
-  }
 
-  .main-nav__link {
-    svg {
-      color: transparentize($color-default-white, 0.65);
+    .header__toggle {
+
+      &::before,
+      &::after {
+        background-color: $color-dark-orange;
+      }
+    }
+
+    .main-nav__link {
+      svg {
+        color: transparentize($color-default-white, 0.65);
+      }
     }
   }
 }
@@ -126,6 +134,10 @@
 
   transition: background-color $trans-default, color $trans-default, opacity $trans-default;
 
+  svg {
+    display: none;
+  }
+
   @include vp-1439 {
     padding-top: 13px;
     padding-bottom: 13px;
@@ -154,6 +166,20 @@
     font-size: 18px;
   }
 
+  @include vp-767 {
+    padding: 10px;
+    border: 2px solid $color-default-white;
+    border-radius: 2px;
+
+    span {
+      display: none;
+    }
+
+    svg {
+      display: block;
+    }
+  }
+
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
@@ -178,6 +204,10 @@
 
   @include vp-1279 {
     margin-left: 40px;
+  }
+
+  @include vp-1023 {
+    margin-left: 20px;
   }
 }
 
@@ -214,7 +244,6 @@
 
     background-color: $color-default-white;
 
-    // transition: right $trans-default, left $trans-default;
     transition: all $trans-default;
   }
 
