@@ -2,7 +2,24 @@
   display: flex;
   flex-direction: column;
 
+  @include vp-767 {
+    width: 224px;
+
+    &:last-of-type {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -16px;
+
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
 }
+
 .article-card__image-wrapper {
   margin-bottom: 24px;
 

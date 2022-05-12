@@ -110,6 +110,10 @@
   @include vp-1279 {
     gap: 24px;
   }
+
+  @include vp-767 {
+    gap: 20px;
+  }
 }
 
 .page-section__grid--about {
@@ -131,14 +135,36 @@
 
 .page-section__grid--advertising {
   grid-template-columns: 1fr 1fr;
+
+  @include vp-767 {
+    grid-template-columns: 100%;
+  }
 }
 
 .page-section__grid--production {
   grid-template-columns: 1fr 1fr 1fr;
+
+  @include vp-767 {
+    grid-template-columns: 100%;
+  }
 }
 
 .page-section__grid--articles {
   grid-template-columns: 1fr 1fr 1fr;
+
+  @include vp-767 {
+    padding-right: 16px;
+    padding-left: 16px;
+
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 

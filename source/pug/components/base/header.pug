@@ -47,27 +47,37 @@ mixin header(headerMods, currentUrl)
             +icon("artmedia", 219, 50)
       nav.main-nav
         .main-nav__wrapper
-          ul.main-nav__list
+          ul.main-nav__list(data-accordion="parent", data-destroy="(max-width: 1279px)")
             each link in headerLinks
               - const activeState = currentUrl === link.href
               if activeState
-                li.main-nav__item
+                li.main-nav__item(data-accordion="element")
                   span.main-nav__link.is-active=link.text
               if link.sublist
-                li.main-nav__item.main-nav__item--sublist
+                li.main-nav__item.main-nav__item--sublist(data-accordion="element")
                   a.main-nav__link(href=link.href)=link.text
                     +icon("logo", 49, 49)
-                  ul.main-nav__sublist
-                    each subItem in link.sublist
-                      li
-                        a(href=subItem.href) !{subItem.text}
+                  button.main-nav__item-toggle(type="button", aria-label="открыть меню услуги", data-accordion="button")
+                  .main-nav__sublist-wrapper(data-accordion="content")
+                    ul.main-nav__sublist
+                      each subItem in link.sublist
+                        li
+                          a(href=subItem.href) !{subItem.text}
               else
                 li.main-nav__item
                   a.main-nav__link(href=link.href)=link.text
                     +icon("logo", 49, 49)
+          a.header__phone(href="tel:+78314795464", aria-label="Позвонить в компанию") #[span +7 (83147) 9-54-64]
+          .socials
+            a(href="#")
+              +icon("logo-vk", 32, 32)
+            a(href="#")
+              +icon("logo-instagram", 32, 32)
+          +button({text: "Получить предложение"}).header__button(data-open-modal="feedback")
+
+        .main-nav__overlay(data-main-nav-overlay)
       .header__buttons
         a.header__phone(href="tel:+78314795464", aria-label="Позвонить в компанию") #[span +7 (83147) 9-54-64]
-          +icon("icon-phone", 24, 24)
         +button({text: "Получить предложение"}).header__button(data-open-modal="feedback")
         button.header__toggle(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-header-toggle)
 

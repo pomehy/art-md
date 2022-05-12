@@ -5,7 +5,7 @@ mixin intro()
     video.intro__video(width="1920", height="1080", preload="auto", autoplay, muted, playsinline, loop, pip="false", src="video/intro-video.mp4")
     .container
       .intro__content
-        +icon("artmedia", 331, 32)
+        +icon("artmedia", 331, 32).intro__logo-text
         .intro__typing-text-wrapper
           span.intro__typing-text(data-typing-text)
           .visually-hidden(data-template-text)

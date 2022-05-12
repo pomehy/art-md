@@ -1,0 +1,13 @@
+.articles {
+  @include vp-767 {
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .page-section__header {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+}

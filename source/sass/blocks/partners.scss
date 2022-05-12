@@ -7,12 +7,20 @@
   .page-section__title,
   .page-section__description {
     max-width: 55%;
+
+    @include vp-767 {
+      max-width: 100%;
+    }
   }
 
   .slider-control {
     position: absolute;
     top: 0;
     right: 0;
+
+    @include vp-767 {
+      display: none;
+    }
   }
 }
 .partners__grid {

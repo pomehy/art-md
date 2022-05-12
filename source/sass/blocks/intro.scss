@@ -25,14 +25,6 @@
     @include vp-1439 {
       align-items: center;
     }
-
-    @include vp-1023 {
-      min-height: 768px;
-    }
-
-    @include vp-767 {
-      min-height: 560px;
-    }
   }
 
   .intro__scroll {
@@ -87,7 +79,8 @@
   flex-direction: column;
   align-items: center;
   margin-top: 300px;
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
 
   z-index: 5;
 
@@ -110,11 +103,18 @@
   }
 
   @include vp-1023 {
-    width: 680px;
+    max-width: 680px;
   }
 
   @include vp-767 {
-    width: auto;
+    max-width: 100%;
+  }
+}
+
+.intro__logo-text {
+  @include vp-767 {
+    width: 260px;
+    height: 30px;
   }
 }
 
@@ -130,6 +130,18 @@
     font-size: 48px;
     line-height: 52px;
     text-transform: uppercase;
+
+    @include vp-1023 {
+      font-size: 40px;
+      line-height: 44px;
+      max-width: 700px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 36px;
+      max-width: 280px;
+    }
   }
 
   .typed-cursor {
@@ -145,6 +157,11 @@
   line-height: 32px;
   color: $color-dark-orange;
   opacity: 0.8;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 28px;
+  }
 }
 
 .intro__video {
@@ -159,7 +176,7 @@
   height: 100%;
   pointer-events: none;
 
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .intro__button {

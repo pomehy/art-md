@@ -19,8 +19,33 @@
 
   @include vp-1279 {
     &.is-active {
+      .header__logo {
+        color: $color-default-white;
+      }
+
       .main-nav {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+
+        &::before {
+          transform: translateX(0);
+        }
+      }
+
+      .main-nav__wrapper {
+        transform: translateX(0);
+      }
+
+      .main-nav__overlay {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include vp-767 {
+    &.is-active {
+      .header__button {
+        background-color: $color-default-white;
       }
     }
   }
@@ -45,6 +70,10 @@
       padding-right: 28px;
       padding-left: 28px;
     }
+
+    @include vp-1023 {
+      padding: 0 24px;
+    }
   }
 }
 
@@ -64,7 +93,6 @@
     }
 
     .header__toggle {
-
       &::before,
       &::after {
         background-color: $color-dark-orange;
@@ -83,6 +111,8 @@
   display: flex;
   align-items: center;
   color: $color-default-white;
+
+  transition: color $trans-default;
 
   svg {
     &:last-of-type {
@@ -108,6 +138,25 @@
         height: 18px;
       }
     }
+  }
+
+  @include vp-1279 {
+    position: relative;
+    z-index: 11;
+  }
+
+  @include vp-767 {
+    // svg {
+    //   &:first-of-type {
+    //     width: 40px;
+    //     height: 40px;
+    //   }
+
+    //   &:last-of-type {
+    //     width: 122px;
+    //     height: 14px;
+    //   }
+    // }
   }
 }
 
@@ -167,16 +216,10 @@
   }
 
   @include vp-767 {
-    padding: 10px;
-    border: 2px solid $color-default-white;
-    border-radius: 2px;
+    display: none;
 
     span {
       display: none;
-    }
-
-    svg {
-      display: block;
     }
   }
 
@@ -209,10 +252,15 @@
   @include vp-1023 {
     margin-left: 20px;
   }
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .header__toggle {
   position: relative;
+  z-index: 10;
   display: none;
 
   padding: 0;
