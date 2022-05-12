@@ -6,7 +6,7 @@ const scrollPosition = () => window.pageYOffset || document.documentElement.scro
 export default class HeaderNav {
   constructor() {
     this._scrollLock = new ScrollLock();
-    this.defaultOffset = 100;
+    this.defaultOffset = 30;
 
     this.root = document.querySelector('[data-header]');
     this.toggle = this.root.querySelector('[data-header-toggle]');

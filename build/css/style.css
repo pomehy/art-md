@@ -3549,7 +3549,6 @@ button,
   font-size: 24px;
   line-height: 32px;
   color: #FE8A00;
-  opacity: 0.8;
 }
 
 .intro__video {
@@ -4092,7 +4091,7 @@ button,
   .main-nav::before {
     content: "";
     position: absolute;
-    width: 290px;
+    width: 320px;
     height: 90px;
     top: 0;
     left: 0;
@@ -4172,10 +4171,6 @@ button,
   .main-nav__item {
     margin-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .main-nav__item:first-of-type {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .main-nav__item.is-active .main-nav__item-toggle {
@@ -4286,6 +4281,11 @@ button,
 
   .header.is-active .header__logo {
     color: #ffffff;
+  }
+
+  .header.is-active .header__toggle::before,
+  .header.is-active .header__toggle::after {
+    background-color: #ffffff;
   }
 
   .header.is-active .main-nav {
@@ -4589,6 +4589,11 @@ button,
     width: 560px;
   }
 
+  .header.is-active .header__button {
+    background-color: #ffffff;
+    color: #FE8A00;
+  }
+
   .header .container {
     padding: 0 24px;
   }
@@ -4681,6 +4686,11 @@ button,
     margin-top: 28px;
   }
 
+  .partners .page-section__title,
+  .partners .page-section__description {
+    max-width: 75%;
+  }
+
   .footer-links {
     margin: 0;
     border-bottom: 1px solid rgba(249, 249, 249, 0.4);
@@ -4752,6 +4762,18 @@ button,
     padding: 0 16px;
   }
 
+  .main-nav {
+    max-width: 100%;
+  }
+
+  .main-nav::before {
+    width: 100%;
+  }
+
+  .main-nav__wrapper {
+    max-width: 100%;
+  }
+
   .footer__copyright .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4787,10 +4809,6 @@ button,
     width: 100%;
   }
 
-  .header.is-active .header__button {
-    background-color: #ffffff;
-  }
-
   .header__phone {
     display: none;
   }
@@ -4801,6 +4819,10 @@ button,
 
   .header__button {
     display: none;
+  }
+
+  .header__toggle {
+    margin-left: 24px;
   }
 
   .page-section {
@@ -5021,6 +5043,22 @@ button,
   .articles .page-section__header {
     padding-right: 16px;
     padding-left: 16px;
+  }
+}
+
+@media (max-width: 374px) {
+  .header__logo svg:first-of-type {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__logo svg:last-of-type {
+    width: 122px;
+    height: 14px;
+  }
+
+  .intro__logo-text {
+    display: none;
   }
 }
 

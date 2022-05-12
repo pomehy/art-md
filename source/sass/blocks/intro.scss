@@ -116,6 +116,10 @@
     width: 260px;
     height: 30px;
   }
+
+  @include vp-374 {
+    display: none;
+  }
 }
 
 .intro__typing-text-wrapper {
@@ -156,7 +160,6 @@
   font-size: 24px;
   line-height: 32px;
   color: $color-dark-orange;
-  opacity: 0.8;
 
   @include vp-767 {
     font-size: 22px;

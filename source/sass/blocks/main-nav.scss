@@ -24,7 +24,7 @@
     &::before {
       content: "";
       position: absolute;
-      width: 290px;
+      width: 320px;
       height: 90px;
       top: 0;
       left: 0;
@@ -80,6 +80,14 @@
       margin-bottom: 20px;
     }
   }
+
+  @include vp-767 {
+    max-width: 100%;
+
+    &::before {
+      width: 100%;
+    }
+  }
 }
 
 .main-nav__wrapper {
@@ -106,6 +114,10 @@
     transition: transform $trans-default;
 
     overflow-y: auto;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
   }
 }
 
@@ -159,10 +171,6 @@
   @include vp-1279 {
     margin-right: 0;
     border-bottom: 1px solid transparentize($color-default-white, 0.8);
-
-    &:first-of-type {
-      border-top: 1px solid transparentize($color-default-white, 0.8);
-    }
 
     &.is-active {
       .main-nav__item-toggle {

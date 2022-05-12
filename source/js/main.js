@@ -13,20 +13,21 @@ const pageHeader = new HeaderNav();
 
 // ---------------------------------
 
+
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
 
   iosVhFix();
-  initParntersSlider();
-  initVideo();
-  initTypedText();
-  pageHeader.init();
   initAccordions();
+  initVideo();
 
   // Modules
   // ---------------------------------
+  initParntersSlider();
+  initTypedText();
+  pageHeader.init();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

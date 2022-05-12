@@ -23,6 +23,13 @@
         color: $color-default-white;
       }
 
+      .header__toggle {
+        &::before,
+        &::after {
+          background-color: $color-default-white;
+        }
+      }
+
       .main-nav {
         opacity: 1;
         visibility: visible;
@@ -42,10 +49,11 @@
     }
   }
 
-  @include vp-767 {
+  @include vp-1023 {
     &.is-active {
       .header__button {
         background-color: $color-default-white;
+        color: $color-dark-orange;
       }
     }
   }
@@ -145,18 +153,18 @@
     z-index: 11;
   }
 
-  @include vp-767 {
-    // svg {
-    //   &:first-of-type {
-    //     width: 40px;
-    //     height: 40px;
-    //   }
+  @include vp-374 {
+    svg {
+      &:first-of-type {
+        width: 40px;
+        height: 40px;
+      }
 
-    //   &:last-of-type {
-    //     width: 122px;
-    //     height: 14px;
-    //   }
-    // }
+      &:last-of-type {
+        width: 122px;
+        height: 14px;
+      }
+    }
   }
 }
 
@@ -354,5 +362,9 @@
   @include vp-1279 {
     display: block;
     margin-left: 40px;
+  }
+
+  @include vp-767 {
+    margin-left: 24px;
   }
 }
