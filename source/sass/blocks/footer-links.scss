@@ -6,6 +6,10 @@
 
     border-bottom: 1px solid transparentize($color-snow, 0.6);
 
+    .footer-links__title {
+      margin-bottom: 0;
+    }
+
     &:last-of-type {
       border-bottom: none;
     }

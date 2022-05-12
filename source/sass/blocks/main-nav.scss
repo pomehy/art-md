@@ -83,6 +83,7 @@
 
   @include vp-767 {
     max-width: 100%;
+    width: 100%;
 
     &::before {
       width: 100%;
