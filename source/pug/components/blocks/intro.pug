@@ -1,19 +1,20 @@
 mixin intro()
-  .intro
+  .intro.is-show(data-animation-group)
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
     video.intro__video(width="1920" height="1080" preload="auto" autoplay muted playsinline loop pip="false" src="video/intro-video.mp4")
     .container
-      .intro__content
+      .intro__content.fi.d-400
         +icon("artmedia", 331, 32).intro__logo-text
+        .intro__text агентство медийной рекламы
         .intro__typing-text-wrapper
           span.intro__typing-text(data-typing-text)
           .visually-hidden(data-template-text)
             span Реклама на радио
+            span Реклама в социальных сетях
+            span Реклама на LED экранах
             span Реклама на мониторах
-            span Реклама в общественных местах
-            span Маркетинг в социальных сетях
-        .intro__text &laquo;Агентство медийной рекламы&raquo;
+            span Изготовление рекламных роликов
         +button({text: "Обсудить проект"}).intro__button(data-open-modal="feedback")
-        a.intro__scroll(href="#scroll")
+        a.intro__scroll(href="#scroll", data-link-trigger)
           +icon("icon-scroll", 25, 58)

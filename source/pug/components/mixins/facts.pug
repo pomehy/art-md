@@ -1,0 +1,8 @@
+mixin facts()
+  .facts&attributes(attributes)
+    ul.facts__list
+      each itemFact, index in aboutFacts
+        - const delay = 'd-'+ (index + 1) * 200
+        li.facts__item.fit(class=delay)
+          p.facts__title !{itemFact.title}
+          p.facts__text !{itemFact.text}

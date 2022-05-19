@@ -1,0 +1,9 @@
+.page-content {
+  .page-section__header {
+    max-width: 80%;
+
+    @include vp-1279 {
+      max-width: 100%;
+    }
+  }
+}

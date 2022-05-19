@@ -11,6 +11,8 @@
 @import "variables";
 @import "mixins";
 @import "functions";
+@import "keyframes";
+
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
@@ -45,6 +47,14 @@
 @import "blocks/production";
 @import "blocks/articles";
 @import "blocks/socials";
+@import "blocks/page-intro";
+@import "blocks/breadcrumbs";
+@import "blocks/value";
+@import "blocks/quote";
+@import "blocks/gratitude";
+@import "blocks/gratitude-slider";
+@import "blocks/page-content";
+@import "blocks/team";
 
 @import "blocks/accordion/accordion.scss";
 @import "blocks/accordion/data-accordion.scss";

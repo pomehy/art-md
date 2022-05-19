@@ -154,7 +154,7 @@
 }
 
 .intro__text {
-  margin-top: 28px;
+  margin-top: 4px;
   margin-bottom: 0;
 
   font-size: 24px;
@@ -164,6 +164,10 @@
   @include vp-767 {
     font-size: 22px;
     line-height: 28px;
+  }
+
+  @include vp-374 {
+    display: none;
   }
 }
 

@@ -59,7 +59,7 @@
   ]
 
 mixin footer(footerMods)
-  footer.footer(class=footerMods)
+  footer.footer(class=footerMods, data-footer)
     .footer__content(data-accordion="parent", data-destroy="(max-width: 1023px)")
       .container
         .footer__grid
@@ -98,9 +98,9 @@ mixin footer(footerMods)
               a(href="tel:+78314795464") +7 (83147) 9-54-64
               a(href="mailto:info@art-md.ru") info@art-md.ru
               .socials
-                a(href="#")
+                a(href="https://vk.com/artmedia_arz", rel="nofollow noopener", target="_blank")
                   +icon("logo-vk", 32, 32)
-                a(href="#")
+                a(href="https://www.instagram.com/artmedia_arz", rel="nofollow noopener", target="_blank")
                   +icon("logo-instagram", 32, 32)
     .footer__copyright
       .container

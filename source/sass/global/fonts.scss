@@ -6,8 +6,20 @@
 
   font-display: swap;
   src:
-    url("../fonts/Futurabc.woff2") format("woff2"),
-    url("../fonts/Futurabc.woff") format("woff");
+    url("../fonts/futurabc.woff2") format("woff2"),
+    url("../fonts/futurabc.woff") format("woff");
+}
+
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "FuturaBT";
+
+  font-display: swap;
+  src:
+    url("../fonts/futurabt-book.woff2") format("woff2"),
+    url("../fonts/futurabt-book.woff") format("woff");
 }
 
 @font-face {

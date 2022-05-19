@@ -5,11 +5,23 @@ import {initFormValidate} from './modules/form/init-form-validate';
 import {initAccordions} from './modules/accordion/init-accordion';
 
 import {initParntersSlider} from './modules/sliders/init-partners-slider';
+import {initGratitudesSlider} from './modules/sliders/init-gratitudes-slider';
 import {initVideo} from './modules/init-video';
 import {initTypedText} from './modules/init-typed-text';
+import {initMoveTo} from './modules/init-move-to';
 import HeaderNav from './modules/init-header-control';
+import Animation from './modules/init-animation';
 
-const pageHeader = new HeaderNav();
+const initHeader = () => {
+  const pageHeader = new HeaderNav();
+  pageHeader.init();
+};
+
+const iniAnimate = () => {
+  const animate = new Animation();
+  animate.init();
+};
+//
 
 // ---------------------------------
 
@@ -20,14 +32,16 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-  initAccordions();
   initVideo();
 
   // Modules
   // ---------------------------------
-  initParntersSlider();
   initTypedText();
-  pageHeader.init();
+  initHeader();
+  iniAnimate();
+  initMoveTo();
+  initAccordions();
+
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -35,6 +49,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCustomSelect();
     initFormValidate();
+    initGratitudesSlider();
+    initParntersSlider();
   });
 });
 

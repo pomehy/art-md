@@ -1,4 +1,5 @@
 import {Accordions} from './accordions';
+
 let accordions;
 
 const initAccordions = () => {

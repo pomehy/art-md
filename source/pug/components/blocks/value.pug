@@ -1,0 +1,20 @@
+-
+  const valueData = [
+    "Ответственность",
+    "Честность",
+    "Увлеченность",
+    "Профессионализм",
+    "Желание быть полезными",
+    "Эффективность",
+  ]
+
+mixin value()
+  section.page-section(data-animation-group)
+    .container
+      .page-section__header.fit.d-300
+        h2.page-section__title Ценности объединяющие нас:
+      .page-section__grid.fit.d-300
+        ul.value
+          each item in valueData
+            li.value__item !{item}
+              +icon("icon-arrow-right", 20, 20)

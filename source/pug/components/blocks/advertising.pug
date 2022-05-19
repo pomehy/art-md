@@ -84,11 +84,11 @@
   ]
 
 mixin advertising(data)
-  .page-section.advertising
+  .page-section.advertising(data-animation-group)
     .container
-      .page-section__header
+      .page-section__header.fit.d-200
         h2.page-section__title Наши рекламные возможности
         p.page-section__description Мы&nbsp;собрали в&nbsp;своём портфеле арсенал рекламных носителей, который позволяет решать эффективно задачи&nbsp;бизнеса по&nbsp;работе со&nbsp;своей аудиторией
-      .page-section__grid.page-section__grid--advertising
+      .page-section__grid.page-section__grid--advertising.fit.d-300
         each item in advertisingData
           +card-item(item)

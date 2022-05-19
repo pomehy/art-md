@@ -20,6 +20,9 @@ const initSwiper = (slider) => {
     slidesPerView: 6,
     slidesPerGroup: 3,
     spaceBetween: 40,
+    autoplay: {
+      delay: 4000,
+    },
     navigation: {
       nextEl: nextButton,
       prevEl: prevButton,

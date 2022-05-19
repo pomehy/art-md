@@ -1,0 +1,34 @@
+-
+  const aboutData = {
+    img: {
+      path: 'content/about',
+      image: 'about-intro',
+      format: 'jpg',
+      width: 1920,
+      height: 1280,
+      altText: 'Фото компанды',
+    },
+    breadcrumbs: [
+      {
+        href: "index.html",
+        text: "Главная",
+      },
+      {
+        href: "about-company.html",
+        text: "О компании",
+      },
+    ],
+  }
+
+mixin page-intro(data)
+  .page-intro(data-animation-group).is-show
+    .page-intro__image-wrapper.fi.d-200
+      +picture(data.img.path, data.img.image, data.img.format, data.img.width, data.img.height, data.img.altText)
+    .container
+      ul.breadcrumbs
+        each item in data.breadcrumbs
+          li.breadcrumbs__item
+            if item.href === currentUrl
+              span !{item.text}
+            else
+              a(href=item.href) !{item.text}

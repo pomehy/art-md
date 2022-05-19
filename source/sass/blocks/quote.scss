@@ -1,0 +1,45 @@
+.quote {
+  overflow: hidden;
+}
+
+.quote__text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  max-width: 980px;
+
+  font-family: $ff-second-font;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 56px;
+  text-align: center;
+
+  @include vp-1279 {
+    max-width: 700px;
+
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.quote-text__decor {
+  position: absolute;
+  top: -10%;
+  right: -80px;
+
+  color: transparentize($color-dark-orange, 0.7);
+
+  @include vp-1023 {
+    display: none;
+  }
+}

@@ -13,6 +13,19 @@
   }
 }
 
+.facts--transparent {
+  background-color: $color-transparent;
+  box-shadow: none;
+
+  display: flex;
+  align-items: center;
+
+  @include vp-1279 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 .facts__list {
   margin: 0;
   padding: 0;

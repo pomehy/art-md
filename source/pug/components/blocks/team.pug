@@ -1,0 +1,12 @@
+mixin team()
+  section.page-section.page-section--snow.team(data-animation-group)
+    .container
+      .page-section__header.fit.d-300
+        h2.page-section__title Наша команда
+        .page-section__description
+          p АМР "Артмедиа" – это команда единомышленников, которая готова в любой момент прийти к вам на помощь в этом необъятном мире рекламы. Совокупный опыт сотрудников агентства в рекламной сфере, позволяет решать задачи партнёров любой сложности
+      .page-section__grid.page-section__grid--team
+        .page-section__image-wrapper.fit.d-600
+          +picture("content/about", "about-1", "jpg", 1132, 660, "Фото команды")
+        +facts().facts--transparent.team__facts
+        +icon("logo", 383, 383).team__decor.fit.d-800

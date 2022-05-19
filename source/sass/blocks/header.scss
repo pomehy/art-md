@@ -119,10 +119,29 @@
   display: flex;
   align-items: center;
   color: $color-default-white;
+  transform: translateZ(0);
 
   transition: color $trans-default;
 
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      svg {
+        &:first-of-type {
+          transform: rotate(10deg);
+        }
+
+        &:last-of-type {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
   svg {
+    transition: opacity $trans-default, transform $trans-default;
+    transform: translateZ(0);
+
     &:last-of-type {
       margin-left: 20px;
     }

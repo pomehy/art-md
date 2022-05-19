@@ -15,6 +15,10 @@ const initTypedText = () => {
   };
 
   // eslint-disable-next-line no-unused-vars
+  if (!typedEl && !typedText) {
+    return;
+  }
+
   const typed = new Typed(typedEl, options);
 };
 
