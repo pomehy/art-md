@@ -1,8 +1,8 @@
 -
   const companyLinks = [
     {
-      href: "#",
-      name: "О нас",
+      href: "about-company.html",
+      name: "О компании",
     },
     {
       href: "#",
@@ -76,7 +76,10 @@ mixin footer(footerMods)
               ul.footer-links__list
                 each item in companyLinks
                   li
-                    a(href=item.href) !{item.name}
+                    if item.href === currentUrl
+                      span !{item.name}
+                    else
+                      a(href=item.href) !{item.name}
           .footer-links(data-accordion="element")
             p.footer-links__title(data-accordion="button") #[button(type="button") Наши возможности]
             .footer-links__list-wrapper(data-accordion="content")

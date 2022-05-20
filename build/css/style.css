@@ -3682,7 +3682,8 @@ button,
   margin-left: auto;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links span {
   font-size: 20px;
   line-height: 24px;
   color: #ffffff;
@@ -4063,7 +4064,7 @@ button,
   text-align: center;
 }
 
-.quote-text__decor {
+.quote__decor {
   position: absolute;
   top: -10%;
   right: -80px;
@@ -4611,7 +4612,8 @@ button,
     height: 210px;
   }
 
-  .footer-links a {
+  .footer-links a,
+  .footer-links span {
     font-size: 18px;
     line-height: 22px;
   }
@@ -5394,7 +5396,7 @@ button,
     grid-template-columns: 1fr 1fr;
   }
 
-  .quote-text__decor {
+  .quote__decor {
     display: none;
   }
 
