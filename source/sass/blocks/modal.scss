@@ -154,6 +154,10 @@
 }
 
 .modal--feedback {
+  .modal__description {
+    margin-bottom: 0;
+  }
+
   .modal__content {
     @include vp-1919 {
       width: 700px;

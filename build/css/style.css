@@ -1946,7 +1946,23 @@ button,
 }
 
 .main-nav__link.is-active {
-  opacity: 0.8;
+  position: relative;
+}
+
+.main-nav__link.is-active::before {
+  content: "";
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  border-radius: 10%;
+  background-color: #ffffff;
 }
 
 .main-nav__link[href] {
@@ -2210,6 +2226,10 @@ button,
 
 .modal__description:first-of-type {
   margin-bottom: -20px;
+}
+
+.modal--feedback .modal__description {
+  margin-bottom: 0;
 }
 
 .header {
@@ -4192,6 +4212,19 @@ button,
   pointer-events: none;
 }
 
+.form__policy {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.form__policy a {
+  text-decoration: underline;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
 .accordion {
   max-width: 500px;
   margin: 0 auto 150px auto;
@@ -4390,15 +4423,15 @@ button,
     opacity: 0.5;
   }
 
-  .header__logo:hover svg:first-of-type,
-  .header__logo:focus svg:first-of-type {
+  .header__logo[href]:hover svg:first-of-type,
+  .header__logo[href]:focus svg:first-of-type {
     -webkit-transform: rotate(10deg);
     -ms-transform: rotate(10deg);
     transform: rotate(10deg);
   }
 
-  .header__logo:hover svg:last-of-type,
-  .header__logo:focus svg:last-of-type {
+  .header__logo[href]:hover svg:last-of-type,
+  .header__logo[href]:focus svg:last-of-type {
     opacity: 0.8;
   }
 
@@ -4558,6 +4591,15 @@ button,
   }
 
   .breadcrumbs__item a:active {
+    opacity: 0.5;
+  }
+
+  .form__policy a:hover,
+  .form__policy a:focus {
+    opacity: 0.8;
+  }
+
+  .form__policy a:active {
     opacity: 0.5;
   }
 }
@@ -5003,6 +5045,14 @@ button,
     display: none;
   }
 
+  .main-nav__link.is-active::before {
+    display: none;
+  }
+
+  .main-nav__link.is-active {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
   .main-nav__sublist {
     position: static;
     display: -webkit-box;
@@ -5344,10 +5394,6 @@ button,
   .main-nav__link {
     padding-right: 24px;
     padding-left: 24px;
-  }
-
-  .main-nav__link.is-active {
-    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .main-nav__sublist {

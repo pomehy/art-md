@@ -1,0 +1,21 @@
+.form__policy {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+
+  a {
+    text-decoration: underline;
+    transition: opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+}
