@@ -26,13 +26,14 @@
       display: none;
     }
   }
-}
-.partners__grid {
-  display: flex;
-  flex-direction: column;
+
+  .swiper {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
-.partners__slider {
-  margin-left: 0;
-  margin-right: 0;
+.page-section__grid--partners-slider {
+  display: flex;
+  flex-direction: column;
 }

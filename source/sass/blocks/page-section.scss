@@ -168,6 +168,11 @@
   }
 }
 
+.page-section__grid--partners-slider {
+  display: flex;
+  flex-direction: column;
+}
+
 .page-section__grid--about {
   grid-template-columns: 300px 1fr;
   column-gap: 120px;

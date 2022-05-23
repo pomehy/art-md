@@ -1,0 +1,441 @@
+
+-
+  const partnersCityData = [
+    {
+      title : "Магазин Дока",
+      icon: "logo-doka",
+      description: "Хозяйственно-строительная база",
+    },
+    {
+      title : "ПАО «Арзамасский машиностроительный завод»",
+      icon: "logo-amz",
+      description: "Арзамасский машиностроительный завод",
+    },
+    {
+      title : "Магазин Евросвет",
+      icon: "logo-eurosvet",
+      description: "Магазинов люстр и освещения в доме",
+    },
+    {
+      title : "Герб Правительство Нижегородской области",
+      icon: "logo-nn",
+      description: "Правительство Нижегородской области",
+    },
+    {
+      title : "Автомагазин Автотайм",
+      icon: "logo-autotime",
+      description: "Автомобильный торговый центр",
+    },
+    {
+      title : "Развлекательный центр Омега",
+      icon: "logo-omega",
+      description: "Крупнейший ТРЦ Арзамаса",
+    },
+    {
+      title : "Рикор-Электроникс",
+      icon: "logo-ricor",
+      description: "Арзамасский завод радиодеталей",
+    },
+    {
+      title : "Прометей",
+      icon: "logo-prometey",
+      description: "Салон дверей",
+    },
+    {
+      title : "Диамед",
+      icon: "logo-diamed",
+      description: "Медицинский центр",
+    },
+    {
+      title : "Вианор",
+      icon: "logo-vianor",
+      description: "Шинный центр",
+    },
+    {
+      title : "Администрация Арзамаса",
+      icon: "logo-arzamas",
+      description: "Администрация г. Арзамас",
+    },
+    {
+      title : "ЖБК Строй",
+      icon: "logo-jbk",
+      description: "Строительные материалы",
+    },
+    {
+      title : "Дком",
+      icon: "logo-dkom",
+      description: "Поставка и ремонт вычислительной техники",
+    },
+    {
+      title : "Ваши двери",
+      icon: "logo-vdveri",
+      description: "Магазин дверей",
+    },
+    {
+      title : "Теплодар",
+      icon: "logo-teplodar",
+      description: "Магазин печей и каминов",
+    },
+    {
+      title : "Премиум Тур",
+      icon: "logo-premium-tur",
+      description: "Туристическое агентство",
+    },
+    {
+      title : "Электро",
+      icon: "logo-electro",
+      description: "Магазин электротоваров",
+    },
+    {
+      title : "Алладин",
+      icon: "logo-alladin",
+      description: "Магазин ковров, обоев, штор и текстиля",
+    },
+    {
+      title : "Энергопром",
+      img: {
+        path: 'content/partners',
+        image: 'logo-energoprom',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип магазина Энергопром',
+      },
+      description: "Магазин электрики",
+    },
+    {
+      title : "ИнрусАвто",
+      img: {
+        path: 'content/partners',
+        image: 'logo-inrus',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип магазина Энергопром',
+      },
+      description: "Автосервис",
+    },
+    {
+      title : "Пиццерия Милано",
+      img: {
+        path: 'content/partners',
+        image: 'logo-milano',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип Милано',
+      },
+      description: "Сеть пиццерий",
+    },
+    {
+      title : "Техносервис",
+      img: {
+        path: 'content/partners',
+        image: 'logo-tehnoservis',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип Техносервис',
+      },
+      description: "Сертифицированный центр по ремонту техники",
+    },
+    {
+      title : "Красносельский Хлеб",
+      img: {
+        path: 'content/partners',
+        image: 'logo-krashleb',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип Красносельский Хлеб',
+      },
+      description: "Производство хлебобулочных изделий",
+    },
+    {
+      title : "Интерьер",
+      img: {
+        path: 'content/partners',
+        image: 'logo-interior',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип Интерьер',
+      },
+      description: "Сеть салонов штор и постельного белья",
+    },
+    {
+      title : "Эталон",
+      img: {
+        path: 'content/partners',
+        image: 'logo-etalon',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип Эталон',
+      },
+      description: "Натяжные потолки",
+    },
+    {
+      title : "Кафе RIO",
+      img: {
+        path: 'content/partners',
+        image: 'logo-rio',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип Rio',
+      },
+      description: "Клуб-кафе",
+    },
+    {
+      title : "Автокузов",
+      img: {
+        path: 'content/partners',
+        image: 'logo-ak',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип Автокузов',
+      },
+      description: "Автокузов - Магазин автозапчастей",
+    },
+    {
+      title : "АвтоТехЦентр Гарантия",
+      img: {
+        path: 'content/partners',
+        image: 'logo-garant',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип АвтоТехЦентр Гарантия',
+      },
+      description: "АвтоТехЦентр",
+    },
+    {
+      title : "Родное море",
+      img: {
+        path: 'content/partners',
+        image: 'logo-rodmore',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип Родное море',
+      },
+      description: "Родное море - Сеть рыбных магазинов",
+    },
+    {
+      title : "Тверна Веселый Роджер",
+      img: {
+        path: 'content/partners',
+        image: 'logo-rodjer',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип Веселый Роджер',
+      },
+      description: "Грузинское кафе",
+    },
+  ]
+
+-
+  const partnersGlobalData = [
+    {
+      title : "Банк Тинькофф",
+      icon: "logo-tinkoff",
+      description: "Российский онлайн банк",
+    },
+    {
+      title : "Телеканал СТС",
+      icon: "logo-sts",
+      description: "Телеканал",
+    },
+    {
+      title : "OZON - Интернет магазин",
+      icon: "logo-ozon",
+      description: "Маркетплейс",
+    },
+    {
+      title : "HeadHunter компания интернет-рекрутмента",
+      icon: "logo-hh",
+      description: "Сервис подбора персонала",
+    },
+    {
+      title : "Магазин Ашан",
+      icon: "logo-auchan",
+      description: "Сеть гипермаркетов",
+    },
+    {
+      title : "Магазин Пятерочка",
+      icon: "logo-five",
+      description: "Сеть продуктовых магазинов",
+    },
+    {
+      title : "Магазин Мвидео",
+      icon: "logo-mvideo",
+      description: "Сеть магазинов бытовой техники",
+    },
+    {
+      title : "Кухни Мария",
+      icon: "logo-mariya",
+      description: "Мебельная фабрика",
+    },
+    {
+      title : "ТНТ",
+      img: {
+        path: 'content/partners',
+        image: 'logo-tnt',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип ТНТ',
+      },
+      description: "Телеканал",
+    },
+    {
+      title : "Телеканал ТВ3",
+      icon: "logo-tv3",
+      description: "Телеканал",
+    },
+    {
+      title : "Телеканал Пятница",
+      icon: "logo-friday",
+      description: "Телеканал",
+    },
+    {
+      title : "SPAR",
+      icon: "logo-spar",
+      description: "Сеть продуктовых магазинов",
+    },
+    {
+      title : "Эльдорадо",
+      icon: "logo-eldorado",
+      description: "Сеть магазинов бытовой техники",
+    },
+    {
+      title : "Мегафон",
+      icon: "logo-megafon",
+      description: "Оператор сотовой связи",
+    },
+    {
+      title : "Ирбис Автозаправки",
+      icon: "logo-irbis",
+      description: "Сеть автозаправок",
+    },
+    {
+      title : "Додо Пицца",
+      icon: "logo-dodo",
+      description: "Сеть пиццерий",
+    },
+    {
+      title : "Империя Сумок",
+      icon: "logo-impersum",
+      description: "сеть магазинов сумок и аксессуаров",
+    },
+    {
+      title : "Перекресток",
+      icon: "logo-perek",
+      description: "Сеть продуктовых магазинов",
+    },
+    {
+      title : "МТС",
+      icon: "logo-mts",
+      description: "Оператор сотовой связи",
+    },
+    {
+      title : "Пушкинская карта",
+      img: {
+        path: 'content/partners',
+        image: 'logo-pushka',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип карты',
+      },
+      description: "Пушкинская карта - Социальный проект",
+    },
+    {
+      title : "Сбермаркет",
+      icon: "logo-sbermarket",
+      description: "Сервис доставки продуктов и товаров",
+    },
+    {
+      title : "КазаньЭкспресс",
+      icon: "logo-kazan",
+      description: "Маркетплейс",
+    },
+    {
+      title : "РЖД",
+      icon: "logo-rjd",
+      description: "Российские железные дороги",
+    },
+    {
+      title : "МЧС России",
+      icon: "logo-mchs",
+      description: "Министерство по делам гражданской обороны, чрезвычайным ситуациям...",
+    },
+    {
+      title : "Автопицца",
+      icon: "logo-autopizza",
+      description: "Сеть доставок пиццы и роллов",
+    },
+    {
+      title : "DNS",
+      icon: "logo-dns",
+      description: "Сеть магазинов цифровой и бытовой техники",
+    },
+    {
+      title : "Monro",
+      icon: "logo-monro",
+      description: "Обувная компания",
+    },
+    {
+      title : "Магнит",
+      icon: "logo-magnit",
+      description: "Сеть продуктовых магазинов",
+    },
+    {
+      title : "Спортсмен",
+      icon: "logo-sportsmen",
+      description: "Сеть спортивных магазинов",
+    },
+    {
+      title : "Мегахэнд",
+      icon: "logo-megahand",
+      description: "Сеть магазинов одежды и обуви из Европы",
+    },
+    {
+      title : "Костюм и галстук",
+      img: {
+        path: 'content/partners',
+        image: 'logo-kostum',
+        format: 'jpg',
+        width: 200,
+        height: 200,
+        altText: 'Логотип Костюм и галстук',
+      },
+      description: "Сеть магазинов мужской одежды",
+    },
+  ]
+
+mixin page-partners()
+  .page-content.page-content--about
+    .page-section(data-animation-group)
+      .container
+        .page-section__header.fit.d-300
+          h2.page-section__title Наши партнеры
+          .page-section__description
+            p АМР "Артмедиа" за время своей работы заручилось доверием многих организаций Арзамаса, а так же компаний федерального масштаба. Мы очень ценим каждого партнёра, выстраивая шаг за шагом крепкое и взаимовыгодное сотрудничество с каждым
+        .page-section__tabs.tabs.tabs--partners(data-tabs="parent")
+          .tabs__controls(data-tabs="controls")
+            +button({text: "Локальные"}).button--secondary(data-tabs="control")
+            +button({text: "Федеральные"}).button--secondary(data-tabs="control")
+          .tabs__content(data-tabs="content")
+            .tabs__element.tabs__element--partners(data-tabs="element")
+              each item in partnersCityData
+                +partner-card(item)
+            .tabs__element.tabs__element--partners(data-tabs="element")
+              each item in partnersGlobalData
+                +partner-card(item)
+    //- +feedback()
+    +gratitude(gratitudeData).page-section--snow
+

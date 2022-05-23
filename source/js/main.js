@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
 import {initAccordions} from './modules/accordion/init-accordion';
+import {initTabs} from './modules/tabs/init-tabs';
 
 import {initParntersSlider} from './modules/sliders/init-partners-slider';
 import {initGratitudesSlider} from './modules/sliders/init-gratitudes-slider';
@@ -51,6 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initFormValidate();
     initGratitudesSlider();
     initParntersSlider();
+    initTabs();
   });
 });
 

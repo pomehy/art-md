@@ -55,6 +55,11 @@
 
   transition: background-color $trans-default, color $trans-default, opacity $trans-default;
 
+  &.is-active {
+    background-color: $color-dark-orange;
+    color: $color-default-white;
+  }
+
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {

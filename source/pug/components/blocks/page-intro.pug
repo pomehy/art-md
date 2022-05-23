@@ -20,6 +20,28 @@
     ],
   }
 
+-
+  const aboutPartners = {
+    img: {
+      path: 'content/partners',
+      image: 'partners-intro',
+      format: 'jpg',
+      width: 1920,
+      height: 1280,
+      altText: 'Фото компанды',
+    },
+    breadcrumbs: [
+      {
+        href: "index.html",
+        text: "Главная",
+      },
+      {
+        href: "partners.html",
+        text: "Нам доверяют",
+      },
+    ],
+  }
+
 mixin page-intro(data)
   .page-intro(data-animation-group).is-show
     .page-intro__image-wrapper.fi.d-200

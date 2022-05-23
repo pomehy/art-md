@@ -1,0 +1,66 @@
+-
+  const partnerCardData = [
+    {
+      title : "Банк Тинькофф",
+      icon: "logo-tinkoff",
+    },
+    {
+      title : "Магазин Дока",
+      icon: "logo-doka",
+    },
+    {
+      title : "Телеканал СТС",
+      icon: "logo-sts",
+    },
+    {
+      title : "ПАО «Арзамасский машиностроительный завод»",
+      icon: "logo-amz",
+    },
+    {
+      title : "OZON - Интернет магазин",
+      icon: "logo-ozon",
+    },
+    {
+      title : "Магазин Евросвет",
+      icon: "logo-eurosvet",
+    },
+    {
+      title : "HeadHunter компания интернет-рекрутмента",
+      icon: "logo-hh",
+    },
+    {
+      title : "Автомагазин Автотайм",
+      icon: "logo-autotime",
+    },
+    {
+      title : "Магазин Ашан",
+      icon: "logo-auchan",
+    },
+    //- {
+    //-   title : "Магазин Пятерочка",
+    //-   icon: "logo-five",
+    //- },
+    {
+      title : "Магазин Мвидео",
+      icon: "logo-mvideo",
+    },
+    {
+      title : "Развлекательный центр Омега",
+      icon: "logo-omega",
+    },
+    {
+      title : "Кухни Мария",
+      icon: "logo-mariya",
+    },
+  ]
+
+mixin partner-card(data)
+  article.partner-card&attributes(attributes)
+    h3.visually-hidden !{data.title}
+    if data.description
+      .partner-card__description #[span !{data.description}]
+    .partner-card__image-wrapper
+      if data.img
+        +picture(data.img.path, data.img.image, data.img.format, data.img.width, data.img.height, data.img.altText)
+      else
+        +icon(data.icon, 200, 200)

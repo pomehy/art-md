@@ -34,8 +34,12 @@ body {
   background-color: $color-default-white;
 
   &::-webkit-scrollbar {
-    width: auto;
+    width: thin;
     background-color: transparent;
+
+    &:hover {
+      width: auto;
+    }
   }
 
   &::-webkit-scrollbar-track {
