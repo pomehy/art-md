@@ -10,6 +10,7 @@ import {initGratitudesSlider} from './modules/sliders/init-gratitudes-slider';
 import {initVideo} from './modules/init-video';
 import {initTypedText} from './modules/init-typed-text';
 import {initMoveTo} from './modules/init-move-to';
+import {initArticlesFilter} from './modules/init-articles-filter';
 import HeaderNav from './modules/init-header-control';
 import Animation from './modules/init-animation';
 
@@ -53,6 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initGratitudesSlider();
     initParntersSlider();
     initTabs();
+    initArticlesFilter();
   });
 });
 

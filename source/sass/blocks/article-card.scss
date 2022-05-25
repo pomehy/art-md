@@ -1,29 +1,38 @@
 .article-card {
+  position: relative;
   display: flex;
   flex-direction: column;
 
-  @include vp-767 {
-    width: 224px;
+  max-height: 100%;
+  visibility: visible;
+  opacity: 1;
 
-    &:last-of-type {
-      position: relative;
+  transition: opacity $trans-600;
 
-      &::before {
-        content: "";
-        position: absolute;
-        right: -16px;
+  &.is-hidden {
+    position: absolute;
 
-        width: 16px;
-        height: 16px;
-      }
-    }
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
   }
+}
+
+.article-card__tag {
+  position: absolute;
+  margin: 16px;
+
+  padding: 2px 8px;
+
+  background-color: $color-default-white;
+  background-color: transparentize($color-default-white, 0.2);
+  border-radius: 2px;
 }
 
 .article-card__image-wrapper {
   margin-bottom: 24px;
 
-  min-height: 200px;
+  min-height: 254px;
   border-radius: 4px;
 
   overflow: hidden;
@@ -37,6 +46,7 @@
 
   @include vp-1279 {
     margin-bottom: 20px;
+    min-height: 200px;
   }
 }
 

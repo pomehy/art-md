@@ -1,23 +1,23 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Партнеры АМР Артмедиа" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Статьи - полезное о рекламе" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
   - const hasFooter = true
   - const footerMods = ""
-  - const currentUrl = "partners.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const currentUrl = "blog.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
   -
-    const aboutPartners = {
+    const aboutBlog = {
       img: {
-        path: 'content/partners',
-        image: 'partners-intro',
+        path: 'content/blog',
+        image: 'blog-intro',
         format: 'jpg',
         width: 1920,
         height: 1280,
-        altText: 'Жест партнерства',
+        altText: 'Идея',
       },
       breadcrumbs: [
         {
@@ -25,8 +25,8 @@ block variables
           text: "Главная",
         },
         {
-          href: "partners.html",
-          text: "Нам доверяют",
+          href: "blog.html",
+          text: "Статьи",
         },
       ],
     }
@@ -36,8 +36,8 @@ block main
     h1.visually-hidden Партнеры АМР Артмедиа
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +page-intro(aboutPartners)
-    +page-partners()
+    +page-intro(aboutBlog)
+    +page-blog()
 block modals
   +modal("modal--feedback")(data-modal="feedback")
     +modal-feedback()

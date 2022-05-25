@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Список страниц</title>
+    <title>Статьи - полезное о рекламе</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -988,63 +988,359 @@
 </symbol></svg>
     </div>
     <div class="wrapper">
-      <style>
-        .container {
-          padding-top: 50px;
-          padding-bottom: 50px;
-        }
-        
-        h1 {
-          font-size: 24px;
-          line-height: 28px;
-        }
-        
-        a {
-          color: rgb(10, 10, 175);
-        }
-        
-        li {
-          font-size: 18px;
-          line-height: 22px;
-          margin-bottom: 7px;
-        }
-        
-        img {
-          width: 100%;
-          max-width: 300px;
-          height: auto;
-          display: block;
-          margin-bottom: 40px;
-        }
-        
-        @media (max-width: 768px) {
-          .container {
-            padding-top: 20px;
-            padding-bottom: 20px;
-          }
-        
-          ol {
-            padding-left: 20px;
-          }
-        
-          ol li {
-            margin-bottom: 15px;
-          }
-        }
-        
-      </style>
+      <header class="header" data-header>
+        <div class="container">
+          <div class="header__logo-wrapper"><a class="header__logo" href="index.html" aria-label="Переход на главную">
+              <svg width="50" height="50" aria-hidden="true">
+                <use xlink:href="#logo"></use>
+              </svg>
+              <svg width="219" height="50" aria-hidden="true">
+                <use xlink:href="#artmedia"></use>
+              </svg></a>
+          </div>
+          <nav class="main-nav">
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list" data-accordion="parent" data-destroy="(max-width: 1279px)">
+                <li class="main-nav__item"><a class="main-nav__link" href="about-company.html">О компании
+                    <svg width="49" height="49" aria-hidden="true">
+                      <use xlink:href="#logo"></use>
+                    </svg></a>
+                </li>
+                <li class="main-nav__item main-nav__item--sublist" data-accordion="element"><a class="main-nav__link" href="#">Услуги
+                    <svg width="49" height="49" aria-hidden="true">
+                      <use xlink:href="#logo"></use>
+                    </svg></a>
+                  <button class="main-nav__item-toggle" type="button" aria-label="открыть меню услуги" data-accordion="button"></button>
+                  <div class="main-nav__sublist-wrapper" data-accordion="content">
+                    <ul class="main-nav__sublist">
+                      <li><a href="advertising.html">Рекламные возможности</a></li>
+                      <li><a href="production.html">Изготовление рекламы</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="partners.html">Нам доверяют
+                    <svg width="49" height="49" aria-hidden="true">
+                      <use xlink:href="#logo"></use>
+                    </svg></a>
+                </li>
+                <li class="main-nav__item"><span class="main-nav__link is-active">Статьи</span>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Контакты
+                    <svg width="49" height="49" aria-hidden="true">
+                      <use xlink:href="#logo"></use>
+                    </svg></a>
+                </li>
+              </ul><a class="header__phone" href="tel:+78314795464" aria-label="Позвонить в компанию"><span>+7 (83147) 9-54-64</span></a>
+              <div class="socials"><a href="https://vk.com/artmedia_arz" rel="nofollow noopener" target="_blank">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#logo-vk"></use>
+                  </svg></a><a href="https://www.instagram.com/artmedia_arz" rel="nofollow noopener" target="_blank">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#logo-instagram"></use>
+                  </svg></a></div>
+              <button class="button header__button" type="button" data-open-modal="feedback">Получить предложение</button>
+            </div>
+            <div class="main-nav__overlay" data-main-nav-overlay></div>
+          </nav>
+          <div class="header__buttons"><a class="header__phone" href="tel:+78314795464" aria-label="Позвонить в компанию"><span>+7 (83147) 9-54-64</span></a>
+            <button class="button header__button" type="button" data-open-modal="feedback">Получить предложение</button>
+            <button class="header__toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-header-toggle></button>
+          </div>
+        </div>
+      </header>
       <main>
-        <div class="container"><img src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта">
-          <h1>Список страниц</h1>
-          <ol>
-            <li><a href="ui-kit.html">UI-kit — ui-kit.html</a></li>
-            <li><a href="index.html">Главная — index.html</a></li>
-            <li><a href="about-company.html">О компании — about-company.html</a></li>
-            <li><a href="partners.html">Нам доверяют — partners.html</a></li>
-            <li><a href="blog.html">Статьи — blog.html</a></li>
-          </ol>
+        <h1 class="visually-hidden">Партнеры АМР Артмедиа</h1>
+        <div class="page-intro is-show" data-animation-group>
+          <div class="page-intro__image-wrapper fi d-200">
+            <picture>
+              <source type="image/webp" srcset="img/content/blog/blog-intro.webp, img/content/blog/blog-intro@2x.webp 2x"><img src="img/content/blog/blog-intro.jpg" srcset="img/content/blog/blog-intro@2x.jpg 2x" width="1920" height="1280" alt="Идея">
+            </picture>
+          </div>
+          <div class="container">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html">Главная</a>
+              </li>
+              <li class="breadcrumbs__item"><span>Статьи</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="page-section page-section--tabs" data-animation-group>
+            <div class="container">
+              <div class="page-section__header fit d-300">
+                <h2 class="page-section__title">Полезное о рекламе</h2>
+                <div class="page-section__description">
+                  <p>О продвижении простыми словами. Делимся секретами, лайфхаками и полезной информацией, как стать заметнее для свой аудитории</p>
+                </div>
+              </div>
+              <div class="page-section__tabs tabs tabs--blog fit d-300" data-filter="parent">
+                <div class="tabs__controls" data-filter="controls">
+                  <button class="button button--secondary is-active" type="button" data-filter="all">Все</button>
+                  <button class="button button--secondary" type="button" data-filter="marketing">Маркетинг</button>
+                  <button class="button button--secondary" type="button" data-filter="radio">Радиореклама</button>
+                  <button class="button button--secondary" type="button" data-filter="adv">О рекламе</button>
+                  <button class="button button--secondary" type="button" data-filter="smm">SMM</button>
+                  <button class="button button--secondary" type="button" data-filter="indoor">Indoor-реклама</button>
+                  <button class="button button--secondary" type="button" data-filter="outdoor">Outdoor-реклама</button>
+                  <button class="button button--secondary" type="button" data-filter="experience">Из нашего опыта</button>
+                  <button class="button button--secondary" type="button" data-filter="history">История рекламы</button>
+                </div>
+                <div class="tabs__content tabs__content--blog">
+                  <article class="article-card is-show" data-filter="smm"><span class="article-card__tag">SMM</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-1.webp, img/content/articles/articles-1@2x.webp 2x"><img src="img/content/articles/articles-1.jpg" srcset="img/content/articles/articles-1@2x.jpg 2x" width="555" height="300" alt="Реклама в социальной сети">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2021-09-14">14.09.2021</time>
+                      <h3 class="article-card__title">SMM или таргетированная реклама?</h3>
+                      <p class="article-card__text">Клиенты часто не могут определиться, что в их случае будет эффективно работать: SMM или таргетированная реклама в поисковых системах</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                  <article class="article-card is-show" data-filter="marketing"><span class="article-card__tag">Маркетинг</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-2.webp, img/content/articles/articles-2@2x.webp 2x"><img src="img/content/articles/articles-2.jpg" srcset="img/content/articles/articles-2@2x.jpg 2x" width="555" height="300" alt="Иллюстрация статьи">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2020-02-21">21.02.2020</time>
+                      <h3 class="article-card__title">Почему реклама на радио по прежнему актуальна?</h3>
+                      <p class="article-card__text">В современном мире владельцы бизнеса, равно как и специалисты по продвижению, сосредоточены в основном на онлайн-рекламе. Другие каналы взаимодействия с аудиторией, такие как радио, используются всё реже. Эффективна ли в наш век высоких технологий реклама на радио — вопрос спорный. Чтобы ответить на него, стоит подробнее рассмотреть ее особенности.</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                  <article class="article-card is-show" data-filter="adv"><span class="article-card__tag">О рекламе</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-3.webp, img/content/articles/articles-3@2x.webp 2x"><img src="img/content/articles/articles-3.jpg" srcset="img/content/articles/articles-3@2x.jpg 2x" width="555" height="300" alt="Иллюстрация статьи">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2018-09-05">05.09.2018</time>
+                      <h3 class="article-card__title">Почему у бизнеса без рекламы нет будущего?</h3>
+                      <p class="article-card__text">Каждый бизнес нуждается в&nbsp;постоянном развитии и&nbsp;расширении рынков сбыта. В&nbsp;ином случае &laquo;место под солнцем&raquo; займут конкуренты, которые оказались более расторопны и&nbsp;предприимчивы. Понятно, что масштабы бизнеса играют далеко не&nbsp;последнюю роль. Однако какой смысл заниматься предпринимательством, если не&nbsp;стремиться достигнуть большего и&nbsp;стать обладателем более значительных прибылей.</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                  <article class="article-card is-show" data-filter="indoor"><span class="article-card__tag">Indoor-реклама</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-4.webp, img/content/articles/articles-4@2x.webp 2x"><img src="img/content/articles/articles-4.jpg" srcset="img/content/articles/articles-4@2x.jpg 2x" width="555" height="300" alt="Иллюстрация статьи">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2018-09-05">05.09.2018</time>
+                      <h3 class="article-card__title">Почему у бизнеса без рекламы нет будущего?</h3>
+                      <p class="article-card__text">Каждый бизнес нуждается в&nbsp;постоянном развитии и&nbsp;расширении рынков сбыта. В&nbsp;ином случае &laquo;место под солнцем&raquo; займут конкуренты, которые оказались более расторопны и&nbsp;предприимчивы. Понятно, что масштабы бизнеса играют далеко не&nbsp;последнюю роль. Однако какой смысл заниматься предпринимательством, если не&nbsp;стремиться достигнуть большего и&nbsp;стать обладателем более значительных прибылей.</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                  <article class="article-card is-show" data-filter="outdoor"><span class="article-card__tag">Outdoor-реклама</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-5.webp, img/content/articles/articles-5@2x.webp 2x"><img src="img/content/articles/articles-5.jpg" srcset="img/content/articles/articles-5@2x.jpg 2x" width="555" height="300" alt="Иллюстрация статьи">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2018-09-05">05.09.2018</time>
+                      <h3 class="article-card__title">Почему у бизнеса?</h3>
+                      <p class="article-card__text">Каждый бизнес В&nbsp;ином случае &laquo;место под солнцем&raquo; займут конкуренты, которые оказались более расторопны и&nbsp;предприимчивы. Понятно, что масштабы бизнеса играют далеко не&nbsp;последнюю роль. Однако какой смысл заниматься предпринимательством, если не&nbsp;стремиться достигнуть большего и&nbsp;стать обладателем более значительных прибылей.</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                  <article class="article-card is-show" data-filter="experience"><span class="article-card__tag">Из нашего опыта</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-2.webp, img/content/articles/articles-2@2x.webp 2x"><img src="img/content/articles/articles-2.jpg" srcset="img/content/articles/articles-2@2x.jpg 2x" width="555" height="300" alt="Иллюстрация статьи">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2018-09-05">05.09.2018</time>
+                      <h3 class="article-card__title">Почему у бизнеса?</h3>
+                      <p class="article-card__text">Каждый бизнес В&nbsp;ином случае &laquo;место под солнцем&raquo; займут конкуренты, которые оказались более расторопны и&nbsp;предприимчивы. Понятно, что масштабы бизнеса играют далеко не&nbsp;последнюю роль. Однако какой смысл заниматься предпринимательством, если не&nbsp;стремиться достигнуть большего и&nbsp;стать обладателем более значительных прибылей.</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                  <article class="article-card is-show" data-filter="history"><span class="article-card__tag">История рекламы</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-1.webp, img/content/articles/articles-1@2x.webp 2x"><img src="img/content/articles/articles-1.jpg" srcset="img/content/articles/articles-1@2x.jpg 2x" width="555" height="300" alt="Иллюстрация статьи">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2018-09-05">05.09.2018</time>
+                      <h3 class="article-card__title">Почему у бизнеса без рекламы нет будущего?</h3>
+                      <p class="article-card__text">Каждый бизнес нуждается в&nbsp;постоянном развитии и&nbsp;расширении рынков сбыта. В&nbsp;ином случае &laquo;место под солнцем&raquo; займут конкуренты, которые оказались более расторопны и&nbsp;предприимчивы. Понятно, что масштабы бизнеса играют далеко не&nbsp;последнюю роль. Однако какой смысл заниматься предпринимательством, если не&nbsp;стремиться достигнуть большего и&nbsp;стать обладателем более значительных прибылей.</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                  <article class="article-card is-show" data-filter="radio"><span class="article-card__tag">Радиореклама</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-2.webp, img/content/articles/articles-2@2x.webp 2x"><img src="img/content/articles/articles-2.jpg" srcset="img/content/articles/articles-2@2x.jpg 2x" width="555" height="300" alt="Иллюстрация статьи">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2020-02-21">21.02.2020</time>
+                      <h3 class="article-card__title">Почему реклама на радио по прежнему актуальна?</h3>
+                      <p class="article-card__text">В современном мире владельцы бизнеса, равно как и специалисты по продвижению, сосредоточены в основном на онлайн-рекламе. Другие каналы взаимодействия с аудиторией, такие как радио, используются всё реже. Эффективна ли в наш век высоких технологий реклама на радио — вопрос спорный. Чтобы ответить на него, стоит подробнее рассмотреть ее особенности.</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                  <article class="article-card is-show" data-filter="radio"><span class="article-card__tag">Радиореклама</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-2.webp, img/content/articles/articles-2@2x.webp 2x"><img src="img/content/articles/articles-2.jpg" srcset="img/content/articles/articles-2@2x.jpg 2x" width="555" height="300" alt="Иллюстрация статьи">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2020-02-21">21.02.2020</time>
+                      <h3 class="article-card__title">Почему реклама на радио по прежнему актуальна?</h3>
+                      <p class="article-card__text">В современном мире владельцы бизнеса, равно как и специалисты по продвижению, сосредоточены в основном на онлайн-рекламе. Другие каналы взаимодействия с аудиторией, такие как радио, используются всё реже. Эффективна ли в наш век высоких технологий реклама на радио — вопрос спорный. Чтобы ответить на него, стоит подробнее рассмотреть ее особенности.</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                  <article class="article-card is-show" data-filter="radio"><span class="article-card__tag">Радиореклама</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-1.webp, img/content/articles/articles-1@2x.webp 2x"><img src="img/content/articles/articles-1.jpg" srcset="img/content/articles/articles-1@2x.jpg 2x" width="555" height="300" alt="Иллюстрация статьи">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2020-02-21">21.02.2020</time>
+                      <h3 class="article-card__title">Почему реклама на радио по прежнему актуальна?</h3>
+                      <p class="article-card__text">В современном мире владельцы бизнеса, равно как и специалисты по продвижению, сосредоточены в основном на онлайн-рекламе. Другие каналы взаимодействия с аудиторией, такие как радио, используются всё реже. Эффективна ли в наш век высоких технологий реклама на радио — вопрос спорный. Чтобы ответить на него, стоит подробнее рассмотреть ее особенности.</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                  <article class="article-card is-show" data-filter="marketing"><span class="article-card__tag">Маркетинг</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-3.webp, img/content/articles/articles-3@2x.webp 2x"><img src="img/content/articles/articles-3.jpg" srcset="img/content/articles/articles-3@2x.jpg 2x" width="555" height="300" alt="Иллюстрация статьи">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2018-09-05">05.09.2018</time>
+                      <h3 class="article-card__title">Почему у бизнеса без рекламы нет будущего?</h3>
+                      <p class="article-card__text">Каждый бизнес нуждается в&nbsp;постоянном развитии и&nbsp;расширении рынков сбыта. В&nbsp;ином случае &laquo;место под солнцем&raquo; займут конкуренты, которые оказались более расторопны и&nbsp;предприимчивы. Понятно, что масштабы бизнеса играют далеко не&nbsp;последнюю роль. Однако какой смысл заниматься предпринимательством, если не&nbsp;стремиться достигнуть большего и&nbsp;стать обладателем более значительных прибылей.</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                  <article class="article-card is-show" data-filter="adv"><span class="article-card__tag">О рекламе</span>
+                    <div class="article-card__image-wrapper">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/articles/articles-1.webp, img/content/articles/articles-1@2x.webp 2x"><img src="img/content/articles/articles-1.jpg" srcset="img/content/articles/articles-1@2x.jpg 2x" width="555" height="300" alt="Иллюстрация статьи">
+                      </picture>
+                    </div>
+                    <div class="article-card__content">
+                      <time class="article-card__date" datetime="2018-09-05">05.09.2018</time>
+                      <h3 class="article-card__title">Почему у бизнеса без рекламы нет будущего?</h3>
+                      <p class="article-card__text">Каждый бизнес нуждается в&nbsp;постоянном развитии и&nbsp;расширении рынков сбыта. В&nbsp;ином случае &laquo;место под солнцем&raquo; займут конкуренты, которые оказались более расторопны и&nbsp;предприимчивы. Понятно, что масштабы бизнеса играют далеко не&nbsp;последнюю роль. Однако какой смысл заниматься предпринимательством, если не&nbsp;стремиться достигнуть большего и&nbsp;стать обладателем более значительных прибылей.</p>
+                    </div>
+                    <a class="button article-card__button button--secondary button--small" href="#" aria-label="Перейти к статье">Подробнее</a>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
+      <footer class="footer" data-footer>
+        <div class="footer__content" data-accordion="parent" data-destroy="(max-width: 1023px)">
+          <div class="container">
+            <div class="footer__grid"><a class="footer__logo" href="index.html" aria-label="Переход на главную">
+                <svg width="260" height="48" aria-hidden="true">
+                  <use xlink:href="#logo-full"></use>
+                </svg></a>
+              <div class="footer-links" data-accordion="element">
+                <p class="footer-links__title" data-accordion="button">
+                  <button type="button">Компания</button>
+                </p>
+                <div class="footer-links__list-wrapper" data-accordion="content">
+                  <ul class="footer-links__list">
+                    <li><a href="about-company.html">О компании</a>
+                    </li>
+                    <li><a href="partners.html">Нам доверяют</a>
+                    </li>
+                    <li><span>Статьи</span>
+                    </li>
+                    <li><a href="contacts.html">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-links" data-accordion="element">
+                <p class="footer-links__title" data-accordion="button">
+                  <button type="button">Наши возможности</button>
+                </p>
+                <div class="footer-links__list-wrapper" data-accordion="content">
+                  <ul class="footer-links__list">
+                    <li><a href="#">Радиостанции</a></li>
+                    <li><a href="#">Социальные сети</a></li>
+                    <li><a href="#">Мониторы</a></li>
+                    <li><a href="#">Локальное радио</a></li>
+                    <li><a href="#">LED Экран</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-links" data-accordion="element">
+                <p class="footer-links__title" data-accordion="button">
+                  <button type="button">Изготовление рекламы</button>
+                </p>
+                <div class="footer-links__list-wrapper" data-accordion="content">
+                  <ul class="footer-links__list">
+                    <li><a href="#">Радиоролики</a></li>
+                    <li><a href="#">Видеоролики</a></li>
+                    <li><a href="#">Продающий текст</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__contacts footer-links" data-accordion="element">
+                <p class="footer-links__title" data-accordion="button">
+                  <button type="button">Контакты</button>
+                </p>
+                <div class="footer-links__list-wrapper" data-accordion="content">
+                  <p>г. Арзамас, ул. Карла Маркса д.61 (БЦ&nbsp;"СитиПарк") офис&nbsp;№410</p><a href="tel:+78314795464">+7 (83147) 9-54-64</a><a href="mailto:info@art-md.ru">info@art-md.ru</a>
+                  <div class="socials"><a href="https://vk.com/artmedia_arz" rel="nofollow noopener" target="_blank">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#logo-vk"></use>
+                      </svg></a><a href="https://www.instagram.com/artmedia_arz" rel="nofollow noopener" target="_blank">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#logo-instagram"></use>
+                      </svg></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <div class="container">
+            <p>Данный сайт носит сугубо рекламно-информационный характер, и&nbsp;ни&nbsp;при каких условиях не&nbsp;является публичной офёртой, определяемой положением Статьи&nbsp;437&nbsp;(2) Гражданского кодекса РФ. Точную и&nbsp;окончательную информацию о&nbsp;стоимости услуг&nbsp;Вы можете получить, связавшись с&nbsp;нами.</p>
+            <div class="copyright"><span>Разработано</span><a href="megacoder.ru">megacoder.ru</a></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal modal--preload modal--feedback" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__title">Анкета рекламодателя</p>
+          <p class="modal__description">Заполните форму и наш менеджер свяжется с вами</p>
+          <div class="form"><script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"931066",hash:"fb111d92b5a0fb54d0c611b26c78508e",locale:"ru"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script><script id="amoforms_script_931066" async="async" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1652252213"></script>
+            <p class="form__policy">Нажимая кнопку «Отправить» вы даёте согласие на <a href="#" target="_blank">обработку своих персональных данных</a></p>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

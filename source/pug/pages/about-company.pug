@@ -9,6 +9,29 @@ block variables
   - const footerMods = ""
   - const currentUrl = "about-company.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
+
+  -
+    const aboutData = {
+      img: {
+        path: 'content/about',
+        image: 'about-intro',
+        format: 'jpg',
+        width: 1920,
+        height: 1280,
+        altText: 'Фото команды',
+      },
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: "about-company.html",
+          text: "О компании",
+        },
+      ],
+    }
+
 block main
   main
     h1.visually-hidden О компании АМР Артмедиа
