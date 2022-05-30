@@ -118,6 +118,8 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M111.894 83.2432C111.894 85.326 115.299 86.7257 117.557 87.9887C121.328 90.0973 123.913 92.5925 126.009 91.0098C126.916 90.3241 126.873 89.5457 126.873 88.5739C126.873 86.7102 123.978 85.7462 121.367 84.1764C120.245 83.5036 119.305 82.9416 118.152 82.3127C116.915 81.6373 115.819 80.7016 114.43 80.7016C113.131 80.7016 111.891 82.0369 111.891 83.2407L111.894 83.2432Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M111.894 50.7439C111.894 51.7028 113.314 54.265 116.296 52.6075L126.184 46.7511C127.383 45.5499 127.494 42.3638 124.081 42.3638C123.122 42.3638 121.573 43.5754 120.694 44.0548C119.518 44.6941 118.534 45.2921 117.466 45.9056C114.603 47.5553 111.894 48.509 111.894 50.7439Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M119.003 66.9935C119.003 67.9808 119.97 69.5326 122.05 69.5326C125.006 69.5326 132.765 70.0378 134.136 68.9242C134.611 68.5376 134.905 67.9859 135 67.3931V66.5553C134.807 65.3387 133.758 64.2019 131.701 64.2019C129.316 64.2019 121.593 63.8127 120.109 64.7974C119.588 65.1428 119.006 66.3233 119.006 66.9961L119.003 66.9935Z" fill="black"/>
+</symbol><symbol id="icon-arrow-down" viewBox="0 0 32 32">
+<path d="M16 18.5372L9.13139 11.6686C8.50656 11.0437 7.49349 11.0437 6.86865 11.6686C6.24381 12.2934 6.24381 13.3065 6.86865 13.9313L14.8687 21.9313C15.4935 22.5562 16.5066 22.5562 17.1314 21.9313L25.1314 13.9313C25.7562 13.3065 25.7562 12.2934 25.1314 11.6686C24.5066 11.0437 23.4935 11.0437 22.8687 11.6686L16 18.5372Z" fill="currentColor"/>
 </symbol><symbol id="icon-arrow-left" viewBox="0 0 32 32">
 <path d="M13.4628 15.9999L20.3314 9.13127C20.9563 8.50643 20.9563 7.49337 20.3314 6.86853C19.7066 6.24369 18.6935 6.24369 18.0687 6.86853L10.0687 14.8685C9.44384 15.4934 9.44384 16.5064 10.0687 17.1313L18.0687 25.1313C18.6935 25.7561 19.7066 25.7561 20.3314 25.1313C20.9563 24.5064 20.9563 23.4934 20.3314 22.8685L13.4628 15.9999Z" fill="currentColor"/>
 </symbol><symbol id="icon-arrow-right" viewBox="0 0 32 32">
@@ -1126,7 +1128,11 @@
             <div class="page-services__navigation">
               <div class="service-nav" data-service-menu>
                 <div class="service-nav__control">
-                  <button class="service-nav__button" type="button" data-service-menu-button><span>Выберите услугу</span></button><span class="service-nav__subcategory" data-service-menu-subcategory></span>
+                  <button class="service-nav__button" type="button" data-service-menu-button><span>Выберите услугу</span>
+                    <svg width="28" height="28" aria-hidden="true">
+                      <use xlink:href="#icon-arrow-down"></use>
+                    </svg>
+                  </button><span class="service-nav__subcategory" data-service-menu-subcategory></span>
                 </div>
                 <ul class="service-nav__list" data-service-menu-list data-accordion="parent" data-single data-triggers-wrapper>
                   <li class="service-nav__item" data-service-menu-item data-accordion="element">

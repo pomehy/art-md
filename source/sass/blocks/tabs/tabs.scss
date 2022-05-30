@@ -89,7 +89,7 @@
 
   &.is-fixed {
     @include vp-1023 {
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 7px 5px transparentize($color-default-black, 0.96);
     }
 
     &::before {

@@ -3,10 +3,48 @@
   top: 120px;
 
   transform: translateZ(0);
+
+  &.is-fixed {
+    @include vp-1023 {
+      box-shadow: 0 7px 5px transparentize($color-default-black, 0.96);
+    }
+  }
+
+  &.is-active {
+    @include vp-1023 {
+      .service-nav__list {
+        opacity: 1;
+        visibility: visible;
+        max-height: 100%;
+      }
+    }
+  }
 }
 
 .service-nav__button {
   display: none;
+
+  @include vp-1023 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    width: 100%;
+
+    font-size: 24px;
+    line-height: 28px;
+
+    background-color: $color-default-white;
+
+    border: none;
+    border-bottom: 1px solid $color-whisper;
+
+    svg {
+      color: $color-dark-orange;
+    }
+  }
 }
 
 .service-nav__list {
@@ -14,6 +52,16 @@
   padding: 0;
 
   list-style: none;
+
+  transition: opacity $trans-default, visibility $trans-default, max-height $trans-default;
+
+  background-color: $color-default-white;
+
+  @include vp-1023 {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+  }
 }
 
 .service-nav__item {

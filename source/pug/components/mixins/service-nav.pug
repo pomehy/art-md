@@ -3,6 +3,7 @@ mixin service-nav(data, buttonText="Выберите услугу", subCategory=
     .service-nav__control
       button.service-nav__button(type="button", data-service-menu-button)
         span !{buttonText}
+        +icon("icon-arrow-down", 28, 28)
       span.service-nav__subcategory(data-service-menu-subcategory) !{subCategory}
     ul.service-nav__list(data-service-menu-list, data-accordion="parent", data-single, data-triggers-wrapper)
       each item in data

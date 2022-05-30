@@ -1,6 +1,8 @@
 const breakpointMD = window.matchMedia('(max-width:1023px)');
 const breakpointSM = window.matchMedia('(max-width:767px)');
+
 const tabsControl = document.querySelector('.tabs__controls');
+const serviceNavMenu = document.querySelector('[data-service-menu]');
 
 export default class FixedBlock {
   constructor(element) {
@@ -34,7 +36,7 @@ export default class FixedBlock {
     const height = this._getHeight();
     const coordBlock = this._getCoord();
 
-    if (coordBlock < height) {
+    if (coordBlock < height || coordBlock === height) {
       this.root.classList.add('is-fixed');
     } else {
       this.root.classList.remove('is-fixed');
@@ -57,4 +59,13 @@ const initFixedBlock = () => {
   fixedBlock.init();
 };
 
-export {initFixedBlock};
+const initFixedServiceMenu = () => {
+  if (!serviceNavMenu) {
+    return;
+  }
+
+  const fixedServiceMenu = new FixedBlock(serviceNavMenu);
+  fixedServiceMenu.init();
+};
+
+export {initFixedBlock, initFixedServiceMenu};

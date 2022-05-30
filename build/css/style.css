@@ -4852,6 +4852,10 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
+  -o-transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
+  background-color: #ffffff;
 }
 
 .service-nav__item.is-active .service-nav__title {
@@ -6789,9 +6793,55 @@ button,
     flex-direction: column;
   }
 
+  .page-services__navigation {
+    position: sticky;
+    top: 89px;
+    z-index: 5;
+  }
+
   .page-services__content {
     padding-right: 24px;
     padding-left: 24px;
+  }
+
+  .service-nav.is-fixed {
+    -webkit-box-shadow: 0 7px 5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.04);
+  }
+
+  .service-nav.is-active .service-nav__list {
+    opacity: 1;
+    visibility: visible;
+    max-height: 100%;
+  }
+
+  .service-nav__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    width: 100%;
+    font-size: 24px;
+    line-height: 28px;
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #EEEEEE;
+  }
+
+  .service-nav__button svg {
+    color: #FE8A00;
+  }
+
+  .service-nav__list {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
   }
 
   .tabs__content--blog {
@@ -6808,8 +6858,8 @@ button,
   }
 
   .tabs__controls.is-fixed {
-    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 7px 5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.04);
   }
 
   .tabs__controls button {
@@ -7481,6 +7531,10 @@ button,
 
   .intro__text {
     display: none;
+  }
+
+  .page-services__navigation {
+    top: 79px;
   }
 
   .tabs__controls {

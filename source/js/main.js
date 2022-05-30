@@ -14,10 +14,11 @@ import {initArticlesFilter} from './modules/init-articles-filter';
 import HeaderNav from './modules/init-header-control';
 import Animation from './modules/init-animation';
 
-import {initFixedBlock} from './modules/init-fixed-tabs-control';
+import {initFixedBlock, initFixedServiceMenu} from './modules/init-fixed-tabs-control';
 import {initButtonToTop} from './modules/init-button-top-top';
 import {initMap} from './modules/init-map';
 import {initServiceButtonShow} from './modules/init-service-button-show';
+import {initServiceNav} from './modules/init-service-nav-menu';
 
 const initHeader = () => {
   const pageHeader = new HeaderNav();
@@ -62,8 +63,10 @@ window.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initArticlesFilter();
     initFixedBlock();
+    initFixedServiceMenu();
     initMap();
     initServiceButtonShow();
+    initServiceNav();
   });
 });
 

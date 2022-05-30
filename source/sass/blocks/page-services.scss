@@ -52,9 +52,17 @@
   }
 }
 
-// .page-services__navigation {
-//   display: none;
-// }
+.page-services__navigation {
+  @include vp-1023 {
+    position: sticky;
+    top: 89px;
+    z-index: 5;
+  }
+
+  @include vp-374 {
+    top: 79px;
+  }
+}
 
 .page-services__content {
   overflow: hidden;
