@@ -1,0 +1,607 @@
+-
+  const productionNavigation = [
+    {
+      title: 'Аудиоролики',
+      activeItem: 'is-active',
+      list: [
+        {
+          title: 'Информационный',
+          href: 'radio-info'
+        },
+        {
+          title: 'Игровой',
+          href: 'radio-game'
+        },
+        {
+          title: 'Пародийный',
+          href: 'radio-parody'
+        },
+        {
+          title: 'Имиджевый',
+          href: 'radio-look'
+        },
+        {
+          title: 'Песенный',
+          href: 'radio-song'
+        },
+        {
+          title: 'Написание сценария',
+          href: 'radio-scenario'
+        },
+      ],
+    },
+    {
+      title: 'Видеоролики',
+      list: [
+        {
+          title: 'Статичная видеооткрытка',
+          href: 'video-static'
+        },
+        {
+          title: 'Полудинамичный',
+          href: 'video-semidynamic'
+        },
+        {
+          title: 'Динамичный',
+          href: 'video-dynamic'
+        },
+        {
+          title: 'Написание сценария',
+          href: 'video-scenario'
+        },
+      ],
+    },
+    {
+      title: 'Продающий текст ',
+    },
+  ];
+
+-
+  const audioInfoData = {
+    id: 'radio-info',
+    title: 'Информационный',
+    description: 'Это информационное сообщение в&nbsp;официально-деловом или позитивном тоне. Буквальный рассказ о&nbsp;рекламируемом объекте. Подойдет, если ваша аудитория серьезная и&nbsp;предпочитает информацию коротко и&nbsp;по&nbsp;делу.',
+    parametersList: [
+      'сценарий;',
+      'один дикторский голос;',
+      'музыкальное сопровождение;',
+      'монтаж;',
+    ],
+    price: '1700',
+    audioList: [
+      {
+        name: 'ЖБК-Строй',
+        audio: {
+          src: 'audio/info/radio-info-1',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'АТСП: Наша территория',
+        audio: {
+          src: 'audio/info/radio-info-2',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Гриль и Кофе: Поработал - покушай',
+        audio: {
+          src: 'audio/info/radio-info-3',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Гриль и Кофе: Вкусно',
+        audio: {
+          src: 'audio/info/radio-info-4',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Гриль и Кофе: Гипноз',
+        audio: {
+          src: 'audio/info/radio-info-5',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Гриль и Кофе: Пицца',
+        audio: {
+          src: 'audio/info/radio-info-6',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Гриль и Кофе: Пицца2',
+        audio: {
+          src: 'audio/info/radio-info-7',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Гриль и Кофе:  После шести есть вредно',
+        audio: {
+          src: 'audio/info/radio-info-8',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Автотехцентр',
+        audio: {
+          src: 'audio/info/radio-info-9',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'ЭкспрессРолл: Вкусно поесть',
+        audio: {
+          src: 'audio/info/radio-info-10',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'ЭкспрессРолл: Вкусные роллы',
+        audio: {
+          src: 'audio/info/radio-info-11',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'ЭкспрессРолл: Пицца',
+        audio: {
+          src: 'audio/info/radio-info-12',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Деловой чебурек: Трансляция со стола',
+        audio: {
+          src: 'audio/info/radio-info-13',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Деловой Чебурек: Такой деловой',
+        audio: {
+          src: 'audio/info/radio-info-14',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Питстоп: СТОП',
+        audio: {
+          src: 'audio/info/radio-info-15',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Сумочка: Что делает женщину женщиной',
+        audio: {
+          src: 'audio/info/radio-info-16',
+          format: 'mp3',
+        },
+      },
+    ],
+  };
+
+-
+  const audioGameData = {
+    id: 'radio-game',
+    title: 'Игровой',
+    description: 'Это яркая, креативная подача. Здесь создается игровая концепция, в&nbsp;которую погружается слушатель.',
+    parametersList: [
+      'сценарий;',
+      'один и более дикторских голосов;',
+      'музыкальное сопровождение;',
+      'монтаж;',
+    ],
+    price: '2200',
+    audioList: [
+      {
+        name: 'Командир',
+        audio: {
+          src: 'audio/game/radio-game-1',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Лестери: Она меня больше не устраивает',
+        audio: {
+          src: 'audio/game/radio-game-2',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Теплодар: Не парьтесь',
+        audio: {
+          src: 'audio/game/radio-game-3',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Автотайм: 23 февраля',
+        audio: {
+          src: 'audio/game/radio-game-4',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Арзамасский дом: Крыша',
+        audio: {
+          src: 'audio/game/radio-game-5',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Арзамасский дом: Мать и Серёжа',
+        audio: {
+          src: 'audio/game/radio-game-6',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Арзамасский дом: Мать и сын',
+        audio: {
+          src: 'audio/game/radio-game-7',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Арзамасский дом: Мать и сын - 2',
+        audio: {
+          src: 'audio/game/radio-game-8',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Арзамасский дом: Пионеры',
+        audio: {
+          src: 'audio/game/radio-game-9',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Арсенал: Строй',
+        audio: {
+          src: 'audio/game/radio-game-10',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Биг Ролл: Мяса Хочу',
+        audio: {
+          src: 'audio/game/radio-game-11',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Гриль и Кофе: Японская кухня',
+        audio: {
+          src: 'audio/game/radio-game-12',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Дока: Сосульки на носу',
+        audio: {
+          src: 'audio/game/radio-game-13',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Пит Стоп: АААААА',
+        audio: {
+          src: 'audio/game/radio-game-14',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Рыболовный Рай: Пошли на щуку',
+        audio: {
+          src: 'audio/game/radio-game-15',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Следопыт: Кузьмич и Михалыч',
+        audio: {
+          src: 'audio/game/radio-game-16',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'ССК Сервис: Шеф, всё пропало',
+        audio: {
+          src: 'audio/game/radio-game-17',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'У Вадяна: Кто мы',
+        audio: {
+          src: 'audio/game/radio-game-18',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Усадьба: Барин приехал',
+        audio: {
+          src: 'audio/game/radio-game-19',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Хали-Гали: Милый, я тоже хочу петь',
+        audio: {
+          src: 'audio/game/radio-game-20',
+          format: 'mp3',
+        },
+      },
+    ],
+  };
+
+-
+  const audioParodyData = {
+    id: 'radio-parody',
+    title: 'Пародийный',
+    description: 'Отлично подходит, чтобы привлечь к себе внимание потребителя и выделиться на фоне конкурентов.',
+    parametersList: [
+      'сценарий;',
+      'один и более дикторских голосов формата «пародия»;',
+      'музыкальное сопровождение;',
+      'монтаж;',
+    ],
+    price: '2200',
+    audioList: [
+      {
+        name: 'Арзамасский дом: Сталин и Берия',
+        audio: {
+          src: 'audio/parody/radio-parody-1',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Велл Тур: А ребята брали',
+        audio: {
+          src: 'audio/parody/radio-parody-2',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Дока: Шпак',
+        audio: {
+          src: 'audio/parody/radio-parody-3',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Весёлый Роджер: Пираты',
+        audio: {
+          src: 'audio/parody/radio-parody-4',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Весёлый Роджер: Пираты-2',
+        audio: {
+          src: 'audio/parody/radio-parody-5',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Арзамасский дом: Вито Карлеоне',
+        audio: {
+          src: 'audio/parody/radio-parody-6',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Два Кота: Купи подарок',
+        audio: {
+          src: 'audio/parody/radio-parody-7',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Два Кота: С Новым Годом',
+        audio: {
+          src: 'audio/parody/radio-parody-8',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Два Кота: Это снова я',
+        audio: {
+          src: 'audio/parody/radio-parody-9',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Дока: Бунша',
+        audio: {
+          src: 'audio/parody/radio-parody-10',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'ЗОВ: Маша и медведь',
+        audio: {
+          src: 'audio/parody/radio-parody-11',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Мастер Люкс: Вовочка',
+        audio: {
+          src: 'audio/parody/radio-parody-12',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Евромакс: Печкин',
+        audio: {
+          src: 'audio/parody/radio-parody-13',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Японика: Бабуля',
+        audio: {
+          src: 'audio/parody/radio-parody-14',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'СП Мега: Нафаня и Кузя домофон',
+        audio: {
+          src: 'audio/parody/radio-parody-15',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'СП Мега: Нафаня и Кузя ключи',
+        audio: {
+          src: 'audio/parody/radio-parody-16',
+          format: 'mp3',
+        },
+      },
+    ],
+  };
+
+-
+  const audioLookData = {
+    id: 'radio-look',
+    title: 'Имиджевый',
+    description: 'Цель данного ролика – создать положительные ассоциации и эмоции рассказав о ценностях компании или товара.',
+    parametersList: [
+      'сценарий;',
+      'один и более дикторских голосов;',
+      'музыкальное сопровождение;',
+      'монтаж;',
+    ],
+    price: '3000',
+    audioList: [
+      {
+        name: 'Автотайм: Несколько секунд тишины',
+        audio: {
+          src: 'audio/look/radio-look-1',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Автотайм: Несколько секунд тишины',
+        audio: {
+          src: 'audio/look/radio-look-2',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'ЛазерСити: Звёздные войны',
+        audio: {
+          src: 'audio/look/radio-look-3',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Гриль и Кофе: Крафтбургер',
+        audio: {
+          src: 'audio/look/radio-look-4',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Кераника: Трейлер',
+        audio: {
+          src: 'audio/look/radio-look-5',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Корона: Королевский отдых',
+        audio: {
+          src: 'audio/look/radio-look-6',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Русь: Выпечка',
+        audio: {
+          src: 'audio/look/radio-look-7',
+          format: 'mp3',
+        },
+      },
+    ],
+  };
+
+-
+  const audioSongData = {
+    id: 'radio-song',
+    title: 'Песенный',
+    description: 'Мини песня про вашу компанию на известный мотив или авторскую подачу. Отлично подойдёт, чтобы выделиться на фоне других компаний.',
+    parametersList: [
+      'сценарий;',
+      'один и более дикторских голосов формата «вокалист»;',
+      'музыкальное сопровождение;',
+      'монтаж;',
+    ],
+    price: '4000',
+    audioList: [
+      {
+        name: 'Апельсин',
+        audio: {
+          src: 'audio/song/radio-song-1',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Иксора',
+        audio: {
+          src: 'audio/song/radio-song-2',
+          format: 'mp3',
+        },
+      },
+      {
+        name: 'Клаксон',
+        audio: {
+          src: 'audio/song/radio-song-3',
+          format: 'mp3',
+        },
+      },
+    ],
+  };
+
+-
+  const audioScenarioData = {
+    id: 'radio-scenario',
+    title: 'Сценарий для аудиороликов',
+    description: 'Напишем сценарий к вашему аудиоролику, который точно запомнится.',
+    price: '500',
+  };
+
+mixin page-production()
+  .page-services
+    .container
+      .page-services__grid(data-tabs="parent")
+        .page-services__navigation(data-tabs="controls")
+          +service-nav(productionNavigation)
+        .page-services__content.service-content
+          div(data-tabs="content")
+            .service-content.page-content(data-tabs="element")
+              h1 Изготовление аудиороликов
+              .page-content__text
+                p Запишем для вас аудиоролики любого формата и сложности. Мы работаем только с профессиональными дикторами, чей опыт составляет не менее 10 лет в данной сфере
+              .page-content__image.page-content__image--main
+                +picture("content/production", "production-radio", "jpg", 695, 420)
+              +service-audio-content(audioInfoData)
+              +service-audio-content(audioGameData)
+              +service-audio-content(audioParodyData)
+              .page-content__image
+                +picture("content/production", "production-radio-1", "jpg", 695, 300)
+              +service-audio-content(audioLookData)
+              +service-audio-content(audioSongData)
+              +service-audio-content(audioScenarioData).service-content__inner--accent
+            .content(data-tabs="element")
+              h2 Lorem ipsum dolor sit amet.
+            .content(data-tabs="element")
+              h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, adipisci!
+          +feedback("Хотите сделать заказ или получить бесплатный расчёт?", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--services

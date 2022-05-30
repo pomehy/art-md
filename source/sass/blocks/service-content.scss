@@ -1,0 +1,137 @@
+.service-content {
+  h1 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-family: $ff-second-font;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 48px;
+
+    @include vp-767 {
+      margin-bottom: 20px;
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  .page-content__image {
+    box-shadow: 0 1px 3px 0 transparentize($color-default-black, 0.9), 0 1px 2px 0 transparentize($color-default-black, 0.94);
+  }
+}
+
+.service-content__inner {
+  padding: 32px 24px;
+  background-color: $color-default-white;
+  border-radius: 4px;
+
+  box-shadow: 0 1px 3px 0 transparentize($color-default-black, 0.9), 0 1px 2px 0 transparentize($color-default-black, 0.94);
+
+  @include vp-767 {
+    padding: 24px 16px;
+  }
+}
+
+.service-content__inner--accent {
+  background-color: transparentize(#0088CD, 0.9);
+}
+
+.service-content__price {
+  position: relative;
+  width: max-content;
+  margin-top: 32px;
+
+  font-family: $ff-second-font;
+  font-weight: 700;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  color: $color-dark-orange;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+// .service-content__price {
+//   width: max-content;
+//   background-color: transparentize($color-dark-orange, 0.2);
+//   margin-top: 32px;
+//   padding: 8px 16px;
+
+//   font-family: $ff-second-font;
+//   font-weight: 700;
+
+//   font-size: 20px;
+//   line-height: 24px;
+
+//   color: $color-default-white;
+//   border-radius: 2px;
+
+//   p {
+//     margin-top: 0;
+//     margin-bottom: 0;
+//   }
+// }
+
+.service-content__examples {
+  margin-top: 40px;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.service-content__button-show {
+  position: relative;
+
+  margin-top: 32px;
+  padding-right: 0;
+  padding-left: 0;
+
+  font-size: 20px;
+  color: $color-dark-orange;
+  border: none;
+  background-color: $color-transparent;
+
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  &.is-hidden {
+    display: none;
+  }
+
+  @include vp-767 {
+    margin-top: 20px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    bottom: -2px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $color-dark-orange;
+  }
+}

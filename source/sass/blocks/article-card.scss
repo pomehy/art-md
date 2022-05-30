@@ -9,6 +9,8 @@
 
   transition: opacity $trans-600;
 
+  overflow: hidden;
+
   &.is-hidden {
     position: absolute;
 
@@ -16,10 +18,26 @@
     visibility: hidden;
     opacity: 0;
   }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      .article-card__image-wrapper {
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      .article-card__title {
+        color: $color-dark-orange;
+      }
+    }
+  }
 }
 
 .article-card__tag {
   position: absolute;
+  z-index: 1;
   margin: 16px;
 
   padding: 2px 8px;
@@ -42,11 +60,19 @@
     height: 100%;
 
     object-fit: cover;
+    transform: scale(1) translateZ(0);
+    transition: transform $trans-default;
+    pointer-events: none;
   }
 
   @include vp-1279 {
     margin-bottom: 20px;
     min-height: 200px;
+  }
+
+  @include vp-1023 {
+    min-height: 240px;
+    height: 260px;
   }
 }
 
@@ -67,6 +93,8 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
+
+  transition: color $trans-default;
 
   @include vp-1439 {
     font-size: 20px;

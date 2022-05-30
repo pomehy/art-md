@@ -1,0 +1,46 @@
+.balloon {
+  border-radius: 8px;
+}
+
+.balloon__title {
+  position: relative;
+
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-family: $ff-second-font;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+
+    width: 70%;
+    height: 2px;
+    background-color: $color-dark-orange;
+    border-radius: 2px;
+  }
+}
+
+.balloon__contacts {
+  p {
+    margin-top: 0;
+    margin-bottom: 4px;
+
+    font-size: 14px;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,8 +1,10 @@
 -
   const articleCardsData = [
     {
-      href: "#",
+      href: "article.html",
       title: "SMM или таргетированная реклама?",
+      tag: "SMM",
+      filter: "smm",
       text: "Клиенты часто не могут определиться, что в их случае будет эффективно работать: SMM или таргетированная реклама в поисковых системах",
       date: "14.09.2021",
       datetime: "2021-09-14",
@@ -16,8 +18,10 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему реклама на радио по прежнему актуальна?",
+      tag: "Маркетинг",
+      filter: "marketing",
       text: "В современном мире владельцы бизнеса, равно как и специалисты по продвижению, сосредоточены в основном на онлайн-рекламе. Другие каналы взаимодействия с аудиторией, такие как радио, используются всё реже. Эффективна ли в наш век высоких технологий реклама на радио — вопрос спорный. Чтобы ответить на него, стоит подробнее рассмотреть ее особенности.",
       date: "21.02.2020",
       datetime: "2020-02-21",
@@ -31,8 +35,10 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему у бизнеса без рекламы нет будущего?",
+      tag: "О рекламе",
+      filter: "adv",
       text: "Каждый бизнес нуждается в&nbsp;постоянном развитии и&nbsp;расширении рынков сбыта. В&nbsp;ином случае &laquo;место под солнцем&raquo; займут конкуренты, которые оказались более расторопны и&nbsp;предприимчивы. Понятно, что масштабы бизнеса играют далеко не&nbsp;последнюю роль. Однако какой смысл заниматься предпринимательством, если не&nbsp;стремиться достигнуть большего и&nbsp;стать обладателем более значительных прибылей.",
       date: "05.09.2018",
       datetime: "2018-09-05",
@@ -72,11 +78,12 @@ mixin articles()
 
       .page-section__grid.page-section__grid--articles.fit.d-200
         each item in articleCardsData
-          article.article-card
-            .article-card__image-wrapper
-              +picture(item.img.path, item.img.image, item.img.format, item.img.width, item.img.height, item.img.altText)
-            .article-card__content
-              time.article-card__date(datetime=item.datetime) !{item.date}
-              h3.article-card__title !{item.title}
-              p.article-card__text !{item.text}
-            +button({text: "Подробнее", href: item.href})(aria-label="Перейти к статье").article-card__button.button--secondary.button--small
+          +article-card(item)
+          //- article.article-card
+          //-   .article-card__image-wrapper
+          //-     +picture(item.img.path, item.img.image, item.img.format, item.img.width, item.img.height, item.img.altText)
+          //-   .article-card__content
+          //-     time.article-card__date(datetime=item.datetime) !{item.date}
+          //-     h3.article-card__title !{item.title}
+          //-     p.article-card__text !{item.text}
+          //-   +button({text: "Подробнее", href: item.href})(aria-label="Перейти к статье").article-card__button.button--secondary.button--small

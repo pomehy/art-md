@@ -1,0 +1,161 @@
+.contacts-item__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+
+  font-family: $ff-second-font;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+
+  @include vp-1439 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  @include vp-1279 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @include vp-767 {
+    margin-top: 4px;
+    margin-bottom: 24px;
+  }
+}
+
+
+.contacts-item__content {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 24px;
+  line-height: 28px;
+
+  a {
+    transition: opacity $trans-default, color $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-dark-orange;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  p,a {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include vp-1439 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.contacts-item__messengers {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+
+  a {
+    margin-right: 8px;
+    margin-bottom: 0;
+
+    transition: opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.contacts-item__socials {
+  display: flex;
+
+  a {
+    margin-bottom: 0;
+    margin-right: 8px;
+    transition: opacity $trans-default;
+
+
+    &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.contacts-item__accordion {
+  margin-top: 16px;
+
+  &.is-active {
+    button {
+      opacity: 1;
+    }
+  }
+
+  button {
+    padding-right: 8px;
+    padding-left: 8px;
+    border: none;
+    color: $color-nero;
+    border: 1px dashed $color-nero;
+
+    opacity: 0.6;
+
+    background-color: $color-transparent;
+
+    cursor: pointer;
+
+    transition: opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 12px;
+    margin-bottom: 0;
+
+    li {
+      font-size: 18px;
+    }
+  }
+}

@@ -44,36 +44,12 @@
   background-color: $color-snow;
 }
 
-.page-section--orange {
-  background-image: linear-gradient(90deg, $color-dark-orange, $color-pumpkin 90%);
-
-  .page-section__title {
-    color: $color-default-white;
-  }
-
-  .page-section__description {
-    color: $color-default-white;
-  }
-}
-
 .page-section__header {
   margin-bottom: 40px;
 
-  max-width: 55%;
-
-  @include vp-1919 {
-    max-width: 70%;
-  }
+  max-width: 80%;
 
   @include vp-1279 {
-    max-width: 75%;
-  }
-
-  @include vp-1023 {
-    max-width: 85%;
-  }
-
-  @include vp-767 {
     max-width: 100%;
   }
 }
@@ -186,6 +162,27 @@
     width: 100%;
 
     object-fit: cover;
+  }
+}
+
+.page-section__grid--contacts {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px;
+  row-gap: 80px;
+
+  @include vp-1919 {
+    column-gap: 80px;
+    row-gap: 80px;
+  }
+
+  @include vp-1279 {
+    column-gap: 60px;
+    row-gap: 60px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 100%;
+    row-gap: 40px;
   }
 }
 

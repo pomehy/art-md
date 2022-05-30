@@ -1,7 +1,7 @@
 -
   const articlesData = [
     {
-      href: "#",
+      href: "article.html",
       title: "SMM или таргетированная реклама?",
       tag: "SMM",
       filter: "smm",
@@ -18,7 +18,7 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему реклама на радио по прежнему актуальна?",
       tag: "Маркетинг",
       filter: "marketing",
@@ -35,7 +35,7 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему у бизнеса без рекламы нет будущего?",
       tag: "О рекламе",
       filter: "adv",
@@ -52,7 +52,7 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему у бизнеса без рекламы нет будущего?",
       tag: "Indoor-реклама",
       filter: "indoor",
@@ -69,7 +69,7 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему у бизнеса?",
       tag: "Outdoor-реклама",
       filter: "outdoor",
@@ -86,7 +86,7 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему у бизнеса?",
       tag: "Из нашего опыта",
       filter: "experience",
@@ -103,7 +103,7 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему у бизнеса без рекламы нет будущего?",
       tag: "История рекламы",
       filter: "history",
@@ -120,7 +120,7 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему реклама на радио по прежнему актуальна?",
       tag: "Радиореклама",
       filter: "radio",
@@ -137,7 +137,7 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему реклама на радио по прежнему актуальна?",
       tag: "Радиореклама",
       filter: "radio",
@@ -154,7 +154,7 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему реклама на радио по прежнему актуальна?",
       tag: "Радиореклама",
       filter: "radio",
@@ -171,7 +171,7 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему у бизнеса без рекламы нет будущего?",
       tag: "Маркетинг",
       filter: "marketing",
@@ -188,7 +188,7 @@
       },
     },
     {
-      href: "#",
+      href: "article.html",
       title: "Почему у бизнеса без рекламы нет будущего?",
       tag: "О рекламе",
       filter: "adv",
@@ -207,25 +207,24 @@
   ]
 
 mixin page-blog()
-  .page-content
-    .page-section.page-section--tabs(data-animation-group)
-      .container
-        .page-section__header.fit.d-300
-          h2.page-section__title Полезное о рекламе
-          .page-section__description
-            p О продвижении простыми словами. Делимся секретами, лайфхаками и полезной информацией, как стать заметнее для свой аудитории
-        .page-section__tabs.tabs.tabs--blog(data-filter="parent").fit.d-300
-          .tabs__controls(data-filter="controls")
-            +button({text: "Все"}).button--secondary(data-filter="all").is-active
-            +button({text: "Маркетинг"}).button--secondary(data-filter="marketing")
-            +button({text: "Радиореклама"}).button--secondary(data-filter="radio")
-            +button({text: "О рекламе"}).button--secondary(data-filter="adv")
-            +button({text: "SMM"}).button--secondary(data-filter="smm")
-            +button({text: "Indoor-реклама"}).button--secondary(data-filter="indoor")
-            +button({text: "Outdoor-реклама"}).button--secondary(data-filter="outdoor")
-            +button({text: "Из нашего опыта"}).button--secondary(data-filter="experience")
-            +button({text: "История рекламы"}).button--secondary(data-filter="history")
-          .tabs__content.tabs__content--blog
-            each item in articlesData
-              +article-card(item).is-show
+  .page-section.page-section--tabs(data-animation-group)
+    .container
+      .page-section__header.fit.d-300
+        h2.page-section__title Полезное о рекламе
+        .page-section__description
+          p О продвижении простыми словами. Делимся секретами, лайфхаками и полезной информацией, как стать заметнее для свой аудитории
+      .page-section__tabs.tabs.tabs--blog(data-filter="parent").fit.d-300
+        .tabs__controls(data-filter="controls")
+          +button({text: "Все"}).button--secondary(data-filter="all").is-active
+          +button({text: "Маркетинг"}).button--secondary(data-filter="marketing")
+          +button({text: "Радиореклама"}).button--secondary(data-filter="radio")
+          +button({text: "О рекламе"}).button--secondary(data-filter="adv")
+          +button({text: "SMM"}).button--secondary(data-filter="smm")
+          +button({text: "Indoor-реклама"}).button--secondary(data-filter="indoor")
+          +button({text: "Outdoor-реклама"}).button--secondary(data-filter="outdoor")
+          +button({text: "Из нашего опыта"}).button--secondary(data-filter="experience")
+          +button({text: "История рекламы"}).button--secondary(data-filter="history")
+        .tabs__content.tabs__content--blog
+          each item in articlesData
+            +article-card(item).is-show
 

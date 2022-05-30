@@ -1,12 +1,16 @@
 .feedback {
   position: relative;
+  background-image: linear-gradient(90deg, $color-dark-orange, $color-pumpkin 90%);
+  overflow: hidden;
+}
 
+.feedback--article {
   padding-top: 56px;
   padding-bottom: 56px;
 
   @include vp-1439 {
-    padding-top: 56px;
-    padding-bottom: 56px;
+    padding-top: 44px;
+    padding-bottom: 44px;
   }
 
   @include vp-1279 {
@@ -20,10 +24,109 @@
   }
 }
 
+.feedback--services {
+  margin-top: 40px;
+
+  padding: 32px 24px;
+  border-radius: 4px;
+
+  box-shadow: 0 1px 3px 0 transparentize($color-default-black, 0.9), 0 1px 2px 0 transparentize($color-default-black, 0.94);
+
+  @include vp-767 {
+    margin-top: 28px;
+    padding: 24px 16px;
+  }
+
+  .feedback__content {
+    max-width: 100%;
+  }
+
+  .feedback__header {
+    max-width: 60%;
+
+    @include vp-767 {
+      max-width: 100%;
+    }
+  }
+
+  .feedback__decor {
+    right: 5%;
+  }
+}
+
 .feedback__content {
-  max-width: 1000px;
+  position: relative;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
+
+  @include vp-1023 {
+    max-width: 100%;
+  }
+}
+
+.feedback__header {
+  color: $color-default-white;
+
+  @include vp-767 {
+    max-width: 60%;
+  }
+
+  @include vp-519 {
+    max-width: 100%;
+  }
+}
+
+.feedback__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $ff-second-font;
+  font-size: 44px;
+  line-height: 48px;
+
+  @include vp-1279 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  @include vp-1023 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  @include vp-374 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+.feedback__description {
+  margin-top: 24px;
+  margin-bottom: 0;
+
+  font-size: 24px;
+  line-height: 28px;
+
+
+  @include vp-1439 {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.feedback__button {
+  margin-top: 24px;
 }
 
 .feedback__image-wrapper {
@@ -35,20 +138,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 60px;
-  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -5%;
   z-index: 0;
 
   color: $color-default-white;
 
-  svg {
-    opacity: 0.3;
-  }
-
   pointer-events: none;
 
   @include vp-1279 {
-    left: -100px;
+    right: 10%;
+  }
+
+  @include vp-767 {
+    // top: 0;
+    right: 5%;
+
+    svg {
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  @include vp-519 {
+    display: none;
   }
 }
 

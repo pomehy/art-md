@@ -1,0 +1,47 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Контакты АМР Артмедиа" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "contacts.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+  -
+    const contactsData = {
+      img: {
+        path: 'content/contacts',
+        image: 'contacts-intro',
+        format: 'jpg',
+        width: 1920,
+        height: 1280,
+        altText: 'Коннект',
+      },
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: "contacts.html",
+          text: "Контакты",
+        },
+      ],
+    }
+
+block main
+  main
+    h1.visually-hidden Контакты АМР Артмедиа
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(contactsData)
+    +page-contacts()
+    +map()
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()

@@ -1,7 +1,8 @@
 mixin page-intro(data)
-  .page-intro(data-animation-group).is-show
-    .page-intro__image-wrapper.fi.d-200
-      +picture(data.img.path, data.img.image, data.img.format, data.img.width, data.img.height, data.img.altText)
+  .page-intro(data-animation-group).is-show&attributes(attributes)
+    if data.img
+      .page-intro__image-wrapper.fi.d-200
+        +picture(data.img.path, data.img.image, data.img.format, data.img.width, data.img.height, data.img.altText)
     .container
       ul.breadcrumbs
         each item in data.breadcrumbs

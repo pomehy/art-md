@@ -7,6 +7,8 @@
 
   min-height: 680px;
 
+  background-color: $color-snow;
+
   @include vp-1023 {
     min-height: 600px;
   }
@@ -14,6 +16,24 @@
   @include vp-767 {
     margin-top: 60px;
     min-height: 400px;
+  }
+}
+
+.page-intro--no-image {
+  min-height: 300px;
+
+  @include vp-1023 {
+    min-height: 300px;
+  }
+
+  @include vp-767 {
+    min-height: 200px;
+  }
+
+  .breadcrumbs__item {
+    a {
+      color: $color-nero;
+    }
   }
 }
 
@@ -34,7 +54,7 @@
     bottom: 0;
 
     width: 100%;
-    height: 25%;
+    height: 30%;
 
     background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 20%, $color-transparent);
 
@@ -52,5 +72,14 @@
     height: 100%;
     pointer-events: none;
     object-position: top;
+  }
+}
+
+
+.page-intro--pos-top {
+  .page-intro__image-wrapper {
+    img {
+      object-position: top;
+    }
   }
 }

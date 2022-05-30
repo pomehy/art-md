@@ -7,25 +7,29 @@
 .tabs__content--blog {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  column-gap: 40px;
+  row-gap: 48px;
 
   margin-top: 16px;
 
   @include vp-1919 {
-    gap: 32px;
+    column-gap: 40px;
+    row-gap: 48px;
   }
 
   @include vp-1279 {
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    column-gap: 32px;
+    row-gap: 40px;
   }
 
   @include vp-1023 {
-    margin-top: 0;
+    margin-top: 16px;
 
     padding-right: 24px;
     padding-left: 24px;
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
   }
 
   @include vp-767 {
@@ -33,7 +37,6 @@
 
     padding-right: 16px;
     padding-left: 16px;
-    gap: 20px;
   }
 }
 
@@ -50,10 +53,55 @@
   margin-top: -20px;
 
   background-color: $color-default-white;
+  transition: box-shadow $trans-default;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -80px;
+    bottom: 0;
+
+    width: calc(100% + 160px);
+    height: 100%;
+
+    background-color: $color-default-white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+
+    transition: opacity $trans-default;
+
+    @include vp-1439 {
+      left: -32px;
+      width: calc(100% + 64px);
+    }
+
+    @include vp-1279 {
+      left: -28px;
+      width: calc(100% + 56px);
+    }
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &.is-fixed {
+    @include vp-1023 {
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
 
   button {
-    margin-right: 24px;
+    margin-right: 20px;
     margin-bottom: 16px;
+
+    padding: 8px 16px;
 
     white-space: nowrap;
 

@@ -19,22 +19,26 @@ const initArticlesFilter = () => {
     });
   };
 
-  filterButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      let array = Array.from(filterButtons);
-      let index = array.indexOf(button);
+  if (filterButtons) {
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        let array = Array.from(filterButtons);
+        let index = array.indexOf(button);
 
-      array.forEach((item, i) => {
-        if (i === index) {
-          item.classList.add('is-active');
-        } else {
-          item.classList.remove('is-active');
+        array.forEach((item, i) => {
+          if (i === index) {
+            item.classList.add('is-active');
+          } else {
+            item.classList.remove('is-active');
+          }
+        });
+
+        if (filterCards) {
+          getFilter(button, filterCards);
         }
       });
-
-      getFilter(button, filterCards);
     });
-  });
+  }
 };
 
 export {initArticlesFilter};

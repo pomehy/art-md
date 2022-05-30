@@ -430,24 +430,23 @@
   ]
 
 mixin page-partners()
-  .page-content
-    .page-section.page-section--tabs(data-animation-group)
-      .container
-        .page-section__header.fit.d-300
-          h2.page-section__title Наши партнеры
-          .page-section__description
-            p АМР "Артмедиа" за время своей работы заручилось доверием многих организаций Арзамаса и компаний федерального масштаба. Мы очень ценим каждого партнёра, выстраивая шаг за шагом крепкое и взаимовыгодное сотрудничество
-        .page-section__tabs.tabs(data-tabs="parent")
-          .tabs__controls(data-tabs="controls")
-            +button({text: "Локальные"}).button--secondary(data-tabs="control")
-            +button({text: "Федеральные"}).button--secondary(data-tabs="control")
-          .tabs__content(data-tabs="content")
-            .tabs__element.tabs__element--partners(data-tabs="element")
-              each item in partnersCityData
-                +partner-card(item)
-            .tabs__element.tabs__element--partners(data-tabs="element")
-              each item in partnersGlobalData
-                +partner-card(item)
-    //- +feedback()
-    +gratitude(gratitudeData).page-section--snow
+  .page-section.page-section--tabs(data-animation-group)
+    .container
+      .page-section__header.fit.d-300
+        h2.page-section__title Наши партнеры
+        .page-section__description
+          p АМР "Артмедиа" за время своей работы заручилось доверием многих организаций Арзамаса и компаний федерального масштаба. Мы очень ценим каждого партнёра, выстраивая шаг за шагом крепкое и взаимовыгодное сотрудничество
+      .page-section__tabs.tabs(data-tabs="parent")
+        .tabs__controls(data-tabs="controls")
+          +button({text: "Локальные"}).button--secondary(data-tabs="control")
+          +button({text: "Федеральные"}).button--secondary(data-tabs="control")
+        .tabs__content(data-tabs="content")
+          .tabs__element.tabs__element--partners(data-tabs="element")
+            each item in partnersCityData
+              +partner-card(item)
+          .tabs__element.tabs__element--partners(data-tabs="element")
+            each item in partnersGlobalData
+              +partner-card(item)
+  //- +feedback()
+  +gratitude(gratitudeData).page-section--snow
 

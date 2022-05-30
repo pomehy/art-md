@@ -1,9 +1,202 @@
-.page-content {
-  .page-section__header {
-    max-width: 80%;
+.page-content__content-wrapper {
+  margin-bottom: 40px;
 
-    @include vp-1279 {
-      max-width: 100%;
+  @include vp-1023 {
+    margin-bottom: 36px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+
+    font-family: $ff-second-font;
+    font-weight: 700;
+    font-size: 32px;
+
+    @include vp-767 {
+      font-size: 28px;
     }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-family: $ff-second-font;
+    font-weight: 700;
+    font-size: 24px;
+
+    @include vp-767 {
+      font-size: 20px;
+    }
+  }
+
+  ul {
+    margin-top: 16px;
+    margin-bottom: 0;
+    padding-left: 24px;
+
+    list-style: none;
+
+    @include vp-767 {
+      padding-left: 0;
+    }
+
+    li {
+      position: relative;
+      display: flex;
+
+      padding-left: 24px;
+      margin-bottom: 4px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      svg {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        color: $color-dark-orange;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ol {
+    margin-top: 16px;
+    margin-bottom: 0;
+    padding-left: 24px;
+
+    counter-reset: list-ol;
+
+    @include vp-767 {
+      padding-left: 0;
+    }
+
+    li {
+      position: relative;
+      display: flex;
+
+      padding-left: 24px;
+
+      margin-bottom: 4px;
+      counter-increment: list-ol;
+
+      &::before {
+        content: counter(list-ol) ".";
+        position: absolute;
+        left: 0;
+
+        color: $color-dark-orange;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  table {
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    border-collapse: collapse;
+
+    border: 1px solid $color-whisper;
+    font-size: 18px;
+
+    th {
+      padding: 16px;
+      background-color: $color-snow;
+      border: 1px solid $color-whisper;
+
+      @include vp-767 {
+        padding: 8px;
+      }
+    }
+
+    td {
+      padding: 16px;
+
+      line-height: 20px;
+      border: 1px solid $color-whisper;
+      text-align: center;
+
+      @include vp-767 {
+        padding: 8px;
+      }
+    }
+  }
+}
+
+.page-content__text {
+  font-size: 20px;
+  line-height: 24px;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include vp-1439 {
+    p {
+      margin-bottom: 20;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+
+.page-content__image {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  height: 300px;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  @include vp-767 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    height: 280px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
+
+.page-content__image--main {
+  height: 420px;
+
+  @include vp-767 {
+    height: 360px;
   }
 }

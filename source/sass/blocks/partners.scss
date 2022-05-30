@@ -1,4 +1,4 @@
-.partners {
+.page-section.partners {
   .page-section__header {
     position: relative;
     max-width: 100%;
@@ -9,7 +9,7 @@
     max-width: 55%;
 
     @include vp-1023 {
-      max-width: 75%;
+      max-width: 100%;
     }
 
     @include vp-767 {

@@ -2,7 +2,7 @@ extends ../components/base/layout
 
 block variables
   - const title = "Артмедиа - агентство медийной рекламы" //- на страницах кроме главной используйте О нас — ProjectName
-  - const wrapperMods = ""
+  - const wrapperMods = "wrapper--main"
   - const hasHeader = true
   - const headerMods = "is-transparent is-painted"
   - const hasFooter = true
@@ -12,6 +12,7 @@ block variables
 block main
   main
     h1.visually-hidden Артмедиа - агентство медийной рекламы
+    +button-to-top()
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     +intro()

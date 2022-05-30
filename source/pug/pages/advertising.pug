@@ -1,0 +1,49 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Рекламные возможности" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "advertising.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutBlog = {
+      img: {
+        path: 'content/blog',
+        image: 'blog-intro',
+        format: 'jpg',
+        width: 1920,
+        height: 1280,
+        altText: 'Идея',
+      },
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: "index.html",
+          text: "Услуги",
+        },
+        {
+          href: "advertising.html",
+          text: "Рекламные возможности",
+        },
+      ],
+    }
+
+block main
+  main
+    h1.visually-hidden Партнеры АМР Артмедиа
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutBlog)
+    +page-advertising()
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()

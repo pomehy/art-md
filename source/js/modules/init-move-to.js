@@ -1,26 +1,35 @@
 import MoveTo from '../vendor/move-to';
 
+const top = 120;
+
 const initMoveTo = () => {
   const moveTo = new MoveTo({
-    tolerance: 90,
+    tolerance: top,
     duration: 600,
     easing: 'easeOutQuart',
     container: window,
   });
 
   const triggers = document.querySelectorAll('[data-link-trigger]');
-  // const triggersWrapper = document.querySelector('.page-template__navigation');
+  // const triggersWrapper = document.querySelector('[data-triggers-wrapper]');
 
   if (triggers) {
-    for (let i = 0; i < triggers.length; i++) {
-      moveTo.registerTrigger(triggers[i]);
+    triggers.forEach((trigger) => {
+      moveTo.registerTrigger(trigger);
 
-      // triggers[i].addEventListener('click', () => {
-      //   let currentLink = triggersWrapper.getElementsByClassName('is-active');
-      //   currentLink[0].className = currentLink[0].className.replace('is-active', '');
-      //   triggers[i].classList.add('is-active');
-      // });
-    }
+      trigger.addEventListener('click', () => {
+        let array = Array.from(triggers);
+        let index = array.indexOf(trigger);
+
+        array.forEach((item, i) => {
+          if (i === index) {
+            item.classList.add('is-active');
+          } else {
+            item.classList.remove('is-active');
+          }
+        });
+      });
+    });
   }
 };
 

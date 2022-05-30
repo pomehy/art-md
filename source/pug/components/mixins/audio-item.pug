@@ -1,0 +1,4 @@
+mixin audio-item(item)
+  .audio-item(data-audio-item)&attributes(attributes)
+    span.audio-item__name !{item.name}
+    audio.audio-item__track(preload="none", src=item.audio.src + '.' + item.audio.format, controls)
