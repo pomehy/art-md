@@ -1,0 +1,23 @@
+mixin service-content(data)
+  .page-content__content-wrapper.service-content__inner(id=data.id)&attributes(attributes)
+    h2 !{data.title}
+    .page-content__text
+      p !{data.description}
+      if data.parametersList
+        p В данный вид ролика входит:
+          ul
+            each item in data.parametersList
+              li
+                +icon("icon-arrow-right", 16, 16)
+                p !{item}
+    .service-content__price
+      p Стоимость: #[span от !{data.price} руб.]
+    if data.audioList
+      .service-content__examples
+        h3 Примеры:
+        div(data-service-item-container)
+          each audio in data.audioList
+            +audio-item(audio)
+          if data.audioList.length > 3
+            button.service-content__button-show(type="button", data-service-show-more) Показать все
+

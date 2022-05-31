@@ -15,7 +15,7 @@ mixin service-nav(data, buttonText="Выберите услугу", subCategory=
             div.service-nav__sublist-wrapper(data-accordion="content")
               ul.service-nav__sublist(data-service-menu-sublist)
                 each subItem in item.list
-                  li #[a(href='#' + subItem.href, data-link-trigger, data-navigation-link) !{subItem.title}]
+                  li #[a(href='#' + subItem.href, data-link-trigger, data-service-sublink) !{subItem.title}]
         else
           li.service-nav__item(data-accordion="element")
             span.service-nav__title(data-tabs="control", data-accordion="button")

@@ -4,18 +4,38 @@
 
   transform: translateZ(0);
 
-  &.is-fixed {
+  &.is-decor {
     @include vp-1023 {
       box-shadow: 0 7px 5px transparentize($color-default-black, 0.96);
     }
   }
 
+  &.is-fixed {
+    position: fixed;
+
+    // box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
   &.is-active {
     @include vp-1023 {
+      position: fixed;
+
+      bottom: 0;
+      right: 0;
+      left: 0;
+
+      .service-nav__button {
+        svg {
+          transform: rotate(-180deg);
+        }
+      }
+
       .service-nav__list {
         opacity: 1;
         visibility: visible;
         max-height: 100%;
+
+        box-shadow: 0 7px 5px transparentize($color-default-black, 0.96);
       }
     }
   }
@@ -27,6 +47,7 @@
   @include vp-1023 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 16px;
     padding-right: 24px;
     padding-bottom: 16px;
@@ -42,8 +63,14 @@
     border-bottom: 1px solid $color-whisper;
 
     svg {
+      transition: transform $trans-default;
       color: $color-dark-orange;
     }
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
@@ -53,7 +80,7 @@
 
   list-style: none;
 
-  transition: opacity $trans-default, visibility $trans-default, max-height $trans-default;
+  transition: opacity $trans-default;
 
   background-color: $color-default-white;
 
@@ -61,10 +88,37 @@
     opacity: 0;
     visibility: hidden;
     max-height: 0;
+
+    position: fixed;
+    top: 61px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+
+    background-color: $color-transparent;
   }
 }
 
 .service-nav__item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 0;
+    border-bottom: 1px solid $color-whisper;
+    background-color: $color-default-white;
+
+    &:last-child {
+      border-bottom: none;
+      box-shadow: 0 7px 5px transparentize($color-default-black, 0.96);
+
+    }
+  }
+
   &.is-active {
     .service-nav__title {
       background-color: transparentize($color-dark-orange, 0.85);
@@ -89,6 +143,7 @@
   line-height: 28px;
   border: none;
   background-color: $color-transparent;
+  border-radius: 4px;
 
   cursor: pointer;
 
@@ -97,6 +152,10 @@
   @include vp-1279 {
     padding-right: 12px;
     padding-left: 12px;
+  }
+
+  @include vp-1023 {
+    border-radius: 0;
   }
 
   svg {

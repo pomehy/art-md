@@ -10,11 +10,12 @@ import {initGratitudesSlider} from './modules/sliders/init-gratitudes-slider';
 import {initVideo} from './modules/init-video';
 import {initTypedText} from './modules/init-typed-text';
 import {initMoveTo} from './modules/init-move-to';
+import {initMoveToService} from './modules/init-move-to-service';
 import {initArticlesFilter} from './modules/init-articles-filter';
 import HeaderNav from './modules/init-header-control';
 import Animation from './modules/init-animation';
 
-import {initFixedBlock, initFixedServiceMenu} from './modules/init-fixed-tabs-control';
+import {initDecorBlock, initDecorServiceNav} from './modules/init-fixed-decor';
 import {initButtonToTop} from './modules/init-button-top-top';
 import {initMap} from './modules/init-map';
 import {initServiceButtonShow} from './modules/init-service-button-show';
@@ -48,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initHeader();
   iniAnimate();
   initMoveTo();
+  initMoveToService();
   initAccordions();
   initButtonToTop();
 
@@ -62,8 +64,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initParntersSlider();
     initTabs();
     initArticlesFilter();
-    initFixedBlock();
-    initFixedServiceMenu();
+    initDecorBlock();
+    initDecorServiceNav();
     initMap();
     initServiceButtonShow();
     initServiceNav();

@@ -1,6 +1,6 @@
 import MoveTo from '../vendor/move-to';
 
-const top = 120;
+const top = 130;
 
 const initMoveTo = () => {
   const moveTo = new MoveTo({

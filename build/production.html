@@ -1056,10 +1056,10 @@
                       <use xlink:href="#logo"></use>
                     </svg></a>
                 </li>
-                <li class="main-nav__item main-nav__item--sublist" data-accordion="element"><a class="main-nav__link" href="#">Услуги
+                <li class="main-nav__item main-nav__item--sublist" data-accordion="element"><span class="main-nav__link">Услуги
                     <svg width="49" height="49" aria-hidden="true">
                       <use xlink:href="#logo"></use>
-                    </svg></a>
+                    </svg></span>
                   <button class="main-nav__item-toggle" type="button" aria-label="открыть меню услуги" data-accordion="button"></button>
                   <div class="main-nav__sublist-wrapper" data-accordion="content">
                     <ul class="main-nav__sublist">
@@ -1116,8 +1116,6 @@
             <ul class="breadcrumbs">
               <li class="breadcrumbs__item"><a href="index.html">Главная</a>
               </li>
-              <li class="breadcrumbs__item"><a href="index.html">Услуги</a>
-              </li>
               <li class="breadcrumbs__item"><span>Изготовление рекламы</span>
               </li>
             </ul>
@@ -1144,12 +1142,12 @@
                       </button>
                       <div class="service-nav__sublist-wrapper" data-accordion="content">
                         <ul class="service-nav__sublist" data-service-menu-sublist>
-                          <li><a href="#radio-info" data-link-trigger data-navigation-link>Информационный</a></li>
-                          <li><a href="#radio-game" data-link-trigger data-navigation-link>Игровой</a></li>
-                          <li><a href="#radio-parody" data-link-trigger data-navigation-link>Пародийный</a></li>
-                          <li><a href="#radio-look" data-link-trigger data-navigation-link>Имиджевый</a></li>
-                          <li><a href="#radio-song" data-link-trigger data-navigation-link>Песенный</a></li>
-                          <li><a href="#radio-scenario" data-link-trigger data-navigation-link>Написание сценария</a></li>
+                          <li><a href="#radio-info" data-link-trigger data-service-sublink>Информационный</a></li>
+                          <li><a href="#radio-game" data-link-trigger data-service-sublink>Игровой</a></li>
+                          <li><a href="#radio-parody" data-link-trigger data-service-sublink>Пародийный</a></li>
+                          <li><a href="#radio-look" data-link-trigger data-service-sublink>Имиджевый</a></li>
+                          <li><a href="#radio-song" data-link-trigger data-service-sublink>Песенный</a></li>
+                          <li><a href="#radio-scenario" data-link-trigger data-service-sublink>Написание сценария</a></li>
                         </ul>
                       </div>
                     </li>
@@ -1161,30 +1159,24 @@
                       </button>
                       <div class="service-nav__sublist-wrapper" data-accordion="content">
                         <ul class="service-nav__sublist" data-service-menu-sublist>
-                          <li><a href="#video-static" data-link-trigger data-navigation-link>Статичная видеооткрытка</a></li>
-                          <li><a href="#video-semidynamic" data-link-trigger data-navigation-link>Полудинамичный</a></li>
-                          <li><a href="#video-dynamic" data-link-trigger data-navigation-link>Динамичный</a></li>
-                          <li><a href="#video-scenario" data-link-trigger data-navigation-link>Написание сценария</a></li>
+                          <li><a href="#video-static" data-link-trigger data-service-sublink>Статичная видеооткрытка</a></li>
+                          <li><a href="#video-semidynamic" data-link-trigger data-service-sublink>Полудинамичный</a></li>
+                          <li><a href="#video-dynamic" data-link-trigger data-service-sublink>Динамичный</a></li>
+                          <li><a href="#video-scenario" data-link-trigger data-service-sublink>Написание сценария</a></li>
                         </ul>
                       </div>
-                    </li>
-                    <li class="service-nav__item" data-accordion="element"><span class="service-nav__title" data-tabs="control" data-accordion="button">
-                        <svg width="28" height="28" aria-hidden="true">
-                          <use xlink:href="#icon-arrow-right"></use>
-                        </svg><span>Продающий текст </span></span>
-                      <div class="service-nav__sublist-wrapper" data-accordion="content"></div>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="page-services__content service-content">
+              <div class="page-services__content">
                 <div data-tabs="content">
                   <div class="service-content page-content" data-tabs="element">
-                    <h1>Изготовление аудиороликов</h1>
+                    <h2 class="service-content__title">Изготовление аудиороликов</h2>
                     <div class="page-content__text">
                       <p>Запишем для вас аудиоролики любого формата и сложности. Мы работаем только с профессиональными дикторами, чей опыт составляет не менее 10 лет в данной сфере</p>
                     </div>
-                    <div class="page-content__image page-content__image--main">
+                    <div class="page-content__image page-content__image--main page-content__image--pos-left">
                       <picture>
                         <source type="image/webp" srcset="img/content/production/production-radio.webp, img/content/production/production-radio@2x.webp 2x"><img src="img/content/production/production-radio.jpg" srcset="img/content/production/production-radio@2x.jpg 2x" width="695" height="420">
                       </picture>
@@ -1199,25 +1191,25 @@
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>сценарий;</p>
+                              <p>сценарий.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>один дикторский голос;</p>
+                              <p>один дикторский голос.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>музыкальное сопровождение;</p>
+                              <p>музыкальное сопровождение.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>монтаж;</p>
+                              <p>монтаж.</p>
                             </li>
                           </ul>
                         </p>
@@ -1290,25 +1282,25 @@
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>сценарий;</p>
+                              <p>сценарий.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>один и более дикторских голосов;</p>
+                              <p>один и более дикторских голосов.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>музыкальное сопровождение;</p>
+                              <p>музыкальное сопровождение.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>монтаж;</p>
+                              <p>монтаж.</p>
                             </li>
                           </ul>
                         </p>
@@ -1393,25 +1385,25 @@
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>сценарий;</p>
+                              <p>сценарий.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>один и более дикторских голосов формата «пародия»;</p>
+                              <p>один и более дикторских голосов формата «пародия».</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>музыкальное сопровождение;</p>
+                              <p>музыкальное сопровождение.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>монтаж;</p>
+                              <p>монтаж.</p>
                             </li>
                           </ul>
                         </p>
@@ -1489,25 +1481,25 @@
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>сценарий;</p>
+                              <p>сценарий.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>один и более дикторских голосов;</p>
+                              <p>один и более дикторских голосов.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>музыкальное сопровождение;</p>
+                              <p>музыкальное сопровождение.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>монтаж;</p>
+                              <p>монтаж.</p>
                             </li>
                           </ul>
                         </p>
@@ -1553,25 +1545,25 @@
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>сценарий;</p>
+                              <p>сценарий.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>один и более дикторских голосов формата «вокалист»;</p>
+                              <p>один и более дикторских голосов формата «вокалист».</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>музыкальное сопровождение;</p>
+                              <p>музыкальное сопровождение.</p>
                             </li>
                             <li>
                               <svg width="16" height="16" aria-hidden="true">
                                 <use xlink:href="#icon-arrow-right"></use>
                               </svg>
-                              <p>монтаж;</p>
+                              <p>монтаж.</p>
                             </li>
                           </ul>
                         </p>
@@ -1604,17 +1596,165 @@
                       </div>
                     </div>
                   </div>
-                  <div class="content" data-tabs="element">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                  </div>
-                  <div class="content" data-tabs="element">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, adipisci!</h3>
+                  <div class="service-content page-content" data-tabs="element">
+                    <h2 class="service-content__title">Изготовление видеороликов</h2>
+                    <div class="page-content__text">
+                      <p>Запишем для вас видеоролики любого формата и сложности. Мы работаем только с профессионалами своего дела с многолетним опытом</p>
+                    </div>
+                    <div class="page-content__image page-content__image--main">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/production/production-video-1.webp, img/content/production/production-video-1@2x.webp 2x"><img src="img/content/production/production-video-1.jpg" srcset="img/content/production/production-video-1@2x.jpg 2x" width="695" height="420">
+                      </picture>
+                    </div>
+                    <div class="page-content__content-wrapper service-content__inner" id="video-static">
+                      <h2>Статичная видеооткрытка</h2>
+                      <div class="page-content__text">
+                        <p>Статичный видеоряд с музыкальным сопровождением и дикторским голосом.</p>
+                        <p>В данный вид ролика входит:
+                          <ul>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>сценарий.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>один дикторский голос.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>музыкальное сопровождение.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>статичный видеоряд.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>монтаж.</p>
+                            </li>
+                          </ul>
+                        </p>
+                      </div>
+                      <div class="service-content__price">
+                        <p>Стоимость: <span>от 2100 руб.</span></p>
+                      </div>
+                    </div>
+                    <div class="page-content__content-wrapper service-content__inner" id="video-semidynamic">
+                      <h2>Полудинамичный</h2>
+                      <div class="page-content__text">
+                        <p>Статичный видеоряд с локальными элементами анимации.</p>
+                        <p>В данный вид ролика входит:
+                          <ul>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>сценарий.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>один дикторский голос.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>музыкальное сопровождение.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>статичный видеоряд с элементами динамики.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>монтаж.</p>
+                            </li>
+                          </ul>
+                        </p>
+                      </div>
+                      <div class="service-content__price">
+                        <p>Стоимость: <span>от 2600 руб.</span></p>
+                      </div>
+                    </div>
+                    <div class="page-content__image">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/production/production-video.webp, img/content/production/production-video@2x.webp 2x"><img src="img/content/production/production-video.jpg" srcset="img/content/production/production-video@2x.jpg 2x" width="695" height="420">
+                      </picture>
+                    </div>
+                    <div class="page-content__content-wrapper service-content__inner" id="video-dynamic">
+                      <h2>Динамичный</h2>
+                      <div class="page-content__text">
+                        <p>Насыщенный видеоряд, с переходами и элементами динамики.</p>
+                        <p>В данный вид ролика входит:
+                          <ul>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>сценарий.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>один дикторский голос.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>музыкальное сопровождение.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>динамичный видеоряд.</p>
+                            </li>
+                            <li>
+                              <svg width="16" height="16" aria-hidden="true">
+                                <use xlink:href="#icon-arrow-right"></use>
+                              </svg>
+                              <p>монтаж.</p>
+                            </li>
+                          </ul>
+                        </p>
+                      </div>
+                      <div class="service-content__price">
+                        <p>Стоимость: <span>от 3500 руб.</span></p>
+                      </div>
+                    </div>
+                    <div class="page-content__content-wrapper service-content__inner service-content__inner--accent" id="video-scenario">
+                      <h2>Сценарий для видеороликов</h2>
+                      <div class="page-content__text">
+                        <p>Напишем сценарий к вашему аудиоролику, который точно запомнится.</p>
+                      </div>
+                      <div class="service-content__price">
+                        <p>Стоимость: <span>от 500 руб.</span></p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="feedback feedback--services">
                   <div class="feedback__content">
                     <div class="feedback__header">
-                      <h2 class="feedback__title">Хотите сделать заказ или получить бесплатный расчёт?</h2>
+                      <h2 class="feedback__title">Хотите узнать подробнее?</h2>
                       <p class="feedback__description">Заполните форму и наш менеджер свяжется с вами</p>
                     </div>
                     <button class="button button--reverse feedback__button" type="button" data-open-modal="feedback">Заполнить форму</button>

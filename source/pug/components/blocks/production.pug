@@ -30,21 +30,21 @@
         altText: 'Съемки видео',
       },
     },
-    {
-      href: "#",
-      title: "Продающий текст",
-      text: [
-        "Цепляющий рекламный текст",
-      ],
-      img: {
-        path: 'content/production',
-        image: 'production-text',
-        format: 'jpg',
-        width: 555,
-        height: 340,
-        altText: 'Копирайтер пишет текст',
-      },
-    },
+    //- {
+    //-   href: "#",
+    //-   title: "Продающий текст",
+    //-   text: [
+    //-     "Цепляющий рекламный текст",
+    //-   ],
+    //-   img: {
+    //-     path: 'content/production',
+    //-     image: 'production-text',
+    //-     format: 'jpg',
+    //-     width: 555,
+    //-     height: 340,
+    //-     altText: 'Копирайтер пишет текст',
+    //-   },
+    //- },
   ]
 
 mixin production()
@@ -55,4 +55,4 @@ mixin production()
         p.page-section__description Разработаем креативную продающую идею и воплотим её в жизнь
       .page-section__grid.page-section__grid--production.fit.d-300
         each item in productionData
-          +card-item(item).card-item--small
+          +card-item(item)

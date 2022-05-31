@@ -200,3 +200,9 @@
     height: 360px;
   }
 }
+
+.page-content__image--pos-left {
+  img {
+    object-position: left;
+  }
+}

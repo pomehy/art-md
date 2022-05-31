@@ -87,7 +87,7 @@
     }
   }
 
-  &.is-fixed {
+  &.is-decor {
     @include vp-1023 {
       box-shadow: 0 7px 5px transparentize($color-default-black, 0.96);
     }

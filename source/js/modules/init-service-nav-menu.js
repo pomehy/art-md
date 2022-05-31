@@ -1,30 +1,58 @@
-export default class ServiceNav {
-  constructor() {
-    this.root = document.querySelector('[data-service-menu]');
-    this.button = this.root.querySelector('[data-service-menu-button]');
+const serviceNav = document.querySelector('[data-service-menu]');
 
+export default class ServiceNav {
+  constructor(element) {
+    this.root = element;
+    this.button = this.root.querySelector('[data-service-menu-button]');
+    this.sublinks = this.root.querySelectorAll('[data-service-sublink]');
 
     this._activeMenu = this._activeMenu.bind(this);
-    // this._trackingScreenBlock = this._trackingScreenBlock.bind(this);
+    this._handlerSubLinks = this._handlerSubLinks.bind(this);
+  }
+
+  _openMenu() {
+    let serviceMenuCoord = this.root.getBoundingClientRect();
+    window.scrollLock.disableScrolling();
+    this.root.classList.add('is-active');
+    this.root.style.top = `${serviceMenuCoord.top}px`;
+  }
+
+  _closeMenu() {
+    window.scrollLock.enableScrolling();
+    this.root.classList.remove('is-active');
+    this.root.style.top = '';
+  }
+
+  _handlerSubLinks() {
+    this.sublinks.forEach((sublink) => {
+      sublink.addEventListener('click', () => {
+        this._closeMenu();
+      });
+    });
   }
 
   _activeMenu() {
     this.button.addEventListener('click', () => {
       if (this.root.classList.contains('is-active')) {
-        this.root.classList.remove('is-active');
+        this._closeMenu();
       } else {
-        this.root.classList.add('is-active');
+        this._openMenu();
       }
     });
   }
 
   init() {
+    this._handlerSubLinks();
     this._activeMenu();
   }
 }
 
 const initServiceNav = () => {
-  const serviceNavMenu = new ServiceNav();
+  if (!serviceNav) {
+    return;
+  }
+
+  const serviceNavMenu = new ServiceNav(serviceNav);
   serviceNavMenu.init();
 };
 

@@ -10,10 +10,10 @@ block variables
   - const currentUrl = "advertising.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
   -
-    const aboutBlog = {
+    const aboutAdv = {
       img: {
-        path: 'content/blog',
-        image: 'blog-intro',
+        path: 'content/advertising',
+        image: 'advertising-intro',
         format: 'jpg',
         width: 1920,
         height: 1280,
@@ -23,10 +23,6 @@ block variables
         {
           href: "index.html",
           text: "Главная",
-        },
-        {
-          href: "index.html",
-          text: "Услуги",
         },
         {
           href: "advertising.html",
@@ -42,7 +38,7 @@ block main
 
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +page-intro(aboutBlog)
+    +page-intro(aboutAdv)
     +page-advertising()
 block modals
   +modal("modal--feedback")(data-modal="feedback")
