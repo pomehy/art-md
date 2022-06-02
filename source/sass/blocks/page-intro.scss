@@ -54,12 +54,12 @@
     bottom: 0;
 
     width: 100%;
-    height: 30%;
+    height: 45%;
 
     background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 20%, $color-transparent);
 
     @include vp-767 {
-      height: 30%;
+      height: 45%;
     }
   }
 
@@ -74,7 +74,6 @@
     object-position: top;
   }
 }
-
 
 .page-intro--pos-top {
   .page-intro__image-wrapper {

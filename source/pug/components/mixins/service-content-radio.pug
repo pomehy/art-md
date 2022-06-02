@@ -1,0 +1,24 @@
+mixin service-content-radio(data)
+  .page-content__content-wrapper.service-content__inner.service-content__inner--radio(id=data.id)&attributes(attributes)
+    h2 !{data.title}
+      if data.fm
+        span.service-content__fm частота !{data.fm}
+    .page-content__text
+      each text in data.description
+        p !{text}
+    if data.textAccent
+      .page-content__text.page-content__text--accent
+        p !{data.textAccent}
+          if data.infoButton
+            button.service-content__info-button(type="button", data-open-modal="radio-info")
+              +icon("icon-info", 20, 20)
+    .service-content__image-wrapper
+      +icon(data.icon.name, data.icon.width, data.icon.height)
+    .service-content__audience.audience
+      h3.audience__title Аудитория:
+      .audience__list
+        span.audience__item.audience__item--male Мужчины:&nbsp; #[span !{data.audience.male}]
+        span.audience__item.audience__item--female Женщины:&nbsp; #[span !{data.audience.female}]
+        span.audience__item.audience__item--age Возраст:&nbsp; #[span !{data.audience.age}]
+
+

@@ -1,10 +1,13 @@
 const serviceNav = document.querySelector('[data-service-menu]');
+import {ScrollLock} from '../utils/scroll-lock';
+
 
 export default class ServiceNav {
   constructor(element) {
     this.root = element;
     this.button = this.root.querySelector('[data-service-menu-button]');
     this.sublinks = this.root.querySelectorAll('[data-service-sublink]');
+    this.scrollLock = new ScrollLock();
 
     this._activeMenu = this._activeMenu.bind(this);
     this._handlerSubLinks = this._handlerSubLinks.bind(this);
@@ -12,13 +15,13 @@ export default class ServiceNav {
 
   _openMenu() {
     let serviceMenuCoord = this.root.getBoundingClientRect();
-    window.scrollLock.disableScrolling();
+    // this.scrollLock.disableScrolling();
     this.root.classList.add('is-active');
     this.root.style.top = `${serviceMenuCoord.top}px`;
   }
 
   _closeMenu() {
-    window.scrollLock.enableScrolling();
+    // this.scrollLock.enableScrolling();
     this.root.classList.remove('is-active');
     this.root.style.top = '';
   }

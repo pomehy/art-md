@@ -53,10 +53,10 @@ mixin header(headerMods, currentUrl)
                   if link.href
                     a.main-nav__link(href=link.href)=link.text
                       +icon("logo", 49, 49)
+                    button.main-nav__item-toggle(type="button", aria-label="открыть меню услуги", data-accordion="button")
                   else
-                    span.main-nav__link=link.text
+                    button(type="button", aria-label="открыть меню услуги", data-accordion="button").main-nav__link.main-nav__link--toggle=link.text
                       +icon("logo", 49, 49)
-                  button.main-nav__item-toggle(type="button", aria-label="открыть меню услуги", data-accordion="button")
                   .main-nav__sublist-wrapper(data-accordion="content")
                     ul.main-nav__sublist
                       each subItem in link.sublist

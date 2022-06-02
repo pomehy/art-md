@@ -20,6 +20,7 @@
     font-family: $ff-second-font;
     font-weight: 700;
     font-size: 32px;
+    line-height: 110%;
 
     @include vp-767 {
       font-size: 28px;
@@ -33,6 +34,7 @@
     font-family: $ff-second-font;
     font-weight: 700;
     font-size: 24px;
+    line-height: 110%;
 
     @include vp-767 {
       font-size: 20px;
@@ -143,8 +145,13 @@
 }
 
 .page-content__text {
+  margin-bottom: 20px;
   font-size: 20px;
   line-height: 24px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   p {
     margin-top: 0;
@@ -167,16 +174,27 @@
   }
 }
 
+.page-content__text--accent {
+  color: $color-dark-orange;
+}
 
 .page-content__image {
   margin-top: 40px;
   margin-bottom: 40px;
 
-  height: 300px;
+  height: 420px;
 
   border-radius: 4px;
 
   overflow: hidden;
+
+  @include vp-1919 {
+    height: 360px;
+  }
+
+  @include vp-1439 {
+    height: 320px;
+  }
 
   @include vp-767 {
     margin-top: 24px;
@@ -194,7 +212,15 @@
 }
 
 .page-content__image--main {
-  height: 420px;
+  height: 500px;
+
+  @include vp-1919 {
+    height: 460px;
+  }
+
+  @include vp-1439 {
+    height: 420px;
+  }
 
   @include vp-767 {
     height: 360px;

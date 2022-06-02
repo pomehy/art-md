@@ -9,7 +9,7 @@ import {initParntersSlider} from './modules/sliders/init-partners-slider';
 import {initGratitudesSlider} from './modules/sliders/init-gratitudes-slider';
 import {initVideo} from './modules/init-video';
 import {initTypedText} from './modules/init-typed-text';
-import {initMoveTo} from './modules/init-move-to';
+// import {initMoveTo} from './modules/init-move-to';
 import {initMoveToService} from './modules/init-move-to-service';
 import {initArticlesFilter} from './modules/init-articles-filter';
 import HeaderNav from './modules/init-header-control';
@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initTypedText();
   initHeader();
   iniAnimate();
-  initMoveTo();
+  // initMoveTo();
   initMoveToService();
   initAccordions();
   initButtonToTop();

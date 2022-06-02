@@ -10,7 +10,7 @@ const initMoveToService = () => {
     if (breakpointS.matches) {
       height = 100;
     } else if (breakpointSM.matches) {
-      height = 150;
+      height = 110;
     } else if (breakpointMD.matches) {
       height = 110;
     } else {
@@ -36,6 +36,7 @@ const initMoveToService = () => {
       moveToService.registerTrigger(trigger);
 
       trigger.addEventListener('click', () => {
+        console.log(getTolerance());
         let array = Array.from(triggers);
         let index = array.indexOf(trigger);
 

@@ -44,6 +44,8 @@
 .service-nav__button {
   display: none;
 
+  cursor: pointer;
+
   @include vp-1023 {
     display: flex;
     justify-content: space-between;
@@ -61,6 +63,7 @@
 
     border: none;
     border-bottom: 1px solid $color-whisper;
+    color: $color-nero !important;
 
     svg {
       transition: transform $trans-default;
@@ -144,6 +147,7 @@
   border: none;
   background-color: $color-transparent;
   border-radius: 4px;
+  color: $color-nero !important;
 
   cursor: pointer;
 
@@ -156,6 +160,11 @@
 
   @include vp-1023 {
     border-radius: 0;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 24px;
   }
 
   svg {
@@ -181,6 +190,10 @@
 
   list-style: none;
 
+  @include vp-767 {
+    padding-left: 48px;
+  }
+
   li {
     margin-bottom: 12px;
 
@@ -191,6 +204,11 @@
     a {
       font-size: 20px;
       line-height: 24px;
+
+      @include vp-767 {
+        font-size: 18px;
+        line-height: 22px;
+      }
 
       transition: color $trans-default;
 

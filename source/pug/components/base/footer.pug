@@ -21,40 +21,36 @@
 -
   const serviceLinks = [
     {
-      href: "#",
+      href: "advertising.html",
       name: "Радиостанции",
     },
     {
-      href: "#",
+      href: "advertising.html",
       name: "Социальные сети",
     },
     {
-      href: "#",
+      href: "advertising.html",
       name: "Мониторы",
     },
     {
-      href: "#",
+      href: "advertising.html",
       name: "Локальное радио",
     },
     {
-      href: "#",
-      name: "LED Экран",
+      href: "advertising.html",
+      name: "LED Экраны",
     },
   ]
 
 -
   const prodLinks = [
     {
-      href: "#",
-      name: "Радиоролики",
+      href: "production.html",
+      name: "Аудиоролики",
     },
     {
-      href: "#",
+      href: "production.html",
       name: "Видеоролики",
-    },
-    {
-      href: "#",
-      name: "Продающий текст",
     },
   ]
 
@@ -81,7 +77,7 @@ mixin footer(footerMods)
                     else
                       a(href=item.href) !{item.name}
           .footer-links(data-accordion="element")
-            p.footer-links__title(data-accordion="button") #[button(type="button") Наши возможности]
+            p.footer-links__title(data-accordion="button") #[button(type="button") Рекламные возможности]
             .footer-links__list-wrapper(data-accordion="content")
               ul.footer-links__list
                 each item in serviceLinks

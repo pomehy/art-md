@@ -174,11 +174,28 @@
     border-bottom: 1px solid transparentize($color-default-white, 0.8);
 
     &.is-active {
+      .main-nav__link--toggle {
+        &::after {
+          transform: rotate(180deg);
+          border-top: 5px solid $color-dark-orange;
+        }
+      }
+
       .main-nav__item-toggle {
         background-color: transparentize($color-default-black, 0.95);
 
         &::after {
           transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  @include vp-1023 {
+    &.is-active {
+      .main-nav__link--toggle {
+        &::after {
+          border-top: 5px solid $color-default-white;
         }
       }
     }
@@ -274,6 +291,8 @@
   color: $color-default-white;
 
   transition: opacity $trans-default, color $trans-default, background-color $trans-default;
+  background-color: $color-transparent;
+  border: none;
 
   @include vp-1279 {
     justify-content: flex-start;
@@ -332,13 +351,38 @@
   }
 }
 
-.main-nav__link[href] {
+.main-nav__link--toggle {
+  @include vp-1279 {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 24px;
+
+      border-top: 5px solid $color-default-white;
+      border-left: 5px solid $color-transparent;
+      border-right: 5px solid $color-transparent;
+
+      transition: transform $trans-default;
+    }
+  }
+}
+
+.main-nav__link[href],
+.main-nav__link[type="button"] {
+  background-color: $color-transparent;
+  border: none;
   cursor: pointer;
 
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
       color: $color-default-white;
+
+      &::after {
+        border-top: 5px solid $color-dark-orange;
+      }
 
       svg {
         opacity: 0.6;

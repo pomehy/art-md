@@ -176,3 +176,35 @@
     }
   }
 }
+
+.modal--radio-info {
+  .modal__links-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+
+    a {
+      display: inline-block;
+      margin-bottom: 4px;
+      font-size: 20px;
+      color: $color-dark-orange;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      transition: opacity $trans-default;
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          opacity: 0.8;
+        }
+
+        &:active {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
