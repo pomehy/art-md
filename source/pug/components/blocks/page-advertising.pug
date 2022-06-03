@@ -55,7 +55,7 @@
         },
         {
           title: 'Топ Арзамас',
-          href: 'social-top-arz'
+          href: 'social-arz-top'
         },
         {
           title: 'Арз Втоп',
@@ -118,8 +118,8 @@
     id: 'radio-nashe',
     title: 'Радиостанция "Наше&nbsp;Радио"',
     fm: "98.9 fm",
-    description: ['Единственная в&nbsp;городе радиостанция формата российской рок музыки (БИ&nbsp;2, Чичерина, Сплин, ДДТ и&nbsp;т.д.). Эфир очень насыщен такими рубриками как: Новости от&nbsp;НСН, Утреннее шоу &laquo;Подъёмники&raquo;, дневное шоу &laquo;Тариф Дневной&raquo;, автомобильная рубрика &laquo;10&nbsp;баллов&raquo;, Хит-парад &laquo;Чартова Дюжина&raquo;, шоу &laquo;За&nbsp;сценой&raquo; и&nbsp;многие другие.'],
-    textAccent: 'Занимает одну из лидирующих позиций среди аудитории Арзамаса.',
+    description: ['Единственная в&nbsp;городе радиостанция формата российской рок музыки (БИ&nbsp;2, Чичерина, Сплин, ДДТ и&nbsp;т.д.). Эфир очень насыщен такими рубриками как: Новости от&nbsp;НСН, Утреннее шоу &laquo;Подъёмники&raquo;, дневное шоу &laquo;Тариф Дневной&raquo;, автомобильная рубрика &laquo;10&nbsp;баллов&raquo;, Хит-парад &laquo;Чартова Дюжина&raquo;, шоу &laquo;За&nbsp;сценой&raquo; и&nbsp;многими другими.'],
+    textAccent: 'Занимает одну из лидирующих позиций среди слушателей Арзамаса.',
     infoButton: true,
     icon: {
       name: "logo-nashe-radio",
@@ -127,6 +127,7 @@
       height: 258,
     },
     audience: {
+      title: "Аудитория:",
       male: "60%",
       female: "40%",
       age: "от 24 до 54 лет",
@@ -151,6 +152,7 @@
       height: 110,
     },
     audience: {
+      title: "Аудитория:",
       male: "50%",
       female: "50%",
       age: "от 18 до 44 лет",
@@ -164,10 +166,10 @@
     title: 'Радиостанция "Rock&nbsp;FM"',
     fm: "90.7 fm",
     description: [
-      'Единственная в&nbsp;городе радиостанция формата зарубежного классического рока (The Beatles, Queen, AC/D, Deep Purple, The Rolling Stones, U2, Coldplay, RHCP и&nbsp;многие другие известные группы).',
+      'Единственная в&nbsp;городе радиостанция формата зарубежного классического рока (The Beatles, Queen, AC/DC, Deep Purple, The Rolling Stones, U2, Coldplay, RHCP и&nbsp;многие другие известные группы).',
       'Радиостанция с очень насыщенным различными программами эфиром (Автомобили, Новости, Календарь событий, Разговор о музыке, Новинки научно-технического прогресса и т.д.)'
       ],
-    textAccent: 'Занимает одну из лидирующих позиций среди аудитории Арзамаса.',
+    textAccent: 'Занимает одну из лидирующих позиций среди слушателей Арзамаса.',
     infoButton: true,
     icon: {
       name: "logo-rock-fm",
@@ -175,6 +177,7 @@
       height: 40,
     },
     audience: {
+      title: "Аудитория:",
       male: "65%",
       female: "35%",
       age: "от 22 до 49 лет",
@@ -196,6 +199,7 @@
       height: 105,
     },
     audience: {
+      title: "Аудитория:",
       male: "50%",
       female: "50%",
       age: "от 25 до 45 лет",
@@ -218,11 +222,430 @@
       height: 130,
     },
     audience: {
+      title: "Аудитория:",
       male: "50%",
       female: "50%",
       age: "от 18 до 45 лет",
     },
   };
+
+-
+  const socialArzLiveData = {
+    id: 'social-arz-live',
+    title: 'Арзамас Live',
+    socialsList: [
+      {
+        href: "https://vk.com/arzamas.live",
+        icon: {
+          name: "logo-vk-color",
+          width: 32,
+          height: 32,
+        },
+      },
+      {
+        href: "https://www.instagram.com/arzamas_live",
+        icon: {
+          name: "logo-instagram-color",
+          width: 32,
+          height: 32,
+        },
+      },
+      {
+        href: "https://t.me/arzamas_live",
+        icon: {
+          name: "icon-telegram-2",
+          width: 32,
+          height: 32,
+        },
+      },
+    ],
+    description: [
+      'Информационно-развлекательное сообщество города, в котором поднимаются важные темы для жителей Арзамаса. Публикуются актуальные новости, юмор, события, важные объявления, больные темы граждан. ',
+      'На данное сообщество часто ссылаются региональные и федеральные СМИ.'
+      ],
+    parametersList: {
+      title: "Арзамас Live в цифрах:",
+      items: [
+        {
+          text: '41 000 участников',
+          note: '27&nbsp;000 Вконтакте, 14&nbsp;000 Инстаграм',
+        },
+        {
+          text: '31 000 охвата пользователей ежедневно',
+          note: '21&nbsp;000 Вконтакте, 10&nbsp;000 Инстаграм',
+        },
+      ],
+    },
+    textAccent: 'Одно из самых популярных сообществ в Арзамасе (Входит в топ 5 по популярности).',
+    img: {
+      path: "content/advertising",
+      image: "social-arz-live",
+      format: "jpg",
+      width: 210,
+      height: 332,
+      altText: "Логотип сообщества",
+    },
+    audience: {
+      title: "Аудитория:",
+      city: "84%",
+      district: "8%",
+      others: "8%",
+      male: "50%",
+      female: "50%",
+      age: "от 18 до 45 лет",
+    },
+  };
+
+-
+  const socialArzOverheardData = {
+    id: 'social-overheard',
+    title: 'Подслушано Арзамас',
+    socialsList: [
+      {
+        href: "https://vk.com/podsluhayarzamas",
+        icon: {
+          name: "logo-vk-color",
+          width: 32,
+          height: 32,
+        },
+      },
+    ],
+    description: [
+      'Информационно-развлекательное сообщество Арзамаса, в котором люди делятся друг с другом историями из жизни, просят совета или просто хотят выговорится. Контент паблика состоит в основном из историй пользователей, новостей и юмора.',
+      'Единственное сообщество подобного формата в Арзамасе.'
+      ],
+    parametersList: {
+      title: "Подслушано Арзамас в цифрах:",
+      items: [
+        {
+          text: '33 000 участников',
+        },
+        {
+          text: '20 000 охвата пользователей ежедневно',
+        },
+      ],
+    },
+    textAccent: 'Одно из самых популярных сообществ в Арзамасе (Входит в топ 5 по популярности).',
+    img: {
+      path: "content/advertising",
+      image: "social-arz-overheard",
+      format: "jpg",
+      width: 210,
+      height: 210,
+      altText: "Логотип сообщества",
+    },
+    audience: {
+      title: "Аудитория:",
+      city: "78%",
+      district: "12%",
+      others: "10%",
+      male: "41%",
+      female: "59%",
+      age: "от 25 до 47 лет",
+    },
+  };
+
+
+-
+  const socialAutoSaleData = {
+    id: 'social-autosale',
+    title: 'Авторынок Арзамас',
+    socialsList: [
+      {
+        href: "https://vk.com/arz52",
+        icon: {
+          name: "logo-vk-color",
+          width: 32,
+          height: 32,
+        },
+      },
+    ],
+    description: [
+      'Контент состоит из автомобильных объявлений пользователей, в основном продают и ищут автомобили, так же задают вопросы автомобильной тематики.',
+      ],
+    parametersList: {
+      title: "Авторынок Арзамас в цифрах:",
+      items: [
+        {
+          text: '38 000 участников',
+        },
+        {
+          text: '9 000 охвата пользователей ежедневно',
+        },
+      ],
+    },
+    textAccent: 'Входит в топ 5 по области.',
+    img: {
+      path: "content/advertising",
+      image: "social-autosale",
+      format: "jpg",
+      width: 210,
+      height: 189,
+      altText: "Логотип сообщества",
+    },
+    audience: {
+      title: "Аудитория:",
+      city: "72%",
+      district: "8%",
+      others: "8%",
+      male: "86%",
+      female: "14%",
+      age: "от 18 до 45 лет",
+    },
+  };
+
+-
+  const socialArzRacingData = {
+    id: 'social-arz-racing',
+    title: 'Арз Рейсинг Зон',
+    socialsList: [
+      {
+        href: "https://vk.com/arzclub52",
+        icon: {
+          name: "logo-vk-color",
+          width: 32,
+          height: 32,
+        },
+      },
+      {
+        href: "https://www.instagram.com/arzclub52",
+        icon: {
+          name: "logo-instagram-color",
+          width: 32,
+          height: 32,
+        },
+      },
+    ],
+    description: [
+      'Сообщество автолюбителей Арзамаса. Контент состоит из автомобильных объявлений пользователей, в основном продают и ищут запчасти к автомобилям.',
+      'В Инстаграм публикуется автомобильный юмор.',
+      ],
+    parametersList: {
+      title: "Арз Рейсинг Зон в цифрах:",
+      items: [
+        {
+          text: '24 000 участников',
+          note: '19&nbsp;000 Вконтакте, 5&nbsp;600 Инстаграм',
+        },
+        {
+          text: '10 000 охвата пользователей ежедневно',
+          note: '7&nbsp;000 Вконтакте, 3&nbsp;000 Инстаграм',
+        },
+      ],
+    },
+    textAccent: 'Является 2-м по величине и охвату сообществом города после Авторынка Арзамас.',
+    img: {
+      path: "content/advertising",
+      image: "social-arz-racing-zone",
+      format: "jpg",
+      width: 210,
+      height: 252,
+      altText: "Логотип сообщества",
+    },
+    audience: {
+      title: "Аудитория:",
+      city: "83%",
+      district: "8%",
+      others: "9%",
+      male: "90%",
+      female: "10%",
+      age: "от 18 до 45 лет",
+    },
+  };
+
+-
+  const socialArzKringeData = {
+    id: 'social-arz-kringe',
+    title: 'Весь кринж Арзамаса',
+    socialsList: [
+      {
+        href: "https://vk.com/priznavashkiarzamas",
+        icon: {
+          name: "logo-vk-color",
+          width: 32,
+          height: 32,
+        },
+      },
+    ],
+    description: [
+      'Самое крупное развлекательное сообщество Арзамаса в социальной сети Вконтакте для молодого поколения.',
+      'Контент состоит из юмора, историй подписчиков, новостей, мемов и приколами участников друг над другом.',
+      ],
+    parametersList: {
+      title: "Весь кринж Арзамаса в цифрах:",
+      items: [
+        {
+          text: '27 000 участников',
+        },
+        {
+          text: '13 000 охвата пользователей ежедневно',
+        },
+      ],
+    },
+    img: {
+      path: "content/advertising",
+      image: "social-arz-kringe",
+      format: "jpg",
+      width: 210,
+      height: 200,
+      altText: "Логотип сообщества",
+    },
+    audience: {
+      title: "Аудитория:",
+      city: "82%",
+      district: "9%",
+      others: "9%",
+      male: "51%",
+      female: "49%",
+      age: "от 16 до 45 лет",
+    },
+  };
+
+-
+  const socialArzJunkData = {
+    id: 'social-arz-live-junk',
+    title: 'Арзамас Live Барахолка',
+    socialsList: [
+      {
+        href: "https://vk.com/arzamaslive_baraholka",
+        icon: {
+          name: "logo-vk-color",
+          width: 32,
+          height: 32,
+        },
+      },
+    ],
+    description: [
+      'Сообщество для размещения своих объявлений в Вконтакте в городе Арзамас.',
+      'Контент состоит из объявлений пользователей абсолютной разных тематик.',
+      ],
+    parametersList: {
+      title: "Арзамас Live Барахолка в цифрах:",
+      items: [
+        {
+          text: '24 000 участников',
+        },
+        {
+          text: '5 500 охвата пользователей ежедневно',
+        },
+      ],
+    },
+    textAccent: 'Входит в топ-3 самых крупных сообществ подобного рода в Арзамасе.',
+    img: {
+      path: "content/advertising",
+      image: "social-arz-junk",
+      format: "jpg",
+      width: 210,
+      height: 210,
+      altText: "Логотип сообщества",
+    },
+    audience: {
+      title: "Аудитория:",
+      city: "83%",
+      district: "6%",
+      others: "11%",
+      male: "65%",
+      female: "35%",
+      age: "от 27 до 45 лет",
+    },
+  };
+
+-
+  const socialArzTopData = {
+    id: 'social-arz-top',
+    title: 'Топ Арзамас',
+    socialsList: [
+      {
+        href: "https://www.instagram.com/top_arzamas",
+        icon: {
+          name: "logo-instagram-color",
+          width: 32,
+          height: 32,
+        },
+      },
+    ],
+    description: [
+      'Самое крупное сообщество Арзамаса в социальной сети Инстаграм данной тематики.',
+      'Контент состоит из фотографий девушек города Арзамаса.',
+      ],
+    parametersList: {
+      title: "Топ Арзамас в цифрах:",
+      items: [
+        {
+          text: '12 000 участников',
+        },
+        {
+          text: '4 000 охвата пользователей ежедневно',
+        },
+      ],
+    },
+    img: {
+      path: "content/advertising",
+      image: "social-arz-top",
+      format: "jpg",
+      width: 210,
+      height: 210,
+      altText: "Логотип сообщества",
+    },
+    audience: {
+      title: "Аудитория:",
+      city: "90%",
+      district: "7%",
+      others: "3%",
+      male: "63%",
+      female: "37%",
+      age: "от 18 до 44 лет",
+    },
+  };
+
+-
+  const socialArzVTopData = {
+    id: 'social-arz-vtop',
+    title: 'Арз Втоп',
+    socialsList: [
+      {
+        href: "https://www.instagram.com/top_arzamas",
+        icon: {
+          name: "logo-instagram-color",
+          width: 32,
+          height: 32,
+        },
+      },
+    ],
+    description: [
+      'Второе по количеству пользователей сообщество Арзамаса в социальной сети Инстаграм данной тематики. ',
+      'Контент состоит из фотографий девушек города Арзамаса.',
+      ],
+    parametersList: {
+      title: "Арз Втоп в цифрах:",
+      items: [
+        {
+          text: '10 000 участников',
+        },
+        {
+          text: '2 000 охвата пользователей ежедневно',
+        },
+      ],
+    },
+    img: {
+      path: "content/advertising",
+      image: "social-arz-top",
+      format: "jpg",
+      width: 210,
+      height: 210,
+      altText: "Логотип сообщества",
+    },
+    audience: {
+      title: "Аудитория:",
+      city: "90%",
+      district: "7%",
+      others: "3%",
+      male: "73%",
+      female: "27%",
+      age: "от 18 до 35 лет",
+    },
+  };
+
 
 mixin page-advertising()
   .page-services
@@ -235,24 +658,28 @@ mixin page-advertising()
             .service-content.page-content(data-tabs="element")
               h2.service-content__title Радиостанции
               .page-content__text
-                p Запишем для вас видеоролики любого формата и сложности. Мы работаем только с профессионалами своего дела с многолетним опытом
+                p Что-то про рекламу на радиостанциях и т.д.
               .page-content__image.page-content__image--main
                 +picture("content/advertising", "advertising-radio", "jpg", 695, 420)
-              +service-content-radio(nasheRadioData)
-              +service-content-radio(recordRadioData)
-              +service-content-radio(vanyaRadioData)
-              +service-content-radio(mariaRadioData)
-              +service-content-radio(rockRadioData)
-              //- +service-content-radio(nasheRadioData)
-              //- +service-content-radio(nasheRadioData)
-              //- +service-content-radio(nasheRadioData)
-
+              +service-item(nasheRadioData).service-item--radio
+              +service-item(recordRadioData).service-item--radio
+              +service-item(vanyaRadioData).service-item--radio
+              +service-item(mariaRadioData).service-item--radio
+              +service-item(rockRadioData).service-item--radio
             .service-content.page-content(data-tabs="element")
               h2.service-content__title Социальные сети
               .page-content__text
-                p Запишем для вас видеоролики любого формата и сложности. Мы работаем только с профессионалами своего дела с многолетним опытом
+                p Что-то про социальные сети их крутость и т.д.
               .page-content__image.page-content__image--main
                 +picture("content/advertising", "advertising-social", "jpg", 695, 420)
+              +service-item(socialArzLiveData).service-item--socials
+              +service-item(socialArzOverheardData).service-item--socials
+              +service-item(socialAutoSaleData).service-item--socials
+              +service-item(socialArzRacingData).service-item--socials
+              +service-item(socialArzKringeData).service-item--socials
+              +service-item(socialArzJunkData).service-item--socials
+              +service-item(socialArzTopData).service-item--socials
+              +service-item(socialArzVTopData).service-item--socials
             .service-content.page-content(data-tabs="element")
               h2.service-content__title Мониторы
               .page-content__text

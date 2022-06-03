@@ -57,13 +57,25 @@
   const audioInfoData = {
     id: 'radio-info',
     title: 'Информационный',
-    description: 'Это информационное сообщение в&nbsp;официально-деловом или позитивном тоне. Буквальный рассказ о&nbsp;рекламируемом объекте. Подойдет, если ваша аудитория серьезная и&nbsp;предпочитает информацию коротко и&nbsp;по&nbsp;делу.',
-    parametersList: [
-      'сценарий',
-      'один дикторский голос',
-      'музыкальное сопровождение',
-      'монтаж',
-    ],
+    description: ['Это информационное сообщение в&nbsp;официально-деловом или позитивном тоне. Буквальный рассказ о&nbsp;рекламируемом объекте. Подойдет, если ваша аудитория серьезная и&nbsp;предпочитает информацию коротко и&nbsp;по&nbsp;делу.'],
+
+    parametersList: {
+      title: "В данный вид ролика входит:",
+      items: [
+        {
+          text: 'сценарий',
+        },
+        {
+          text: 'один дикторский голос',
+        },
+        {
+          text: 'музыкальное сопровождение',
+        },
+        {
+          text: 'монтаж',
+        },
+      ],
+    },
     price: '1700',
     audioList: [
       {
@@ -185,13 +197,24 @@
   const audioGameData = {
     id: 'radio-game',
     title: 'Игровой',
-    description: 'Это яркая, креативная подача. Здесь создается игровая концепция, в&nbsp;которую погружается слушатель.',
-    parametersList: [
-      'сценарий',
-      'один и более дикторских голосов',
-      'музыкальное сопровождение',
-      'монтаж',
-    ],
+    description: ['Это яркая, креативная подача. Здесь создается игровая концепция, в&nbsp;которую погружается слушатель.'],
+    parametersList: {
+      title: "В данный вид ролика входит:",
+      items: [
+        {
+          text: 'сценарий',
+        },
+        {
+          text: 'один и более дикторских голосов',
+        },
+        {
+          text: 'музыкальное сопровождение',
+        },
+        {
+          text: 'монтаж',
+        },
+      ],
+    },
     price: '2200',
     audioList: [
       {
@@ -341,13 +364,24 @@
   const audioParodyData = {
     id: 'radio-parody',
     title: 'Пародийный',
-    description: 'Отлично подходит, чтобы привлечь к себе внимание потребителя и выделиться на фоне конкурентов.',
-    parametersList: [
-      'сценарий',
-      'один и более дикторских голосов формата «пародия»',
-      'музыкальное сопровождение',
-      'монтаж',
-    ],
+    description: ['Отлично подходит, чтобы привлечь к себе внимание потребителя и выделиться на фоне конкурентов.'],
+    parametersList: {
+      title: "В данный вид ролика входит:",
+      items: [
+        {
+          text: 'сценарий',
+        },
+        {
+          text: 'один и более дикторских голосов формата «пародия»',
+        },
+        {
+          text: 'музыкальное сопровождение',
+        },
+        {
+          text: 'монтаж',
+        },
+      ],
+    },
     price: '2200',
     audioList: [
       {
@@ -469,13 +503,24 @@
   const audioLookData = {
     id: 'radio-look',
     title: 'Имиджевый',
-    description: 'Цель данного ролика – создать положительные ассоциации и эмоции рассказав о ценностях компании или товара.',
-    parametersList: [
-      'сценарий',
-      'один и более дикторских голосов',
-      'музыкальное сопровождение',
-      'монтаж',
-    ],
+    description: ['Цель данного ролика – создать положительные ассоциации и эмоции рассказав о ценностях компании или товара.'],
+    parametersList: {
+      title: "В данный вид ролика входит:",
+      items: [
+        {
+          text: 'сценарий',
+        },
+        {
+          text: 'один и более дикторских голосов',
+        },
+        {
+          text: 'музыкальное сопровождение',
+        },
+        {
+          text: 'монтаж',
+        },
+      ],
+    },
     price: '3000',
     audioList: [
       {
@@ -534,13 +579,24 @@
   const audioSongData = {
     id: 'radio-song',
     title: 'Песенный',
-    description: 'Мини песня про вашу компанию на известный мотив или авторскую подачу. Отлично подойдёт, чтобы выделиться на фоне других компаний.',
-    parametersList: [
-      'сценарий',
-      'один и более дикторских голосов формата «вокалист»',
-      'музыкальное сопровождение',
-      'монтаж',
-    ],
+    description: ['Мини песня про вашу компанию на известный мотив или авторскую подачу. Отлично подойдёт, чтобы выделиться на фоне других компаний.'],
+    parametersList: {
+      title: "В данный вид ролика входит:",
+      items: [
+        {
+          text: 'сценарий',
+        },
+        {
+          text: 'один и более дикторских голосов формата «вокалист»',
+        },
+        {
+          text: 'музыкальное сопровождение',
+        },
+        {
+          text: 'монтаж',
+        },
+      ],
+    },
     price: '4000',
     audioList: [
       {
@@ -571,7 +627,7 @@
   const audioScenarioData = {
     id: 'radio-scenario',
     title: 'Сценарий для аудиороликов',
-    description: 'Напишем сценарий к вашему аудиоролику, который точно запомнится.',
+    description: ['Напишем сценарий к вашему аудиоролику, который точно запомнится.'],
     price: '500',
   };
 
@@ -579,14 +635,27 @@
   const videoStaticData = {
     id: 'video-static',
     title: 'Статичная видеооткрытка',
-    description: 'Статичный видеоряд с музыкальным сопровождением и дикторским голосом.',
-    parametersList: [
-      'сценарий',
-      'один дикторский голос',
-      'музыкальное сопровождение',
-      'статичный видеоряд',
-      'монтаж',
-    ],
+    description: ['Статичный видеоряд с музыкальным сопровождением и дикторским голосом.'],
+    parametersList: {
+      title: "В данный вид ролика входит:",
+      items: [
+        {
+          text: 'сценарий',
+        },
+        {
+          text: 'один дикторский голос',
+        },
+        {
+          text: 'музыкальное сопровождение',
+        },
+        {
+          text: 'статичный видеоряд',
+        },
+        {
+          text: 'монтаж',
+        },
+      ],
+    },
     price: '2100',
   };
 
@@ -594,14 +663,27 @@
   const videoSemyDinamycData = {
     id: 'video-semidynamic',
     title: 'Полудинамичный',
-    description: 'Статичный видеоряд с локальными элементами анимации.',
-    parametersList: [
-      'сценарий',
-      'один дикторский голос',
-      'музыкальное сопровождение',
-      'статичный видеоряд с элементами динамики',
-      'монтаж',
-    ],
+    description: ['Статичный видеоряд с локальными элементами анимации.'],
+    parametersList: {
+      title: "В данный вид ролика входит:",
+      items: [
+        {
+          text: 'сценарий',
+        },
+        {
+          text: 'один дикторский голос',
+        },
+        {
+          text: 'музыкальное сопровождение',
+        },
+        {
+          text: 'статичный видеоряд с элементами динамики',
+        },
+        {
+          text: 'монтаж',
+        },
+      ],
+    },
     price: '2600',
   };
 
@@ -609,14 +691,27 @@
   const videoDinamycData = {
     id: 'video-dynamic',
     title: 'Динамичный',
-    description: 'Насыщенный видеоряд, с переходами и элементами динамики.',
-    parametersList: [
-      'сценарий',
-      'один дикторский голос',
-      'музыкальное сопровождение',
-      'динамичный видеоряд',
-      'монтаж',
-    ],
+    description: ['Насыщенный видеоряд, с переходами и элементами динамики.'],
+    parametersList: {
+      title: "В данный вид ролика входит:",
+      items: [
+        {
+          text: 'сценарий',
+        },
+        {
+          text: 'один дикторский голос',
+        },
+        {
+          text: 'музыкальное сопровождение',
+        },
+        {
+          text: 'динамичный видеоряд',
+        },
+        {
+          text: 'монтаж',
+        },
+      ],
+    },
     price: '3500',
   };
 
@@ -624,7 +719,7 @@
   const videoScenarioData = {
     id: 'video-scenario',
     title: 'Сценарий для видеороликов',
-    description: 'Напишем сценарий к вашему аудиоролику, который точно запомнится.',
+    description: ['Напишем сценарий к вашему аудиоролику, который точно запомнится.'],
     price: '500',
   };
 
@@ -642,25 +737,24 @@ mixin page-production()
                 p Запишем для вас аудиоролики любого формата и сложности. Мы работаем только с профессиональными дикторами, чей опыт составляет не менее 10 лет в данной сфере
               .page-content__image.page-content__image--main.page-content__image--pos-left
                 +picture("content/production", "production-radio", "jpg", 695, 420)
-              +service-content(audioInfoData)
-              +service-content(audioGameData)
-              +service-content(audioParodyData)
+              +service-item(audioInfoData)
+              +service-item(audioGameData)
+              +service-item(audioParodyData)
               .page-content__image
                 +picture("content/production", "production-radio-1", "jpg", 695, 300)
-              +service-content(audioLookData)
-              +service-content(audioSongData)
-              +service-content(audioScenarioData).service-content__inner--accent
+              +service-item(audioLookData)
+              +service-item(audioSongData)
+              +service-item(audioScenarioData).service-item--accent
             .service-content.page-content(data-tabs="element")
               h2.service-content__title Изготовление видеороликов
               .page-content__text
                 p Запишем для вас видеоролики любого формата и сложности. Мы работаем только с профессионалами своего дела с многолетним опытом
               .page-content__image.page-content__image--main
                 +picture("content/production", "production-video-1", "jpg", 695, 420)
-              +service-content(videoStaticData)
-              +service-content(videoSemyDinamycData)
+              +service-item(videoStaticData)
+              +service-item(videoSemyDinamycData)
               .page-content__image
                 +picture("content/production", "production-video", "jpg", 695, 420)
-              +service-content(videoDinamycData)
-              +service-content(videoScenarioData).service-content__inner--accent
-
+              +service-item(videoDinamycData)
+              +service-item(videoScenarioData).service-item--accent
           +feedback("Хотите узнать подробнее?", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--services

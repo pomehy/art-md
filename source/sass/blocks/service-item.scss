@@ -1,0 +1,309 @@
+.service-item {
+  display: grid;
+  column-gap: 24px;
+
+  ul {
+    margin-bottom: 40px;
+    li {
+      font-size: 20px;
+    }
+
+    p {
+      display: inline;
+    }
+  }
+
+  .audience__title {
+    margin-bottom: 0;
+
+    @include vp-767 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.service-item--socials {
+  .service-item__header {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      margin-right: 20px;
+    }
+
+    @include vp-767 {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.service-item--accent {
+  background-color: transparentize(#0088CD, 0.9);
+}
+
+.service-item--radio {
+  grid-template-columns: 1fr auto;
+
+  @include vp-1279 {
+    column-gap: 20px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 100%;
+  }
+}
+
+.service-item__header {
+  h2 {
+    margin-bottom: 0;
+  }
+
+  margin-bottom: 24px;
+}
+
+.service-item__image-wrapper {
+  grid-column: 2/3;
+  grid-row: 1 / -10;
+
+  @include vp-767 {
+    grid-column: 1/1;
+    grid-row: 2/3;
+    margin-bottom: 20px;
+
+    svg,
+    img {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  @include vp-374 {
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.service-item__socials {
+  display: flex;
+
+  @include vp-767 {
+    margin-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    margin-right: 6px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        span {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3;
+
+    top: -30px;
+    left: 35px;
+    padding: 4px 8px;
+    width: max-content;
+    background-color: $color-snow;
+    border-radius: 2px;
+    font-size: 16px;
+    box-shadow: 0 1px 3px 0 transparentize($color-default-black, 0.9), 0 1px 2px 0 transparentize($color-default-black, 0.94);
+
+    transition: opacity $trans-default;
+  }
+}
+
+.service-item__fm {
+display: block;
+margin-top: 10px;
+width: 100%;
+font-family: $ff-main-font;
+font-size: 20px;
+line-height: 20px;
+color: transparentize($color-nero, 0.7);
+}
+
+.service-item__info-button {
+  position: absolute;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-transparent;
+  border: none;
+  color: $color-dark-orange;
+
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.service-item__note {
+  position: relative;
+  display: inline;
+  margin-left: 4px;
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+
+  cursor: help;
+
+  svg {
+    position: static !important;
+  }
+
+  span {
+    position: absolute;
+    visibility: hidden;
+    top: auto;
+    opacity: 0;
+
+    vertical-align: middle;
+
+    top: -32px;
+    left: 10px;
+    padding: 4px 8px;
+    width: max-content;
+    background-color: $color-snow;
+    border-radius: 2px;
+    font-size: 16px;
+    box-shadow: 0 1px 3px 0 transparentize($color-default-black, 0.9), 0 1px 2px 0 transparentize($color-default-black, 0.94);
+
+    transition: opacity $trans-default;
+
+    @include vp-767 {
+      width: 150px;
+      top: -60px;
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    span {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.service-item__price {
+  position: relative;
+  width: max-content;
+  margin-top: 32px;
+
+  font-family: $ff-second-font;
+  font-weight: 700;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  color: $color-dark-orange;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+.service-item__examples {
+  margin-top: 40px;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.service-item__button-show {
+  position: relative;
+
+  margin-top: 32px;
+  padding-right: 0;
+  padding-left: 0;
+
+  font-size: 20px;
+  color: $color-dark-orange;
+  border: none;
+  background-color: $color-transparent;
+
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  &.is-hidden {
+    display: none;
+  }
+
+  @include vp-767 {
+    margin-top: 20px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    bottom: -2px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $color-dark-orange;
+  }
+}
+
+.service-item__audience {
+  grid-column: 1/-1;
+  margin-top: 40px;
+}

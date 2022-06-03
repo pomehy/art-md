@@ -1,5 +1,6 @@
 .audience__list {
   display: flex;
+  flex-wrap: wrap;
 
   @include vp-767 {
     flex-wrap: wrap;
@@ -7,6 +8,7 @@
 }
 
 .audience__item {
+  margin-top: 16px;
   margin-right: 16px;
   padding: 4px 8px;
 
@@ -17,6 +19,9 @@
   border: 1px solid;
   border-radius: 2px;
 
+  color: $color-nero;
+  border-color: $color-nero;
+
   @include vp-1279 {
     margin-right: 12px;
     font-size: 18px;
@@ -24,6 +29,10 @@
 
   @include vp-767 {
     margin-top: 12px;
+  }
+
+  @include vp-374 {
+    font-size: 16px;
   }
 
   &:last-of-type {
@@ -40,6 +49,13 @@
   color: $color-brink-pink;
   border-color: $color-brink-pink;
 }
+
+.audience__item--geo {
+  color: transparentize($color-nero, 0.2);
+  border-color: transparentize($color-nero, 0.2);
+}
+
+
 
 // .audience__item--age {
 //   color: $color-dark-orange;

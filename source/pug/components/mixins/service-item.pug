@@ -1,0 +1,74 @@
+mixin service-item(data)
+  .page-content__content-wrapper.service-content__inner.service-item(id=data.id)&attributes(attributes)
+    .service-item__header
+      h2 !{data.title}
+      if data.fm
+        span.service-item__fm частота !{data.fm}
+      if data.socialsList
+        .service-item__socials
+          each socialItem in data.socialsList
+            a(href=socialItem.href)
+              +icon(socialItem.icon.name, 30, 30)
+              span Перейти в сообщество
+    .service-item__body
+      .page-content__text
+        each text in data.description
+          p !{text}
+      if data.parametersList
+        .page-content__text
+          p !{data.parametersList.title}
+        ul
+          each item in data.parametersList.items
+            li
+              +icon("icon-arrow-right", 16, 16)
+              p !{item.text}
+                if item.note
+                  span.service-item__note
+                    +icon("icon-note", 20, 20)
+                    span !{item.note}
+
+      if data.textAccent
+        .page-content__text.page-content__text--accent
+          p !{data.textAccent}
+            if data.infoButton
+              button.service-item__info-button(type="button", data-open-modal="radio-info")
+                +icon("icon-info", 20, 20)
+    if data.price
+      .service-item__price
+        p Стоимость: #[span от !{data.price} руб.]
+    if data.audioList
+      .service-item__examples
+        h3 Примеры:
+        div(data-service-item-container)
+          each audio in data.audioList
+            +audio-item(audio)
+          if data.audioList.length > 3
+            button.service-item__button-show(type="button", data-service-show-more) Показать все
+    if data.icon
+      .service-item__image-wrapper
+        +icon(data.icon.name, data.icon.width, data.icon.height)
+    if data.img
+      .service-item__image-wrapper
+        +picture(data.img.path, data.img.image, data.img.format, data.img.width, data.img.height, data.img.altText)
+    if data.audience
+      .service-item__audience.audience
+        h3.audience__title !{data.audience.title}
+        .audience__list
+          if data.audience.city
+            span.audience__item.audience__item--geo Арзамас:&nbsp; #[span !{data.audience.city}]
+          if data.audience.district
+            span.audience__item.audience__item--geo Арзамасский район:&nbsp; #[span !{data.audience.district}]
+          if data.audience.others
+            span.audience__item.audience__item--geo Соседние поселения:&nbsp; #[span !{data.audience.others}]
+          span.audience__item.audience__item--male Мужчины:&nbsp; #[span !{data.audience.male}]
+          span.audience__item.audience__item--female Женщины:&nbsp; #[span !{data.audience.female}]
+          span.audience__item.audience__item--age Возраст:&nbsp; #[span !{data.audience.age}]
+    //- if data.socialsList
+    //-   .service-item__socials-link
+    //-     h3 Ссылки на сообщества:
+    //-     div
+    //-       each socialItem in data.socialsList
+    //-         a(href=socialItem.href, rel="nofollow noopener", target="_blank")
+    //-           +icon(socialItem.icon.name, socialItem.icon.width, socialItem.icon.height)
+    //-           span !{socialItem.href}
+

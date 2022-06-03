@@ -1,5 +1,6 @@
-mixin service-content-radio(data)
-  .page-content__content-wrapper.service-content__inner.service-content__inner--radio(id=data.id)&attributes(attributes)
+mixin service-content-social(data)
+  .page-content__content-wrapper.service-content__inner.service-item.--socials(id=data.id)&attributes(attributes)
+
     h2 !{data.title}
       if data.fm
         span.service-content__fm частота !{data.fm}
