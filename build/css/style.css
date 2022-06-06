@@ -5405,6 +5405,12 @@ button,
   margin-bottom: 0;
 }
 
+.service-item__timework {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
 .accordion {
   max-width: 500px;
   margin: 0 auto 150px auto;

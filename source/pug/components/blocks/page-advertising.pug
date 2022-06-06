@@ -81,7 +81,7 @@
       title: 'Локальное радио',
       list: [
         {
-          title: 'ТРЦ "Омега',
+          title: 'ТРЦ "Омега"',
           href: 'local-radio-omega'
         },
         {
@@ -656,6 +656,7 @@
     description: [
       'Мониторы находятся в терапевтическом отделении и регистратуре - дают гарантию, что человек увидит вашу рекламу несколько раз за время ожидания своей очереди и как правило будет посещать поликлинику в течении одной/двух недель сдавая анализы и посещая различных врачей.',
       ],
+    timeWorkTitle: "График работы мониторов",
     timeWork: [
       {
         name: 'Поликлиника №1',
@@ -721,12 +722,8 @@
       'ТРЦ "ОМЕГА" является самым крупным торговым центром на юге Нижегородской области. Рядом с ТРЦ «Омега» находится одно из самых крупных промышленных предприятий в Арзамасе – завод «АПЗ», на котором трудятся 6000+ человек.',
       ' Проходимость ТРЦ "Омега" составляет 8000-11000 человек в сутки.',
       ],
-    timeWork: [
-      {
-        name: 'ТРЦ "Омега"',
-        time: '8:00 - 22:00',
-      },
-    ],
+    timeWorkTitle: "График работы мониторов c 8:00 - 22:00",
+    timeWork: true,
     textAccent: '8 мониторов установлены в коридорах и напротив кассовой зоны магазина "АШАН"',
     img: {
       path: "content/advertising",
@@ -745,6 +742,154 @@
       altText: "Фотография монитора",
     },
   };
+
+-
+  const localRadioSlavanData = {
+    id: 'local-radio-slavan',
+    title: 'ТЦ "Славянский"',
+    description: [
+      'Крупнейший торгово-развлекательный центр на&nbsp;юге Нижегородской области. Данный ТРЦ направлен не&nbsp;только на&nbsp;удовлетворение потребностей жителей&nbsp;г. Арзамаса, но&nbsp;и&nbsp;жителей Арзамасского и&nbsp;близлежащих районов Нижегородской области.',
+      'Вещание осуществляется внутри ТРЦ. Адрес ТРЦ – ул. Калинина, 46',
+      ],
+    parametersList: {
+      title: "Ежедневная аудитория:",
+      items: [
+        {
+          text: 'Будние около 8&nbsp;000 человек',
+        },
+        {
+          text: 'Выходные около 11&nbsp;000 человек',
+        },
+      ],
+    },
+    timeWork: true,
+    timeWorkTitle: "Время работы радиовещания с 9:00&nbsp;-&nbsp;20:00",
+    img: {
+      path: "content/advertising",
+      image: "local-radio-slavan",
+      format: "jpg",
+      width: 250,
+      height: 250,
+      altText: "Логотип ТЦ Славянский",
+    },
+  };
+
+-
+  const localRadioColosseumData = {
+    id: 'local-radio-colosseum',
+    title: 'ТЦ "Колизей',
+    description: [
+      'Расположен в центре города, на одном из самых оживлённых перекрёстков города (Проспект Ленина, ул. Севастопольская и ул. Парковая).',
+      'Вещание осуществляется внутри ТРЦ. Адрес ТЦ – ул. Парковая, 14',
+      ],
+    parametersList: {
+      title: "Ежедневная аудитория:",
+      items: [
+        {
+          text: 'около 4&nbsp;000 человек',
+        },
+      ],
+    },
+    timeWork: true,
+    timeWorkTitle: "Время работы радиовещания с 9:00&nbsp;-&nbsp;19:00",
+    img: {
+      path: "content/advertising",
+      image: "local-radio-colosseum",
+      format: "jpg",
+      width: 250,
+      height: 250,
+      altText: "Логотип ТЦ Колизей",
+    },
+  };
+
+-
+  const localRadioOmegaData = {
+    id: 'local-radio-omega',
+    title: 'ТРЦ "Омега',
+    description: [
+      'Крупнейший торгово-развлекательный центр на&nbsp;юге Нижегородской области. Данный ТРЦ направлен не&nbsp;только на&nbsp;удовлетворение потребностей жителей&nbsp;г. Арзамаса, но&nbsp;и&nbsp;жителей Арзамасского и&nbsp;близлежащих районов Нижегородской области.',
+      'Вещание осуществляется внутри ТРЦ. Адрес ТРЦ – ул. Калинина, 46',
+      ],
+    parametersList: {
+      title: "Ежедневная аудитория:",
+      items: [
+        {
+          text: 'Будние около 8&nbsp;000 человек',
+        },
+        {
+          text: 'Выходные около 11&nbsp;000 человек',
+        },
+      ],
+    },
+    timeWork: true,
+    timeWorkTitle: "Время работы радиовещания с 9:00&nbsp;-&nbsp;20:00",
+    img: {
+      path: "content/advertising",
+      image: "local-radio-omega",
+      format: "jpg",
+      width: 250,
+      height: 250,
+      altText: "Логотип ТЦ Омега",
+    },
+  };
+
+-
+  const localRadioChampionData = {
+    id: 'local-radio-champion',
+    title: 'ФОК "Чемпион"',
+    description: [
+      'Единственный центр физической культуры в Арзамасском районе.',
+      'Вещание осуществляется внутри ФОКа. Адрес ФОК "Чемпион" – ул. Пушкина, 108, р.п.&nbsp;Выездное.',
+      ],
+    parametersList: {
+      title: "Ежедневная аудитория:",
+      items: [
+        {
+          text: 'около 3&nbsp;000 человек',
+        },
+      ],
+    },
+    timeWork: true,
+    timeWorkTitle: "Время работы радиовещания с 9:00&nbsp;-&nbsp;22:00",
+    img: {
+      path: "content/advertising",
+      image: "local-radio-champion",
+      format: "jpg",
+      width: 250,
+      height: 250,
+      altText: "Логотип ФОК Чемпион",
+    },
+  };
+
+-
+  const localRadioStarryData = {
+    id: 'local-radio-starry',
+    title: 'ФОК "Звездный"',
+    description: [
+      'Единственный центр физической культуры в г. Арзамас.',
+      'Вещание осуществляется внутри ФОКа. Адрес ФОК "Звездный" – 3-й Спортивный пер., 1, г.&nbsp;Арзамас',
+      ],
+    parametersList: {
+      title: "Ежедневная аудитория:",
+      items: [
+        {
+          text: 'около 3&nbsp;000 человек',
+        },
+      ],
+    },
+    timeWork: true,
+    timeWorkTitle: "Время работы радиовещания с 9:00&nbsp;-&nbsp;22:00",
+    img: {
+      path: "content/advertising",
+      image: "local-radio-starry",
+      format: "jpg",
+      width: 250,
+      height: 250,
+      altText: "Логотип ФОК Звездный",
+    },
+  };
+
+
 
 mixin page-advertising()
   .page-services(id="service-top")
@@ -790,9 +935,15 @@ mixin page-advertising()
             .service-content.page-content(data-tabs="element")
               h2.service-content__title Локальное радио
               .page-content__text
-                p Запишем для вас видеоролики любого формата и сложности. Мы работаем только с профессионалами своего дела с многолетним опытом
+                p Что-то про локальное радио
               .page-content__image.page-content__image--main
                 +picture("content/advertising", "advertising-radio-local-1", "jpg", 695, 420)
+              +service-item(localRadioOmegaData).service-item--radio
+              +service-item(localRadioSlavanData).service-item--radio
+              +service-item(localRadioColosseumData).service-item--radio
+              +service-item(localRadioChampionData).service-item--radio
+              +service-item(localRadioStarryData).service-item--radio
+
             .service-content.page-content(data-tabs="element")
               h2.service-content__title LED Экраны
               .page-content__text

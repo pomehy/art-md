@@ -48,14 +48,16 @@ mixin service-item(data)
       .service-item__image-wrapper
         +icon(data.icon.name, data.icon.width, data.icon.height)
     if data.timeWork
-      .service-item__accordion(data-accordion="parent")
-        div(data-accordion="element")
-          button(type="button", data-accordion="button") Время работы мониторов
-          div(data-accordion="content")
-            ul
-              each item in data.timeWork
-                li #[span !{item.name}] #[span !{item.time}]
-
+      if data.timeWork.length > 1
+        .service-item__accordion(data-accordion="parent")
+          div(data-accordion="element")
+            button(type="button", data-accordion="button") !{data.timeWorkTitle}
+            div(data-accordion="content")
+              ul
+                each item in data.timeWork
+                  li #[span !{item.name}] #[span !{item.time}]
+      else
+        p.service-item__timework !{data.timeWorkTitle}
     if data.img
       .service-item__image-wrapper
         +picture(data.img.path, data.img.image, data.img.format, data.img.width, data.img.height, data.img.altText)
