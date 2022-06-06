@@ -8018,6 +8018,11 @@ button,
     grid-template-columns: 100%;
   }
 
+  .service-item--monitors .service-item__image-wrapper {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+
   .service-item--socials .service-item__image-wrapper,
   .service-item--radio .service-item__image-wrapper {
     -ms-grid-column: 1;
@@ -8056,6 +8061,13 @@ button,
 
   .service-item__button-show {
     margin-top: 20px;
+  }
+
+  .service-item__accordion ul li {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    gap: 0;
+    margin-bottom: 16px;
   }
 
   .tabs__content--blog {
