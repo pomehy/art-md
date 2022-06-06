@@ -7,7 +7,7 @@ mixin service-item(data)
       if data.socialsList
         .service-item__socials
           each socialItem in data.socialsList
-            a(href=socialItem.href)
+            a(href=socialItem.href, rel="nofollow noopener", target="_blank")
               +icon(socialItem.icon.name, 30, 30)
               span Перейти в сообщество
     .service-item__body
@@ -47,9 +47,22 @@ mixin service-item(data)
     if data.icon
       .service-item__image-wrapper
         +icon(data.icon.name, data.icon.width, data.icon.height)
+    if data.timeWork
+      .service-item__accordion(data-accordion="parent")
+        div(data-accordion="element")
+          button(type="button", data-accordion="button") Время работы мониторов
+          div(data-accordion="content")
+            ul
+              each item in data.timeWork
+                li #[span !{item.name}] #[span !{item.time}]
+
     if data.img
       .service-item__image-wrapper
         +picture(data.img.path, data.img.image, data.img.format, data.img.width, data.img.height, data.img.altText)
+        if data.secondImg
+          +picture(data.secondImg.path, data.secondImg.image, data.secondImg.format, data.secondImg.width, data.secondImg.height, data.secondImg.altText)
+
+
     if data.audience
       .service-item__audience.audience
         h3.audience__title !{data.audience.title}

@@ -53,37 +53,59 @@
   }
 }
 
+.service-item--monitors {
+  .service-item__image-wrapper {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+
+      border-radius: 4px;
+    }
+  }
+}
+
+.service-item--socials,
+.service-item--radio {
+  .service-item__image-wrapper {
+    grid-column: 2/3;
+    grid-row: 1 / -10;
+
+    @include vp-767 {
+      grid-column: 1/1;
+      grid-row: 2/3;
+      margin-bottom: 20px;
+
+      svg,
+      img {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+
+    @include vp-374 {
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
 .service-item__header {
   h2 {
     margin-bottom: 0;
   }
 
   margin-bottom: 24px;
-}
-
-.service-item__image-wrapper {
-  grid-column: 2/3;
-  grid-row: 1 / -10;
-
-  @include vp-767 {
-    grid-column: 1/1;
-    grid-row: 2/3;
-    margin-bottom: 20px;
-
-    svg,
-    img {
-      display: block;
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
-
-  @include vp-374 {
-    svg {
-      width: 100%;
-      height: auto;
-    }
-  }
 }
 
 .service-item__socials {
@@ -306,4 +328,71 @@ color: transparentize($color-nero, 0.7);
 .service-item__audience {
   grid-column: 1/-1;
   margin-top: 40px;
+}
+
+.service-item__accordion {
+  margin-top: 20px;
+
+  button {
+    position: relative;
+    padding: 0;
+    border: none;
+    font-size: 20px;
+    color: $color-nero;
+
+    background-color: $color-transparent;
+
+    cursor: pointer;
+
+    transition: opacity $trans-default;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      bottom: -2px;
+      background-color: $color-nero;
+      width: 100%;
+      height: 1px;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+      position: relative;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 20px;
+      margin-bottom: 10px;
+      padding-left: 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+
+        width: 5px;
+        height: 5px;
+
+        background-color: $color-nero;
+        border-radius: 50%;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
