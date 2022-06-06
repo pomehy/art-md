@@ -1,0 +1,35 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Политика персональных данных" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "privacy.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutPrivacy = {
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: "privacy.html",
+          text: "Политика персональных данных",
+        },
+      ],
+    }
+
+block main
+  main
+    h1.visually-hidden Политика персональных данных
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutPrivacy).page-intro--no-image
+    +page-privacy()
+block modals

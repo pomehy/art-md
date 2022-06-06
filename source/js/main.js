@@ -48,10 +48,10 @@ window.addEventListener('DOMContentLoaded', () => {
   initTypedText();
   initHeader();
   iniAnimate();
-  // initMoveTo();
-  initMoveToService();
   initAccordions();
   initButtonToTop();
+  // initMoveTo();
+  initMoveToService();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

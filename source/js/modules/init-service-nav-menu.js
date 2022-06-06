@@ -1,5 +1,6 @@
 const serviceNav = document.querySelector('[data-service-menu]');
 import {ScrollLock} from '../utils/scroll-lock';
+import {iosChecker} from '../utils/ios-checker';
 
 
 export default class ServiceNav {
@@ -8,22 +9,35 @@ export default class ServiceNav {
     this.button = this.root.querySelector('[data-service-menu-button]');
     this.sublinks = this.root.querySelectorAll('[data-service-sublink]');
     this.scrollLock = new ScrollLock();
+    this._iosChecker = iosChecker;
 
     this._activeMenu = this._activeMenu.bind(this);
     this._handlerSubLinks = this._handlerSubLinks.bind(this);
   }
 
   _openMenu() {
-    let serviceMenuCoord = this.root.getBoundingClientRect();
-    // this.scrollLock.disableScrolling();
-    this.root.classList.add('is-active');
-    this.root.style.top = `${serviceMenuCoord.top}px`;
+    if (this._iosChecker()) {
+      let serviceMenuCoord = this.root.getBoundingClientRect();
+      this.root.classList.add('is-active');
+      this.root.style.top = `${serviceMenuCoord.top}px`;
+    } else {
+      let serviceMenuCoord = this.root.getBoundingClientRect();
+      this.scrollLock.disableScrolling();
+      this.root.classList.add('is-active');
+      this.root.style.top = `${serviceMenuCoord.top}px`;
+    }
   }
 
   _closeMenu() {
-    // this.scrollLock.enableScrolling();
-    this.root.classList.remove('is-active');
-    this.root.style.top = '';
+    if (this._iosChecker()) {
+      this.root.classList.remove('is-active');
+      this.root.style.top = '';
+    } else {
+      this.scrollLock.enableScrolling();
+
+      this.root.classList.remove('is-active');
+      this.root.style.top = '';
+    }
   }
 
   _handlerSubLinks() {

@@ -208,3 +208,26 @@
     }
   }
 }
+
+.modal--privacy {
+  .page-article__grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-article__button-prev {
+    display: none;
+  }
+
+  .modal__content {
+    width: 80%;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  .page-article__content {
+    max-width: 100%;
+  }
+}

@@ -16,21 +16,23 @@ const initMoveTo = () => {
   if (triggers) {
     triggers.forEach((trigger) => {
       moveTo.registerTrigger(trigger);
-
-      trigger.addEventListener('click', () => {
-        let array = Array.from(triggers);
-        let index = array.indexOf(trigger);
-
-        array.forEach((item, i) => {
-          if (i === index) {
-            item.classList.add('is-active');
-          } else {
-            item.classList.remove('is-active');
-          }
-        });
-      });
     });
   }
+
+  //     trigger.addEventListener('click', () => {
+  //       let array = Array.from(triggers);
+  //       let index = array.indexOf(trigger);
+
+  //       array.forEach((item, i) => {
+  //         if (i === index) {
+  //           item.classList.add('is-active');
+  //         } else {
+  //           item.classList.remove('is-active');
+  //         }
+  //       });
+  //     });
+  //   });
+  // }
 };
 
 export {initMoveTo};

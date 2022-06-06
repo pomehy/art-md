@@ -30,26 +30,25 @@ const initMoveToService = () => {
   const triggers = document.querySelectorAll('[data-link-trigger]');
   // const triggersWrapper = document.querySelector('[data-triggers-wrapper]');
 
+  if (!triggers.length) {
+    return;
+  }
 
-  if (triggers) {
-    triggers.forEach((trigger) => {
-      moveToService.registerTrigger(trigger);
-
-      trigger.addEventListener('click', () => {
-        console.log(getTolerance());
-        let array = Array.from(triggers);
-        let index = array.indexOf(trigger);
-
-        array.forEach((item, i) => {
-          if (i === index) {
-            item.classList.add('is-active');
-          } else {
-            item.classList.remove('is-active');
-          }
-        });
+  triggers.forEach((trigger) => {
+    moveToService.registerTrigger(trigger);
+    trigger.addEventListener('click', () => {
+      console.log(getTolerance());
+      let array = Array.from(triggers);
+      let index = array.indexOf(trigger);
+      array.forEach((item, i) => {
+        if (i === index) {
+          item.classList.add('is-active');
+        } else {
+          item.classList.remove('is-active');
+        }
       });
     });
-  }
+  });
 };
 
 export {initMoveToService};
