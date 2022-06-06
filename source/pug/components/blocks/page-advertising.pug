@@ -106,7 +106,7 @@
       title: 'LED Экраны',
       list: [
         {
-          title: 'ТЦ "Павлин',
+          title: 'ТЦ "Павлин"',
           href: 'led-pavlin'
         },
       ],
@@ -744,6 +744,35 @@
   };
 
 -
+  const ledPavlinData = {
+    id: 'led-pavlin',
+    title: 'LED Экран ТЦ "Павлин',
+    description: [
+      'LED-Щит расположен в&nbsp;центре города на&nbsp;перекрёстке улиц 50&nbsp;лет ВЛКСМ и&nbsp;ул. Калинина (Охватывает перекрёсток с&nbsp;2мя активными улицами города + находится рядом с&nbsp;самым крупным торговым центром на&nbsp;юге области ТРЦ &laquo;ОМЕГА&raquo; 100&nbsp;метров).',
+      'Является одним из 3-х светодиодных щитов в Арзамасе.',
+      ],
+    textAccent: 'Рядом находится завод "АПЗ", на котором работают 6000+ человек',
+    timeWorkTitle: "График работы LED Щита c 8:00 - 22:00",
+    timeWork: true,
+    img: {
+      path: "content/advertising",
+      image: "led-pavlin-1",
+      format: "jpg",
+      width: 700,
+      height: 468,
+      altText: "Фотография LED Экрана",
+    },
+    secondImg: {
+      path: "content/advertising",
+      image: "led-pavlin-2",
+      format: "jpg",
+      width: 700,
+      height: 468,
+      altText: "Фотография LED Экрана",
+    },
+  };
+
+-
   const localRadioSlavanData = {
     id: 'local-radio-slavan',
     title: 'ТЦ "Славянский"',
@@ -947,7 +976,8 @@ mixin page-advertising()
             .service-content.page-content(data-tabs="element")
               h2.service-content__title LED Экраны
               .page-content__text
-                p Запишем для вас видеоролики любого формата и сложности. Мы работаем только с профессионалами своего дела с многолетним опытом
+                p Что-то про LED Экраны
               .page-content__image.page-content__image--main
                 +picture("content/advertising", "advertising-led", "jpg", 695, 420)
+              +service-item(ledPavlinData).service-item--monitors
           +feedback("Хотите узнать подробнее?", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--services
