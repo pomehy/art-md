@@ -37,7 +37,6 @@ const initMoveToService = () => {
   triggers.forEach((trigger) => {
     moveToService.registerTrigger(trigger);
     trigger.addEventListener('click', () => {
-      console.log(getTolerance());
       let array = Array.from(triggers);
       let index = array.indexOf(trigger);
       array.forEach((item, i) => {

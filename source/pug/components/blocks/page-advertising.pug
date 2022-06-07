@@ -683,15 +683,15 @@
         time: '7:00 - 15:00',
       },
       {
-        name: 'Стоматология ул.&nbsp9&nbspМая',
+        name: 'Стоматология ул.&nbsp;9&nbsp;Мая',
         time: '7:00 - 20:00',
       },
       {
-        name: 'Стоматология ул.&nbspВахтерова',
+        name: 'Стоматология ул.&nbsp;Вахтерова',
         time: '7:00 - 20:00',
       },
       {
-        name: 'Стоматология "Детская" ул.&nbspПарковая',
+        name: 'Стоматология "Детская" ул.&nbsp;Парковая',
         time: '7:00 - 18:00',
       },
     ],
@@ -933,7 +933,7 @@ mixin page-advertising()
               .page-content__text
                 p Радио - является одним из титанов всей современной рекламной индустрии. Широкий охват аудитории, гибкость и невысокая стоимость, делают данный инструмент продвижения одним из самых эффективных в принципе.
               .page-content__image.page-content__image--main
-                +picture("content/advertising", "advertising-radio", "jpg", 695, 420)
+                +picture("content/advertising", "advertising-radio", "jpg", 695, 420, "Реклама на радио")
               +service-item(nasheRadioData).service-item--radio
               +service-item(recordRadioData).service-item--radio
               +service-item(vanyaRadioData).service-item--radio
@@ -944,7 +944,7 @@ mixin page-advertising()
               .page-content__text
                 p Социальные сети очень плотно вошли в нашу жизнь, как наверное главный канал получения информации. В современном мире, жизнь без них - просто невозможна. Именно поэтому данный инструмент продвижения является одним из самых эффективных.
               .page-content__image.page-content__image--main
-                +picture("content/advertising", "advertising-social", "jpg", 695, 420)
+                +picture("content/advertising", "advertising-social", "jpg", 695, 420, "Реклама в соцсетях")
               +service-item(socialArzLiveData).service-item--socials
               +service-item(socialArzOverheardData).service-item--socials
               +service-item(socialAutoSaleData).service-item--socials
@@ -958,7 +958,7 @@ mixin page-advertising()
               .page-content__text
                 p Пишем что-то про мониторы
               .page-content__image.page-content__image--main
-                +picture("content/advertising", "advertising-monitor", "jpg", 695, 420)
+                +picture("content/advertising", "advertising-monitor", "jpg", 695, 420, "Реклама на мониторах")
               +service-item(monitorsHealthData).service-item--monitors
               +service-item(monitorsOmegaData).service-item--monitors
             .service-content.page-content(data-tabs="element")
@@ -966,7 +966,7 @@ mixin page-advertising()
               .page-content__text
                 p Что-то про локальное радио
               .page-content__image.page-content__image--main
-                +picture("content/advertising", "advertising-radio-local-1", "jpg", 695, 420)
+                +picture("content/advertising", "advertising-radio-local-1", "jpg", 695, 420, "Реклама в ТЦ")
               +service-item(localRadioOmegaData).service-item--radio
               +service-item(localRadioSlavanData).service-item--radio
               +service-item(localRadioColosseumData).service-item--radio
@@ -978,6 +978,6 @@ mixin page-advertising()
               .page-content__text
                 p Что-то про LED Экраны
               .page-content__image.page-content__image--main
-                +picture("content/advertising", "advertising-led", "jpg", 695, 420)
+                +picture("content/advertising", "advertising-led", "jpg", 695, 420, "Реклама на LED Экранах")
               +service-item(ledPavlinData).service-item--monitors
           +feedback("Хотите узнать подробнее?", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--services

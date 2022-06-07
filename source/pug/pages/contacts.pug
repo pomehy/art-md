@@ -1,13 +1,13 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Контакты АМР Артмедиа" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Контакты АМР Артмедиа"
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
   - const hasFooter = true
   - const footerMods = ""
-  - const currentUrl = "contacts.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const currentUrl = "contacts.html"
 
 
   -
@@ -36,9 +36,6 @@ block main
   main
     h1.visually-hidden Контакты АМР Артмедиа
     +button-to-top()
-
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
     +page-intro(contactsData)
     +page-contacts()
     +map()

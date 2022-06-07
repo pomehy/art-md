@@ -1,13 +1,13 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Изготовление рекламы" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Изготовление рекламы"
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
   - const hasFooter = true
   - const footerMods = ""
-  - const currentUrl = "production.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const currentUrl = "production.html"
 
   -
     const aboutBlog = {
@@ -35,9 +35,6 @@ block main
   main
     h1.visually-hidden Партнеры АМР Артмедиа
     +button-to-top()
-
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
     +page-intro(aboutBlog)
     +page-production()
 block modals
