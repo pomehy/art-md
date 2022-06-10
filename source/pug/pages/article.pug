@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "SMM или таргетированная реклама?" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Страница в разработке" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
@@ -10,7 +10,7 @@ block variables
   - const currentUrl = "article.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
   -
-    const aboutArticle = {
+    const aboutArticleInner = {
       breadcrumbs: [
         {
           href: "index.html",
@@ -29,7 +29,7 @@ block main
 
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +page-intro(aboutArticle).page-intro--no-image
+    +page-intro(aboutArticleInner).page-intro--no-image
     +page-article()
     +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
 block modals

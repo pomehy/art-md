@@ -1,0 +1,21 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Ошибка - страница не найдена"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "404.html"
+
+block main
+  main
+    h1.visually-hidden Ошибка 404
+    +button-to-top()
+    +page-404()
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--privacy")(data-modal="privacy")
+    +modal-privacy()

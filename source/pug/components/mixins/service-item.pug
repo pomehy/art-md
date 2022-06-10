@@ -31,7 +31,7 @@ mixin service-item(data)
         .page-content__text.page-content__text--accent
           p !{data.textAccent}
             if data.infoButton
-              button.service-item__info-button(type="button", data-open-modal="radio-info")
+              button.service-item__info-button(type="button", data-open-modal="radio-info", aria-label="Узнать подробнее")
                 +icon("icon-info", 20, 20)
     if data.price
       .service-item__price

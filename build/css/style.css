@@ -1515,14 +1515,6 @@ button.swiper-pagination-bullet {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "FuturaBT";
-  font-display: swap;
-  src: url("../fonts/futurabt-book.woff2") format("woff2"), url("../fonts/futurabt-book.woff") format("woff");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
   font-family: "Gilroy";
   font-display: swap;
   src: url("../fonts/gilroy-regular.woff2") format("woff2"), url("../fonts/gilroy-regular.woff") format("woff");
@@ -4177,6 +4169,14 @@ button,
   margin-top: 56px;
 }
 
+.article__button-index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
 .socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5432,6 +5432,32 @@ button,
   margin-top: 20px;
   margin-bottom: 0;
   font-size: 20px;
+}
+
+.page-404 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.page-404 .page-content__text {
+  text-align: center;
+}
+
+.page-404 .button {
+  margin-top: 24px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-404__image-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 740px;
 }
 
 .accordion {
@@ -6880,6 +6906,10 @@ button,
     column-gap: 20px;
   }
 
+  .page-404 {
+    padding-top: 100px;
+  }
+
   .tabs__content--blog {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
@@ -7105,6 +7135,8 @@ button,
   }
 
   .feedback__content {
+    padding-right: 24px;
+    padding-left: 24px;
     max-width: 100%;
   }
 
@@ -7399,6 +7431,10 @@ button,
 
   .service-nav__title {
     border-radius: 0;
+  }
+
+  .page-404__image-wrapper {
+    max-width: 600px;
   }
 
   .tabs__content--blog {
@@ -7711,6 +7747,11 @@ button,
 
   .feedback--services .feedback__header {
     max-width: 100%;
+  }
+
+  .feedback__content {
+    padding-right: 16px;
+    padding-left: 16px;
   }
 
   .feedback__header {
@@ -8095,6 +8136,10 @@ button,
     grid-template-columns: auto;
     gap: 0;
     margin-bottom: 16px;
+  }
+
+  .page-404 {
+    padding-top: 120px;
   }
 
   .tabs__content--blog {

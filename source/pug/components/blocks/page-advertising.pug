@@ -655,6 +655,7 @@
     title: 'Мониторы в поликлиниках',
     description: [
       'Мониторы находятся в терапевтическом отделении и регистратуре - дают гарантию, что человек увидит вашу рекламу несколько раз за время ожидания своей очереди и как правило будет посещать поликлинику в течении одной/двух недель сдавая анализы и посещая различных врачей.',
+      '17 мониторов установлены в 9 поликлиниках города (в г. Арзамас их всего 9)',
       ],
     timeWorkTitle: "График работы мониторов",
     timeWork: [
@@ -695,22 +696,22 @@
         time: '7:00 - 18:00',
       },
     ],
-    textAccent: '17 мониторов установлены в 9 поликлиниках города (в г. Арзамас их всего 9)',
+    textAccent: 'Охват аудитории в поликлиниках составляет - 15 000 человек в сутки',
     img: {
       path: "content/advertising",
       image: "monitor-1",
       format: "jpg",
       width: 700,
       height: 400,
-      altText: "Логотип сообщества",
+      altText: "Фотография монитора",
     },
     secondImg: {
       path: "content/advertising",
-      image: "monitor-1",
+      image: "monitor-2",
       format: "jpg",
       width: 700,
       height: 400,
-      altText: "Логотип сообщества",
+      altText: "Фотография монитора",
     },
   };
 
@@ -720,11 +721,11 @@
     title: 'Мониторы в ТРЦ "Омега',
     description: [
       'ТРЦ "ОМЕГА" является самым крупным торговым центром на юге Нижегородской области. Рядом с ТРЦ «Омега» находится одно из самых крупных промышленных предприятий в Арзамасе – завод «АПЗ», на котором трудятся 6000+ человек.',
-      'Проходимость ТРЦ "Омега" составляет 8000&nbsp;-&nbsp;11000 человек в сутки.',
+      '8 мониторов установлены в коридорах и напротив кассовой зоны магазина "АШАН"',
       ],
     timeWorkTitle: "График работы мониторов c 8:00&nbsp;-&nbsp;22:00",
     timeWork: true,
-    textAccent: '8 мониторов установлены в коридорах и напротив кассовой зоны магазина "АШАН"',
+    textAccent: 'Проходимость ТРЦ "Омега" составляет 8000&nbsp;-&nbsp;11000 человек в сутки',
     img: {
       path: "content/advertising",
       image: "monitor-omega",
@@ -735,7 +736,7 @@
     },
     secondImg: {
       path: "content/advertising",
-      image: "monitor-omega",
+      image: "monitor-omega-2",
       format: "jpg",
       width: 700,
       height: 400,
@@ -777,22 +778,19 @@
     id: 'local-radio-slavan',
     title: 'ТЦ "Славянский"',
     description: [
-      'Крупнейший торгово-развлекательный центр на&nbsp;юге Нижегородской области. Данный ТРЦ направлен не&nbsp;только на&nbsp;удовлетворение потребностей жителей&nbsp;г. Арзамаса, но&nbsp;и&nbsp;жителей Арзамасского и&nbsp;близлежащих районов Нижегородской области.',
-      'Вещание осуществляется внутри ТРЦ. Адрес ТРЦ – ул. Калинина, 46',
+      'Крупный торговый центр г. Арзамаса, имеет на своей территории рынок. ',
+      'Вещание осуществляется внутри ТЦ. Адрес ТЦ – ул. Парковая, 14',
       ],
     parametersList: {
       title: "Ежедневная аудитория:",
       items: [
         {
-          text: 'Будние около 8&nbsp;000 человек',
-        },
-        {
-          text: 'Выходные около 11&nbsp;000 человек',
+          text: 'около 4&nbsp;000 человек',
         },
       ],
     },
     timeWork: true,
-    timeWorkTitle: "Время работы радиовещания с 9:00&nbsp;-&nbsp;20:00",
+    timeWorkTitle: "Время работы радиовещания с 9:00&nbsp;-&nbsp;19:00",
     img: {
       path: "content/advertising",
       image: "local-radio-slavan",
@@ -809,7 +807,7 @@
     title: 'ТЦ "Колизей',
     description: [
       'Расположен в центре города, на одном из самых оживлённых перекрёстков города (Проспект Ленина, ул. Севастопольская и ул. Парковая).',
-      'Вещание осуществляется внутри ТРЦ. Адрес ТЦ – ул. Парковая, 14',
+      'Вещание осуществляется внутри ТЦ. Адрес ТЦ – ул. Парковая, 123А',
       ],
     parametersList: {
       title: "Ежедневная аудитория:",
@@ -942,7 +940,9 @@ mixin page-advertising()
             .service-content.page-content(data-tabs="element")
               h2.service-content__title Социальные сети
               .page-content__text
-                p Социальные сети очень плотно вошли в нашу жизнь, как наверное главный канал получения информации. В современном мире, жизнь без них - просто невозможна. Именно поэтому данный инструмент продвижения является одним из самых эффективных.
+                p Социальные сети очень плотно вошли в нашу жизнь, как главный канал получения информации. В современном мире, жизнь без них - просто невозможна. Именно поэтому данный инструмент продвижения является одним из самых эффективных.
+              .page-content__text.page-content__text--accent
+                p Совокупный охват аудитории нашими сообществами составляет – 117 000 пользователей в сутки
               .page-content__image.page-content__image--main
                 +picture("content/advertising", "advertising-social", "jpg", 695, 420, "Реклама в соцсетях")
               +service-item(socialArzLiveData).service-item--socials
@@ -956,7 +956,9 @@ mixin page-advertising()
             .service-content.page-content(data-tabs="element")
               h2.service-content__title Мониторы
               .page-content__text
-                p Пишем что-то про мониторы
+                p Мониторы – тренд цифровой indoor-рекламы последних лет. Данный инструмент неоднократно показал свою эффективность за счёт: широкого охвата аудитории, быстрого запуска рекламных материалов и большого количество показов.
+              .page-content__text.page-content__text--accent
+                p Совокупный охват наших мониторов составляет - 25 000 посетителей в сутки
               .page-content__image.page-content__image--main
                 +picture("content/advertising", "advertising-monitor", "jpg", 695, 420, "Реклама на мониторах")
               +service-item(monitorsHealthData).service-item--monitors
@@ -964,7 +966,9 @@ mixin page-advertising()
             .service-content.page-content(data-tabs="element")
               h2.service-content__title Локальное радио
               .page-content__text
-                p Что-то про локальное радио
+                p Локальное радио – один из инструментов эффективной indoor-рекламы, ненавязчиво доносящий информацию о компании или товаре до потребителя. Посещая торговый центр или место с локальным радиовещанием, человек гарантировано услышит несколько раз информацию о вашей организации.
+              .page-content__text.page-content__text--accent
+                p Совокупный охват аудитории - 23 000 посетителей в сутки
               .page-content__image.page-content__image--main
                 +picture("content/advertising", "advertising-radio-local-1", "jpg", 695, 420, "Реклама в ТЦ")
               +service-item(localRadioOmegaData).service-item--radio
@@ -976,7 +980,9 @@ mixin page-advertising()
             .service-content.page-content(data-tabs="element")
               h2.service-content__title LED Экраны
               .page-content__text
-                p Что-то про LED Экраны
+                p LED экраны – самый эффективный инструмент продвижения среди outdoor-рекламы. Динамичные видеоролики, быстрый запуск и интерес у потребителей сделали данный способ продвижения одним из результативных в наше время.
+              .page-content__text.page-content__text--accent
+                p Совокупный охват аудитории наших LED экранов составляет – 14 000 человек в сутки
               .page-content__image.page-content__image--main
                 +picture("content/advertising", "advertising-led", "jpg", 695, 420, "Реклама на LED Экранах")
               +service-item(ledPavlinData).service-item--monitors

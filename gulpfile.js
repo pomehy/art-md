@@ -25,6 +25,14 @@ const pugToHtml = () => {
       .pipe(gulp.dest('build'));
 };
 
+const pugToHtmlArticles = () => {
+  return gulp.src('source/pug/pages/blog/*.pug')
+      .pipe(plumber())
+      .pipe(pug({ pretty: true }))
+      .pipe(cached('pug'))
+      .pipe(gulp.dest('build/blog'));
+}
+
 const css = () => {
   return gulp.src('source/sass/style.scss')
       .pipe(plumber())

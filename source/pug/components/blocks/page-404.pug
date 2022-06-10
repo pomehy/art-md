@@ -1,0 +1,8 @@
+mixin page-404()
+  .page-section.page-404(data-animation-group)
+    .container
+      .page-404__image-wrapper
+        +picture("content", "error", "jpg", 717, 523, "Ошибка 404")
+      .page-content__text
+        p Запрашиваемая страница не найдена
+      a(href="index.html").button.button--secondary На главную
