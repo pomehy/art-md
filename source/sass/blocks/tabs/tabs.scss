@@ -46,8 +46,6 @@
   z-index: 5;
 
   display: flex;
-  flex-wrap: wrap;
-
 
   padding-top: 20px;
   margin-top: -20px;
@@ -97,7 +95,7 @@
     }
   }
 
-  button {
+  button:not(.sorting__button) {
     margin-right: 20px;
     margin-bottom: 16px;
 
@@ -143,8 +141,6 @@
   }
 
   @include vp-1023 {
-    flex-wrap: nowrap;
-
     padding-right: 24px;
     padding-left: 24px;
     padding-bottom: 16px;
@@ -159,7 +155,7 @@
   }
 
   @include vp-767 {
-    top: 84px;
+    top: 80px;
 
     padding-right: 16px;
     padding-left: 16px;
@@ -167,6 +163,16 @@
 
   @include vp-374 {
     top: 76px;
+  }
+}
+
+.tabs__controls-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vp-1023 {
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
   }
 }
 

@@ -1,0 +1,5 @@
+mixin picture-lazy(path, image, format, width, height, altText, stub)
+  picture
+    source(type='image/webp', data-srcset="img/" + path + "/" + image + ".webp" + ", " + "img/" + path + "/" + image + "@2x.webp" + " 2x", srcset="img/content/stub.png")
+    img(data-src="img/" + path + "/" + image + "." + format, data-srcset= "img/" + path + "/" + image + "@2x." + format + " 2x", width= width, height= height, alt= altText, src="img/content/stub.png", srcset="img/content/stub.png")&attributes(attributes)
+

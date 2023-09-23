@@ -62,10 +62,12 @@ mixin footer(footerMods)
           if(currentUrl === "index.html")
             //- lighthouse снимает 10 баллов SEO за <a> без href
             span.footer__logo
-              +icon("logo-full", 260, 48)
+              +icon("logo", 50, 50)
+              +icon("artmedia", 219, 50)
           else
             a.footer__logo(href="index.html", aria-label="Переход на главную")
-              +icon("logo-full", 260, 48)
+              +icon("logo", 50, 50)
+              +icon("artmedia", 219, 50)
           .footer-links(data-accordion="element")
             p.footer-links__title(data-accordion="button") #[button(type="button") Компания]
             .footer-links__list-wrapper(data-accordion="content")
@@ -98,14 +100,16 @@ mixin footer(footerMods)
               a(href="tel:+79877561246") +7 (987) 756-12-46
               a(href="mailto:info@art-md.ru") info@art-md.ru
               .socials
-                a(href="https://vk.com/artmedia_arz", rel="nofollow noopener", target="_blank", aria-label="Перейти в сообщество Вконтакте")
+                a(href=vkLink, rel="nofollow noopener", target="_blank", aria-label="Перейти в сообщество Вконтакте")
                   +icon("logo-vk", 32, 32)
-                a(href="https://www.instagram.com/artmedia_arz", rel="nofollow noopener", target="_blank", aria-label="Перейти в сообщество Instagram")
+                a(href=instLink, rel="nofollow noopener", target="_blank", aria-label="Перейти в сообщество Instagram")
                   +icon("logo-instagram", 32, 32)
     .footer__copyright
       .container
-        p Данный сайт носит сугубо рекламно-информационный характер, и&nbsp;ни&nbsp;при каких условиях не&nbsp;является публичной офёртой, определяемой положением Статьи&nbsp;437&nbsp;(2) Гражданского кодекса РФ. Точную и&nbsp;окончательную информацию о&nbsp;стоимости услуг&nbsp;Вы можете получить, связавшись с&nbsp;нами.
+        p &copy; ООО "Артмедиа" 2022. Все права защищены. Данный сайт носит сугубо рекламно-информационный характер, и&nbsp;ни&nbsp;при каких условиях не&nbsp;является публичной офертой, определяемой положением Статьи&nbsp;437&nbsp;(2) Гражданского кодекса РФ. Точную и&nbsp;окончательную информацию о&nbsp;стоимости услуг&nbsp;Вы можете получить, связавшись с&nbsp;нами.
+        //- p
         .copyright
           span Разработано
           a(href="megacoder.ru") megacoder.ru
+
 

@@ -1,0 +1,53 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "История рекламы: Первая реклама в мире" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "adv-history.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutArticleInner = {
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: currentUrl,
+          text: "Статьи",
+        },
+      ],
+    }
+
+block main
+  main
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutArticleInner).page-intro--no-image
+    .page-article
+      .container
+        .page-article__grid
+          a.page-article__button-prev(href="blog.html")
+            +icon("icon-arrow-left", 24, 24)
+            span Назад
+          section.page-article__content.page-content.article
+            h1.page-article__title Первая реклама в мире
+            time.article__date(datetime="2023-04-27") 27.04.2023
+            .page-content__image
+              +picture("content/articles", "adv-history", "jpg", 760, 420, "Иллюстрация статьи")
+            .page-content__content-wrapper
+              .page-content__text
+                p Первая реклама в мире была написана на глиняной табличке в Месопотамии более 4000 лет назад. Она была размещена на улицах и была написана на аккадском языке и рекламировала продажу меда, пива и текстиля. Это считается первой известной формой рекламы в истории человечества..
+                p С тех пор реклама стала неотъемлемой частью нашей жизни и развивается с каждым днем, принимая новые формы и технологии.
+    +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--privacy")(data-modal="privacy")
+    +modal-privacy()

@@ -1,4 +1,3 @@
-// import {ScrollLock} from '../../utils/scroll-lock';
 import {ScrollLock} from '../utils/scroll-lock';
 
 const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;

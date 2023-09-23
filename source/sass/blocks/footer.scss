@@ -3,6 +3,8 @@
 
   background-color: $color-nero;
 
+  overflow: hidden;
+
   @include vp-1023 {
     padding-top: 28px;
     padding-bottom: 12px;
@@ -32,17 +34,78 @@
 
 .footer__logo {
   display: flex;
+  margin-bottom: auto;
   color: $color-dark-orange;
+
+  transform: translateZ(0);
+
+  transition: color $trans-default;
+
+  svg {
+    transition: opacity $trans-default, transform $trans-default;
+    transform: translateZ(0);
+
+    &:last-of-type {
+      margin-left: 20px;
+    }
+  }
+
+  @include vp-1919 {
+    align-items: center;
+
+    svg {
+      &:last-of-type {
+        margin-left: 20px;
+        width: 178px;
+        height: 20px;
+      }
+    }
+  }
 
   @include vp-1439 {
     svg {
-      width: 200px;
-      height: 37px;
+      &:last-of-type {
+        margin-left: 12px;
+        width: 158px;
+        height: 18px;
+      }
+    }
+  }
+
+  @include vp-1279 {
+    svg {
+      &:first-of-type {
+        width: 45px;
+        height: 45px;
+      }
+
+      &:last-of-type {
+        margin-left: 8px;
+        width: 148px;
+        height: 17px;
+      }
     }
   }
 
   @include vp-1023 {
     display: none;
+  }
+}
+
+.footer__logo[href] {
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      svg {
+        &:first-of-type {
+          transform: rotate(10deg);
+        }
+
+        &:last-of-type {
+          opacity: 0.8;
+        }
+      }
+    }
   }
 }
 

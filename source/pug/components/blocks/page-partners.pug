@@ -447,17 +447,17 @@
   ]
 
 mixin page-partners()
-  .page-section.page-section--tabs(data-animation-group)
+  .page-section.page-section--tabs
     .container
-      .page-section__header.fit.d-300
-        h2.page-section__title Наши партнеры
-        .page-section__description
+      .page-section__header(data-animation-group)
+        h2.page-section__title.fit Наши партнеры
+        .page-section__description.fit
           p АМР "Артмедиа" за время своей работы заручилось доверием многих организаций Арзамаса и компаний федерального масштаба. Мы очень ценим каждого партнёра, выстраивая шаг за шагом крепкое и взаимовыгодное сотрудничество
-      .page-section__tabs.tabs(data-tabs="parent")
-        .tabs__controls(data-tabs="controls")
+      .page-section__tabs.tabs(data-tabs="parent", data-animation-group)
+        .tabs__controls.fit.d-700(data-tabs="controls")
           +button({text: "Локальные"}).button--secondary(data-tabs="control")
           +button({text: "Федеральные"}).button--secondary(data-tabs="control")
-        .tabs__content(data-tabs="content")
+        .tabs__content.fit.d-700(data-tabs="content")
           .tabs__element.tabs__element--partners(data-tabs="element")
             each item in partnersCityData
               +partner-card(item)

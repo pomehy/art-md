@@ -1,0 +1,56 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Идеальная рекламная кампания S7 Airlines на светодиодных билбордах" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "adv-s7.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutArticleInner = {
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: currentUrl,
+          text: "Статьи",
+        },
+      ],
+    }
+
+block main
+  main
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutArticleInner).page-intro--no-image
+    .page-article
+      .container
+        .page-article__grid
+          a.page-article__button-prev(href="blog.html")
+            +icon("icon-arrow-left", 24, 24)
+            span Назад
+          section.page-article__content.page-content.article
+            h1.page-article__title Идеальная рекламная кампания S7 Airlines на светодиодных билбордах
+            time.article__date(datetime="2022-12-22") 22.12.2022
+            .page-content__image.page-content__image--main
+              +picture("content/articles", "s7", "jpg", 760, 420, "Иллюстрация статьи")
+            .page-content__content-wrapper
+              .page-content__text
+                p Он установлен в Домодедово в Москве
+
+                p Идеальнее интеграции в повседневный взгляд потребителя на окружающий мир — придумать невозможно 😍
+            .page-content__iframe
+              iframe(src="https://vk.com/video_ext.php?oid=-203025511&id=456239024&hd=2" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen)
+    +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--privacy")(data-modal="privacy")
+    +modal-privacy()

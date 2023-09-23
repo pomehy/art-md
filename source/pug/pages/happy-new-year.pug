@@ -1,0 +1,57 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "С Новый Годом!" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "happy-new-year.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutArticleInner = {
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: currentUrl,
+          text: "Статьи",
+        },
+      ],
+    }
+
+block main
+  main
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutArticleInner).page-intro--no-image
+    .page-article
+      .container
+        .page-article__grid
+          a.page-article__button-prev(href="blog.html")
+            +icon("icon-arrow-left", 24, 24)
+            span Назад
+          section.page-article__content.page-content.article
+            h1.page-article__title С Новый Годом!
+            time.article__date(datetime="2022-12-29") 29.12.2022
+            //- time.article__date(datetime=2022-08-17) 17.08.2022
+            .page-content__image
+              +picture("content/articles", "happy-ny-2023", "jpg", 760, 420, "Иллюстрация статьи")
+            .page-content__content-wrapper
+              .page-content__text
+                p Хотим поздравить всех с наступающими праздниками и пожелать всего самого светлого, доброго, чтобы цели достигались в посталенный срок, чтобы вас окружали только настоящие и надёжные люди, чтобы 2023 принёс множество положительных моментов и чтобы все желания сбылись! ☺
+                p Следующий год будет вашим во всех смыслах! Мы верим — всё получится! 💪
+
+                p С уважением, коллектив АМР «Артмедиа» 🤶🤶🎅🤶🤶
+
+    +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--privacy")(data-modal="privacy")
+    +modal-privacy()

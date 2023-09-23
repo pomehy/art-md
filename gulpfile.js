@@ -158,9 +158,9 @@ const refresh = (done) => {
   done();
 };
 
-const start = gulp.series(clean, svgo, copy, css, sprite, js, pugToHtml, syncServer);
+const start = gulp.series(clean, svgo, copy, css, sprite, js, pugToHtml, pugToHtmlArticles, syncServer);
 
-const build = gulp.series(clean, svgo, copy, css, sprite, js, pugToHtml, optimizeImages);
+const build = gulp.series(clean, svgo, copy, css, sprite, js, pugToHtml, pugToHtmlArticles, optimizeImages);
 
 exports.imagemin = optimizeImages;
 exports.webp = createWebp;

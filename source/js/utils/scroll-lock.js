@@ -34,7 +34,7 @@ export class ScrollLock {
 
   enableScrolling() {
     document.body.classList.remove(this._lockClass);
-    window.scrollTo(0, +document.body.dataset.scroll);
+    // window.scrollTo(0, +document.body.dataset.scroll);
     document.body.style.paddingRight = null;
     document.body.style.top = null;
     this._fixedBlockElements.forEach((block) => {

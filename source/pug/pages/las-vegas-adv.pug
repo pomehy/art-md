@@ -1,0 +1,57 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Светодиодное здание за 2,3 миллиарда долларов для привлечения внимания" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "las-vegas-adv.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutArticleInner = {
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: currentUrl,
+          text: "Статьи",
+        },
+      ],
+    }
+
+block main
+  main
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutArticleInner).page-intro--no-image
+    .page-article
+      .container
+        .page-article__grid
+          a.page-article__button-prev(href="blog.html")
+            +icon("icon-arrow-left", 24, 24)
+            span Назад
+          section.page-article__content.page-content.article
+            h1.page-article__title Светодиодное здание за 2,3 миллиарда долларов для привлечения внимания
+            time.article__date(datetime="2023-07-13") 13.07.2023
+            .page-content__image.page-content__image--main
+              +picture("content/articles", "las-vegas-adv", "jpg", 760, 420, "Иллюстрация статьи")
+            .page-content__content-wrapper
+              .page-content__text
+                p В Лас-Вегасе построили огромное сферическое светодиодное здание за 2,3 миллиарда долларов 😳
+
+                p 1 200 000 светодиодных панелей, 54 000 м2 площади, 111,5 метров в высоту и 157 метров в ширину. Разрешение — 19000×13500 пикселей
+                p Экран проецирует изображение как наружу, так и внутрь. Официальное название проекта — MSG Sphere и его открытие состоится 29 сентября 2023 года
+            .page-content__iframe
+              iframe(src="https://vk.com/video_ext.php?oid=-203025511&id=456239028&hd=2" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen)
+    +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--privacy")(data-modal="privacy")
+    +modal-privacy()

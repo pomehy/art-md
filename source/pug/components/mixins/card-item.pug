@@ -1,7 +1,7 @@
 mixin card-item(item)
   a.card-item(href=item.href)&attributes(attributes)
     .card-item__image-wrapper
-        +picture(item.img.path, item.img.image, item.img.format, item.img.width, item.img.height, item.img.altText)
+        +picture-lazy(item.img.path, item.img.image, item.img.format, item.img.width, item.img.height, item.img.altText)
     h3.card-item__title !{item.title}
       +icon("icon-arrow-right", 32, 32)
     .card-item__description

@@ -32,7 +32,7 @@ mixin header(headerMods, currentUrl)
       },
     ]
 
-  header.header(class=headerMods, data-header)
+  header.header(class=headerMods, data-header, data-fix-block)
     .container
       .header__logo-wrapper
         if(currentUrl === "index.html")
@@ -71,9 +71,9 @@ mixin header(headerMods, currentUrl)
                       +icon("logo", 49, 49)
           a.header__phone(href="tel:+78314795464", aria-label="Позвонить в компанию") #[span +7 (83147) 9-54-64]
           .socials
-            a(href="https://vk.com/artmedia_arz", rel="nofollow noopener", target="_blank")
+            a(href=vkLink, rel="nofollow noopener", target="_blank")
               +icon("logo-vk", 32, 32)
-            a(href="https://www.instagram.com/artmedia_arz", rel="nofollow noopener", target="_blank")
+            a(href=instLink, rel="nofollow noopener", target="_blank")
               +icon("logo-instagram", 32, 32)
           +button({text: "Получить предложение"}).header__button(data-open-modal="feedback")
 

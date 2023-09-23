@@ -30,7 +30,7 @@ block main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     +page-intro(aboutArticleInner).page-intro--no-image
-    +page-article()
+    //- +page-article()
     +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
 block modals
   +modal("modal--feedback")(data-modal="feedback")

@@ -1,0 +1,55 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "С Днём рождения, любимый Арзамас!" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "love-arzamas.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutArticleInner = {
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: currentUrl,
+          text: "Статьи",
+        },
+      ],
+    }
+
+block main
+  main
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutArticleInner).page-intro--no-image
+    .page-article
+      .container
+        .page-article__grid
+          a.page-article__button-prev(href="blog.html")
+            +icon("icon-arrow-left", 24, 24)
+            span Назад
+          section.page-article__content.page-content.article
+            h1.page-article__title С Днём рождения, любимый Арзамас!
+            time.article__date(datetime="2022-09-03") 03.09.2022
+            .page-content__image.page-content__image--main
+              +picture("content/articles", "hb-arz", "jpg", 760, 420, "Иллюстрация статьи")
+            .page-content__content-wrapper
+              .page-content__text
+                p Совсем скоро ты станешь ещё красивее и комфортнее! Твои жители — это самые добрые, отзывчивые и душевные люди, которые всегда придут на помощь ближнему не взирая ни на что! Мы абсолютно уверены, что ты самый уютный, яркий и фантастический город на земле 😌
+
+                p С праздником, наш Арзамас 🎉 Коллектив АМР «Артмедиа»
+
+    +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--privacy")(data-modal="privacy")
+    +modal-privacy()

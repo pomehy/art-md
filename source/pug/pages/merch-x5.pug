@@ -1,0 +1,57 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Ситуационный и всем знакомый мерч от X5 Retail Group" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "adv-day.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutArticleInner = {
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: currentUrl,
+          text: "Статьи",
+        },
+      ],
+    }
+
+block main
+  main
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutArticleInner).page-intro--no-image
+    .page-article
+      .container
+        .page-article__grid
+          a.page-article__button-prev(href="blog.html")
+            +icon("icon-arrow-left", 24, 24)
+            span Назад
+          section.page-article__content.page-content.article
+            h1.page-article__title Ситуационный и всем знакомый мерч от X5 Retail Group
+            time.article__date(datetime="2023-05-24") 24.05.2023
+            .page-content__image
+              +picture("content/articles", "merch-x5", "jpg", 760, 420, "Иллюстрация статьи")
+            .page-content__content-wrapper
+              .page-content__text
+                p X5 Retail Group решили выпустить коллекционные фигурки по мотивам типичных покупателей и самого знаменитого сотрудника «Пятёрочки» 😄
+                p Больше всех заинтересовала фигурка той самой Гали с легендарной и уже народной фразой «Галя, у нас отмена!»
+
+                p Так же в этой коллекции имеются: «Растерянный муж», «Спортсмен», «Бабуля с сумкой», «Студент» и «Лояльный покупатель»
+                p Как вам такая ситуационка?
+
+    +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--privacy")(data-modal="privacy")
+    +modal-privacy()

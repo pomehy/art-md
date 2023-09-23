@@ -1,13 +1,16 @@
+- const vkLink = 'https://vk.com/artmd_arz';
+- const instLink = 'https://www.instagram.com/artmd_arz';
+
 
 mixin page-contacts()
-  .page-section(data-animation-group)
+  .page-section
     .container
-      .page-section__header.fit.d-300
-        h2.page-section__title Связаться с нами
-        .page-section__description
+      .page-section__header(data-animation-group)
+        h2.page-section__title.fit.d-300 Связаться с нами
+        .page-section__description.fit.d-300
           p Мы всегда готовы оперативно ответить на все ваши вопросы
-      .page-section__grid.page-section__grid--contacts.contacts
-        .contacts-item
+      .page-section__grid.page-section__grid--contacts.contacts(data-animation-group)
+        .contacts-item.fit.d-300
           p.contacts-item__title Офис:
           .contacts-item__content(data-accordion="parent")
             p г. Арзамас, ул. Карла Маркса д.&nbsp;61&nbsp;(БЦ&nbsp;&laquo;Сити Парк&raquo;) офис &#8470;&nbsp;410
@@ -19,34 +22,38 @@ mixin page-contacts()
                   li Ген.директор Кригин Никита Александрович
                   li ИНН/КПП 5243036625/524301001
                   li ОГРН 1165243050466
-        .contacts-item
+        .contacts-item.fit.d-400
           p.contacts-item__title График работы:
           .contacts-item__content
             p #[b Рабочие дни:] ПН-ПТ 9:00 - 18:00
             p #[b Выходные:] СБ и ВС
-        .contacts-item
+        .contacts-item.fit.d-500
           p.contacts-item__title Телефоны:
           .contacts-item__content
             a(href="tel:+78314795464") +7 (83147) 9-54-64
             a(href="tel:+79877561246") +7 (987) 756-12-46
-            .contacts-item__messengers
-              a(href="#", aria-label="Написать в Viber")
-                +icon("icon-viber", 32, 32)
-              a(href="#", aria-label="Написать в Whatsapp")
-                +icon("icon-whatsapp", 32, 32)
-              a(href="#", aria-label="Написать в Telegram")
-                +icon("icon-telegram", 32, 32)
-        .contacts-item
+        .contacts-item.fit.d-600
           p.contacts-item__title E-mail:
           .contacts-item__content
             a(href="mailto:info@art-md.ru") info@art-md.ru
-        .contacts-item
+        .contacts-item.fit.d-700
+          p.contacts-item__title Мессенджеры:
+          .contacts-item__messengers
+            a(href="viber://pa?chatURI=artmd_arz", rel="nofollow noopener", target="_blank", aria-label="Написать в Viber")
+              +icon("icon-viber", 42, 42)
+            a.is-mobile(href="https://wa.me/79877561246", rel="nofollow noopener", target="_blank", aria-label="Написать в Whatsapp")
+              +icon("icon-whatsapp", 42, 42)
+            a.is-desktop(href="https://web.whatsapp.com/send?phone=79877561246", rel="nofollow noopener", target="_blank", aria-label="Написать в Whatsapp")
+              +icon("icon-whatsapp", 42, 42)
+            a(href="https://t.me/artmd_arz_bot", rel="nofollow noopener", target="_blank", aria-label="Написать в Telegram")
+              +icon("icon-telegram", 42, 42)
+        .contacts-item.fit.d-800
           p.contacts-item__title Социальные сети:
           .contacts-item__content
             .contacts-item__socials
-              a(href="https://vk.com/artmedia_arz", rel="nofollow noopener", target="_blank")
+              a(href=vkLink, rel="nofollow noopener", target="_blank")
                 +icon("logo-vk-color", 40, 40)
-              a(href="https://www.instagram.com/artmedia_arz", rel="nofollow noopener", target="_blank")
+              a(href=instLink, rel="nofollow noopener", target="_blank")
                 +icon("logo-instagram-color", 40, 40)
 
 

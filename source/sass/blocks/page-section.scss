@@ -192,11 +192,12 @@
 }
 
 .page-section__grid--about {
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 330px 1fr;
   column-gap: 120px;
 
   @include vp-1439 {
     gap: 60px;
+    grid-template-columns: 300px 1fr;
   }
 
   @include vp-1279 {
@@ -238,7 +239,7 @@
 
     .article-card {
       @include vp-767 {
-        width: 224px;
+        width: 280px;
 
         &:last-of-type {
           position: relative;

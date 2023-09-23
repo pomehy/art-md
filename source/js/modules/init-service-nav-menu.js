@@ -71,6 +71,7 @@ const initServiceNav = () => {
 
   const serviceNavMenu = new ServiceNav(serviceNav);
   serviceNavMenu.init();
+  console.log(serviceNavMenu);
 };
 
 export {initServiceNav};

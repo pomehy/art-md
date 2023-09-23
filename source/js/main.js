@@ -9,7 +9,6 @@ import {initParntersSlider} from './modules/sliders/init-partners-slider';
 import {initGratitudesSlider} from './modules/sliders/init-gratitudes-slider';
 import {initVideo} from './modules/init-video';
 import {initTypedText} from './modules/init-typed-text';
-// import {initMoveTo} from './modules/init-move-to';
 import {initMoveToService} from './modules/init-move-to-service';
 import {initArticlesFilter} from './modules/init-articles-filter';
 import HeaderNav from './modules/init-header-control';
@@ -20,6 +19,8 @@ import {initButtonToTop} from './modules/init-button-top-top';
 import {initMap} from './modules/init-map';
 import {initServiceButtonShow} from './modules/init-service-button-show';
 import {initServiceNav} from './modules/init-service-nav-menu';
+import {initLoadImg} from './modules/init-load-img';
+import {getDateArr, handlerSort} from './modules/init-sort-date';
 
 const initHeader = () => {
   const pageHeader = new HeaderNav();
@@ -50,7 +51,6 @@ window.addEventListener('DOMContentLoaded', () => {
   iniAnimate();
   initAccordions();
   initButtonToTop();
-  // initMoveTo();
   initMoveToService();
 
 
@@ -69,9 +69,11 @@ window.addEventListener('DOMContentLoaded', () => {
     initMap();
     initServiceButtonShow();
     initServiceNav();
+    initLoadImg();
+    getDateArr();
+    handlerSort();
   });
 });
-
 
 // ---------------------------------
 

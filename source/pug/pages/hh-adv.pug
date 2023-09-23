@@ -1,0 +1,61 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Крутая реклама Head Hunter!" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "hh-adv.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutArticleInner = {
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: currentUrl,
+          text: "Статьи",
+        },
+      ],
+    }
+
+block main
+  main
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutArticleInner).page-intro--no-image
+    .page-article
+      .container
+        .page-article__grid
+          a.page-article__button-prev(href="blog.html")
+            +icon("icon-arrow-left", 24, 24)
+            span Назад
+          section.page-article__content.page-content.article
+            h1.page-article__title Крутая реклама Head Hunter!
+            time.article__date(datetime="2022-12-22") 22.12.2022
+            .page-content__image.page-content__image--main
+              +picture("content/articles", "hh-adv", "jpg", 760, 420, "Иллюстрация статьи")
+            .page-content__content-wrapper
+              .page-content__text
+                p Хотим с вами поделиться тем, что нам понравилось 👇
+
+                p Платформа онлайн-рекрутинга в России hh.ru: работа есть всегда, выпустила серию рекламных роликов под названием «Индивидуальный не значит один» 💪
+                p Это пример отличной рекламной кампании от отечественного бренда, которой затронули важные ценности для каждого предпринимателя из малого бизнеса. У них получилось передать все трудности и атмосферу работы «на себя», когда только начинаешь свой путь как предприниматель, украсив в красивую игровую форму 🤜🤛
+            .page-content__iframe
+              iframe(src="https://vk.com/video_ext.php?oid=-203025511&id=456239023&hd=1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen)
+            .page-content__iframe
+              iframe(src="https://vk.com/video_ext.php?oid=-203025511&id=456239020&hd=2" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen)
+            .page-content__iframe
+              iframe(src="https://vk.com/video_ext.php?oid=-203025511&id=456239021&hd=2" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen)
+    +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--privacy")(data-modal="privacy")
+    +modal-privacy()

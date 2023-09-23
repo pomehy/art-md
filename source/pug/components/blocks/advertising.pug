@@ -9,7 +9,7 @@
       note: "Согласно опросам проведённым в городских сообществах социальной сети Вконтакте",
       img: {
         path: 'content/advertising',
-        image: 'advertising-radio',
+        image: 'radio',
         format: 'jpg',
         width: 610,
         height: 340,
@@ -23,10 +23,10 @@
         "203 600+ совокупное количество подписчиков",
         "117 000+ ежедневный охват аудитории",
       ],
-      note: "Данные на основании совокупной статистики всех сообществ",
+      note: "Данные, на основании совокупной статистики всех сообществ",
       img: {
         path: 'content/advertising',
-        image: 'advertising-social',
+        image: 'social',
         format: 'jpg',
         width: 610,
         height: 340,
@@ -42,7 +42,7 @@
       note: "Данные предоставлены администрациями объектов, где установлены мониторы",
       img: {
         path: 'content/advertising',
-        image: 'advertising-monitor',
+        image: 'monitor',
         format: 'jpg',
         width: 610,
         height: 340,
@@ -58,7 +58,7 @@
       note: "Данные предоставлены администрацией торговых и социальных объектов",
       img: {
         path: 'content/advertising',
-        image: 'advertising-radio-local',
+        image: 'radio-local',
         format: 'jpg',
         width: 610,
         height: 340,
@@ -71,10 +71,10 @@
       text: [
         "Охват 14 000 человек ежедневно",
       ],
-      note: "Данные основаны на базе автомобильного и пешего трафика с учётом близлежащих объектов скопления людей",
+      note: "Данные основаны на базе автомобильного и пешего трафика, с учётом близлежащих объектов скопления людей",
       img: {
         path: 'content/advertising',
-        image: 'advertising-led',
+        image: 'led',
         format: 'jpg',
         width: 610,
         height: 340,
@@ -84,11 +84,11 @@
   ]
 
 mixin advertising(data)
-  .page-section.advertising(data-animation-group)
+  .page-section.advertising(data-animation-group, data-image-lazy)
     .container
       .page-section__header.fit.d-200
         h2.page-section__title Наши рекламные возможности
-        p.page-section__description Мы&nbsp;собрали в&nbsp;своём портфеле арсенал рекламных носителей, который позволяет решать эффективно задачи&nbsp;бизнеса по&nbsp;работе со&nbsp;своей аудиторией
+        p.page-section__description Мы&nbsp;собрали в&nbsp;своём портфеле арсенал рекламных носителей, позволяющий эффективно решать задачи бизнеса по&nbsp;работе со&nbsp;своей аудиторией
       .page-section__grid.page-section__grid--advertising.fit.d-300
         each item in advertisingData
           +card-item(item)

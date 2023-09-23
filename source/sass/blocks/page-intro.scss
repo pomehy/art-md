@@ -19,6 +19,27 @@
   }
 }
 
+.page-intro--about {
+  margin-top: 24px;
+
+  @include vp-1023 {
+    margin-top: 24px;
+    min-height: 500px;
+  }
+
+  @include vp-767 {
+    min-height: 320px;
+  }
+
+  @include vp-519 {
+    min-height: 270px;
+  }
+
+  @include vp-374 {
+    min-height: 220px;
+  }
+}
+
 .page-intro--no-image {
   min-height: 300px;
 
@@ -69,6 +90,7 @@
     top: 0;
 
     object-fit: cover;
+    width: 100%;
     height: 100%;
     pointer-events: none;
     object-position: top;

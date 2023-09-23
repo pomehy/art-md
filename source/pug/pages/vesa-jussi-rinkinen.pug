@@ -1,0 +1,62 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Радиолюбитеь vesa-jussi-rinkinen" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "vesa-jussi-rinkinen.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutArticleInner = {
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: currentUrl,
+          text: "Статьи",
+        },
+      ],
+    }
+
+block main
+  main
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutArticleInner).page-intro--no-image
+    .page-article
+      .container
+        .page-article__grid
+          a.page-article__button-prev(href="blog.html")
+            +icon("icon-arrow-left", 24, 24)
+            span Назад
+          section.page-article__content.page-content.article
+            h1.page-article__title Случай из жизни агентства №2
+            time.article__date(datetime="2023-03-01") 01.03.2023
+            .page-content__image.page-content__image--main
+              +picture("content/articles", "vesa-jussi-rinkinen", "jpg", 760, 420, "Иллюстрация статьи")
+            .page-content__content-wrapper
+              .page-content__text
+                p Знакомьтесь, это Vesa-Jussi Rinkinen и он радиолюбитель из Финляндии. Вот такое сообщение мы сегодня получили от него:
+                p «Привет от вашего слушателя в Финляндии. Меня зовут Веса. Мое хобби регулярно контролировать сигналы от далеких FМ станций.
+                p Я пишу, чтобы вы знали, Что я слышал вашу станцию в Финляндии, в исключительных условиях в атмосфере.
+                p Дата: 07.06.2022 #[br] Время: 19.51 #[br] Частота: 90,7 FМ
+                p Я был в состоянии записать короткую часть вещания к прилагаемому звукового файла. Качество звука было очень хорошим, и я слышал местную рекламу.
+                p Я буду счастлив если вы сможете прослушать его и любезно прислать мне сообщение с подтверждением, что сигнал пришел из «ROCK FM» г. Арзамас.
+                p Мое приемное оборудование состоит из портативного приемника SDRPlay и 15-элементной антенны типа «яги».
+                p Я живу в городе Вантаа, в южной части Финландии, всего в 15 км. к северу от столицы Хельсинки.
+                p С уважением, Веса»
+                p Веса смог поймать сигнал одной из наших радиостанций (ROCK FM, частота 90,7 fm) у себя в Финляндии
+
+    +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--privacy")(data-modal="privacy")
+    +modal-privacy()

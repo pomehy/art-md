@@ -34,7 +34,6 @@ body {
   background-color: $color-default-white;
 
   &::-webkit-scrollbar {
-    width: thin;
     background-color: transparent;
 
     &:hover {
@@ -47,7 +46,8 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(0deg, $color-dark-orange, $color-pumpkin 90%);
+    // background-image: linear-gradient(0deg, $color-dark-orange, $color-pumpkin 90%);
+    background-color: #C4C3C4;
 
     border: 2px solid $color-snow;
     border-radius: 12px;

@@ -1,11 +1,11 @@
 mixin article-card(item)
-  a.article-card(href=item.href, data-filter=item.filter)&attributes(attributes)
+  a.article-card(href=item.href, data-filter=item.filter, data-article-card='parent')&attributes(attributes)
     if item.tag
       span.article-card__tag !{item.tag}
     .article-card__image-wrapper
-      +picture(item.img.path, item.img.image, item.img.format, item.img.width, item.img.height, item.img.altText)
+      +picture-lazy(item.img.path, item.img.image, item.img.format, item.img.width, item.img.height, item.img.altText)
     .article-card__content
-      time.article-card__date(datetime=item.datetime) !{item.date}
+      time.article-card__date(datetime=item.datetime, data-article-card='date') !{item.date}
       h3.article-card__title !{item.title}
       p.article-card__text !{item.text}
     //- +button({text: "Подробнее", href: item.href})(aria-label="Перейти к статье").article-card__button.button--secondary.button--small

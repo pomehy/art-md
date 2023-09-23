@@ -2,9 +2,10 @@ import MoveTo from '../vendor/move-to';
 const breakpointMD = window.matchMedia('(max-width:1023px)');
 const breakpointSM = window.matchMedia('(max-width:767px)');
 const breakpointS = window.matchMedia('(max-width:374px)');
+const currentUrl = window.location.pathname;
+
 
 const initMoveToService = () => {
-
   const getTolerance = () => {
     let height;
     if (breakpointS.matches) {
@@ -13,6 +14,8 @@ const initMoveToService = () => {
       height = 110;
     } else if (breakpointMD.matches) {
       height = 110;
+    } else if (currentUrl === '/index.html' || '') {
+      height = 90;
     } else {
       height = 120;
     }
@@ -28,7 +31,6 @@ const initMoveToService = () => {
   });
 
   const triggers = document.querySelectorAll('[data-link-trigger]');
-  // const triggersWrapper = document.querySelector('[data-triggers-wrapper]');
 
   if (!triggers.length) {
     return;

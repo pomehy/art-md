@@ -24,7 +24,7 @@
     &::before {
       content: "";
       position: absolute;
-      width: 320px;
+      width: 364px;
       height: 90px;
       top: 0;
       left: 0;
@@ -106,7 +106,7 @@
     margin: 0;
     padding-top: 89px;
 
-    max-width: 320px;
+    max-width: 365px;
     width: 100%;
     background-color: $color-dark-orange;
     z-index: 1;
@@ -166,8 +166,12 @@
   }
 
   @include vp-1439 {
-    margin-right: 24px;
+    margin-right: 20px;
   }
+
+  /*@include vp-1319 {
+    margin-right: 16px;
+  }*/
 
   @include vp-1279 {
     margin-right: 0;
@@ -175,6 +179,9 @@
 
     &.is-active {
       .main-nav__link--toggle {
+        color: $color-dark-orange;
+        background-color: $color-default-white;
+
         &::after {
           transform: rotate(180deg);
           border-top: 5px solid $color-dark-orange;
@@ -205,7 +212,7 @@
 .main-nav__item--sublist {
   display: flex;
   align-items: center;
-  padding-right: 12px;
+  padding-right: 6px;
 
   @include vp-1279 {
     flex-direction: column;
@@ -293,6 +300,10 @@
   transition: opacity $trans-default, color $trans-default, background-color $trans-default;
   background-color: $color-transparent;
   border: none;
+
+  @include vp-1439 {
+    font-size: 18px;
+  }
 
   @include vp-1279 {
     justify-content: flex-start;

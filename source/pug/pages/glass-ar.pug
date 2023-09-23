@@ -1,0 +1,57 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Зеркала дополненной реальности для магазинов одежды, как способ удержания покупателя" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "glass-ar.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutArticleInner = {
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: currentUrl,
+          text: "Статьи",
+        },
+      ],
+    }
+
+block main
+  main
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutArticleInner).page-intro--no-image
+    .page-article
+      .container
+        .page-article__grid
+          a.page-article__button-prev(href="blog.html")
+            +icon("icon-arrow-left", 24, 24)
+            span Назад
+          section.page-article__content.page-content.article
+            h1.page-article__title Зеркала дополненной реальности для магазинов одежды, как способ удержания покупателя
+            time.article__date(datetime="2023-05-03") 03.05.2023
+            .page-content__image
+              +picture("content/articles", "glass-ar", "jpg", 760, 420, "Иллюстрация статьи")
+            .page-content__content-wrapper
+              .page-content__text
+                p Будущее уже наступило ❗
+                p Отечественная компания ZERO10 разработала зеркала с дополненной реальностью
+                p Теперь не нужно долго искать подходящую вам одежду, весь модельный ряд вы сможете примерить прямо у такого гаджета
+                p AR-зеркала от Zero10 пока что появились только в Лондоне, Берлине и Милане
+            .page-content__iframe
+              iframe(src="https://vk.com/video_ext.php?oid=-203025511&id=456239025&hd=2" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen)
+    +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--privacy")(data-modal="privacy")
+    +modal-privacy()

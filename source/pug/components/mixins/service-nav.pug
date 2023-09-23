@@ -1,14 +1,15 @@
 mixin service-nav(data, buttonText="Выберите услугу", subCategory="")
-  .service-nav(data-service-menu)&attributes(attributes)
+  .service-nav(data-service-menu, data-animation-group)&attributes(attributes)
     .service-nav__control
       button.service-nav__button(type="button", data-service-menu-button)
         span !{buttonText}
         +icon("icon-arrow-down", 28, 28)
       span.service-nav__subcategory(data-service-menu-subcategory) !{subCategory}
     ul.service-nav__list(data-service-menu-list, data-accordion="parent", data-single, data-triggers-wrapper)
-      each item in data
+      each item, index in data
+        - const delay = 'd-'+ (index + 1) * 200
         if item.list
-          li.service-nav__item(class=item.activeItem, data-service-menu-item, data-accordion="element")
+          li.service-nav__item.fit(class=delay + ' ' + item.activeItem, data-service-menu-item, data-accordion="element")
             button.service-nav__title(type="button", data-service-menu-item-control, data-tabs="control", data-accordion="button")
               +icon("icon-arrow-right", 28, 28)
               span !{item.title}
@@ -17,7 +18,7 @@ mixin service-nav(data, buttonText="Выберите услугу", subCategory=
                 each subItem in item.list
                   li #[a(href='#' + subItem.href, data-link-trigger, data-service-sublink) !{subItem.title}]
         else
-          li.service-nav__item(data-accordion="element")
+          li.service-nav__item.fit(data-accordion="element")
             span.service-nav__title(data-tabs="control", data-accordion="button")
               +icon("icon-arrow-right", 28, 28)
               span !{item.title}

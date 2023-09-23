@@ -132,32 +132,12 @@
     }
   }
 
-  @include vp-1919 {
-    svg {
-      &:last-of-type {
-        margin-left: 20px;
-        width: 178px;
-        height: 20px;
-      }
-    }
-  }
-
-  @include vp-1439 {
-    svg {
-      &:last-of-type {
-        margin-left: 12px;
-        width: 158px;
-        height: 18px;
-      }
-    }
-  }
-
   @include vp-1279 {
     position: relative;
     z-index: 11;
   }
 
-  @include vp-374 {
+  @include vp-1023 {
     svg {
       &:first-of-type {
         width: 40px;
@@ -279,7 +259,7 @@
   }
 
   @include vp-1023 {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   @include vp-767 {

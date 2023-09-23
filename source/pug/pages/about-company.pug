@@ -17,7 +17,7 @@ block variables
         image: 'about-intro',
         format: 'jpg',
         width: 1920,
-        height: 1280,
+        height: 680,
         altText: 'Фото команды',
       },
       breadcrumbs: [
@@ -39,7 +39,7 @@ block main
 
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +page-intro(aboutData)
+    +page-intro(aboutData).page-intro--about
     +page-about()
 block modals
   +modal("modal--feedback")(data-modal="feedback")

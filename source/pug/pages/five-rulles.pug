@@ -1,0 +1,60 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "5 правил создания эффективной рекламы" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "five-rulles.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const aboutArticleInner = {
+      breadcrumbs: [
+        {
+          href: "index.html",
+          text: "Главная",
+        },
+        {
+          href: currentUrl,
+          text: "Статьи",
+        },
+      ],
+    }
+
+block main
+  main
+    +button-to-top()
+
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +page-intro(aboutArticleInner).page-intro--no-image
+    .page-article
+      .container
+        .page-article__grid
+          a.page-article__button-prev(href="blog.html")
+            +icon("icon-arrow-left", 24, 24)
+            span Назад
+          section.page-article__content.page-content.article
+            h1.page-article__title 5&nbsp;правил создания эффективной рекламы
+            time.article__date(datetime="2023-02-15") 15.02.2023
+            .page-content__image.page-content__image--main
+              +picture("content/articles", "five-rulles", "jpg", 760, 420, "Иллюстрация статьи")
+            .page-content__content-wrapper
+              .page-content__text
+                ol
+                  li Материал не должен быть перегружен информацией, только конкретика и в понятной форме. Не создавайте дополнительных преград на пути между вами и потребителем
+                  li Всегда применяйте УТП (Уникальное Торговое Предложение). Ни для кого не секрет — вы не одна организация на рынке, занимающаяся данным видом деятельности. Вам жизненно необходимо качественно отличаться от других и обладать преимуществами, имеющимися только у вас
+                  li Правильная подача. Материал должен быть преподнесён так, чтобы целевая аудитория заметила вас. Будьте смелее, выделяйтесь на фоне других (но не перегибайте)
+                  li Затрагивайте ценности вашего потребителя. Старайтесь преподнести свой продукт/услугу, как решение его задач или проблем. Объясняйте, как вы можете быть ему полезны на уровне потребностей
+                  li Сократите путь к себе. Сделайте так, чтобы желающий обратиться именно к вам, смог в одно нажатие/один звонок/одно письмо/одно сообщение/один запрос в поиске получить всю нужную ему информацию о вас и вашей продукции/услугах
+              .page-content__text
+                p P.S. Реклама - это битва за место в голове потребителя
+
+    +feedback("Оставьте заявку", "Заполните форму и наш менеджер свяжется с вами", "Заполнить форму").feedback--article
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--privacy")(data-modal="privacy")
+    +modal-privacy()
