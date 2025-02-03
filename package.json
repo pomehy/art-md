@@ -9,8 +9,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig & npm run stylelint & eslint source/js/",
-    "build": "cross-env NODE_ENV=production gulp build",
-    "start": "cross-env NODE_ENV=development gulp start",
+    "build": "cross-env NODE_ENV=production gulp build --openssl-legacy-provider",
+    "start": "cross-env NODE_ENV=development gulp start --openssl-legacy-provider",
     "imagemin": "gulp imagemin",
     "webp": "gulp webp"
   },
